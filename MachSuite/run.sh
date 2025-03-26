@@ -5,9 +5,6 @@ mkdir -p verilogs
 workloads=("./kmp/kmp.c" "./stencil2d/stencil.c" "./ellpack/ellpack.c" "./merge/merge.c" "./radix/radix.c" "./fft/fft.c")
 new_names=("kmp"          "stencil"               "spmv"                "merge"           "radix"           "fft")
 
-workloads=("./kmp/kmp.c")
-new_names=("kmp"            )
-
 for ((i=1; i<=${#workloads[@]}; i++))
 do
 
