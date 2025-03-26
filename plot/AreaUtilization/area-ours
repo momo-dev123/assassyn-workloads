@@ -1,0 +1,73 @@
+ 
+****************************************
+Report : area
+Design : top
+Version: V-2023.12-SP1
+Date   : Tue Oct 29 01:12:34 2024
+****************************************
+
+Library(s) Used:
+
+    asap7sc7p5t_AO_RVT_TT_nldm (File: /Volumes/QLC_2T/eda/libraries/asap7/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_AO_RVT_TT_nldm.db)
+    asap7sc7p5t_SIMPLE_RVT_TT_nldm (File: /Volumes/QLC_2T/eda/libraries/asap7/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_SIMPLE_RVT_TT_nldm.db)
+    asap7sc7p5t_INVBUF_RVT_TT_nldm (File: /Volumes/QLC_2T/eda/libraries/asap7/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_INVBUF_RVT_TT_nldm.db)
+    asap7sc7p5t_SEQ_RVT_TT_nldm (File: /Volumes/QLC_2T/eda/libraries/asap7/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_SEQ_RVT_TT_nldm.db)
+
+Number of ports:                         3377
+Number of nets:                         15469
+Number of cells:                        12353
+Number of combinational cells:           9518
+Number of sequential cells:              2812
+Number of macros/black boxes:               0
+Number of buf/inv:                       2226
+Number of references:                      50
+
+Combinational area:                735.254824
+Buf/Inv area:                       97.715161
+Noncombinational area:             961.273963
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  1696.528787
+Total area:                 undefined
+
+Information: This design contains black box (unknown) components. (RPT-8)
+
+The above information was reported from the logical library. The following are from the physical library:
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  ------------------------------
+top                               1696.5288    100.0  246.5915   576.9598  0.0000  top
+W1_i                                13.0928      0.8   13.0928     0.0000  0.0000  top_W1_0
+d_i                                 12.1743      0.7   12.1743     0.0000  0.0000  top_d_0
+d_trigger_i                          7.6837      0.5    4.3448     3.3388  0.0000  top_trigger_counter_WIDTH8_0
+e_i                                279.3236     16.5  279.3236     0.0000  0.0000  top_e_0
+e_trigger_i                          6.9692      0.4    3.6450     3.3242  0.0000  top_trigger_counter_WIDTH8_2
+f_i                                  0.0000      0.0    0.0000     0.0000  0.0000  top_f_0
+f_trigger_i                          0.0437      0.0    0.0437     0.0000  0.0000  top_trigger_counter_WIDTH8_1
+fifo_d_fetch_addr_i                 41.5676      2.5   12.0577    29.5099  0.0000  top_fifo_WIDTH32_DEPTH_LOG21_5
+fifo_d_rdata_i                      41.5676      2.5   12.0577    29.5099  0.0000  top_fifo_WIDTH32_DEPTH_LOG21_2
+fifo_e_fetch_addr_i                 73.6873      4.3   24.3778    49.3096  0.0000  top_fifo_WIDTH32_DEPTH_LOG22_0
+fifo_e_signals_i                   171.3442     10.1   54.9666   116.3776  0.0000  top_fifo_WIDTH97_DEPTH_LOG22_0
+fifo_m_rd_i                          9.2000      0.5    3.3097     5.8903  0.0000  top_fifo_WIDTH5_DEPTH_LOG21_1
+fifo_m_rdata_i                      42.0779      2.5   12.1889    29.8890  0.0000  top_fifo_WIDTH32_DEPTH_LOG21_1
+fifo_w_csr_id_i                      8.5147      0.5    3.1201     5.3946  0.0000  top_fifo_WIDTH4_DEPTH_LOG21_0
+fifo_w_csr_new_i                    42.0779      2.5   12.1889    29.8890  0.0000  top_fifo_WIDTH32_DEPTH_LOG21_3
+fifo_w_is_csr_i                      4.8697      0.3    2.0995     2.7702  0.0000  top_fifo_WIDTH1_DEPTH_LOG21_1
+fifo_w_is_memory_read_i              4.8697      0.3    2.0995     2.7702  0.0000  top_fifo_WIDTH1_DEPTH_LOG21_0
+fifo_w_mdata_i                      42.0779      2.5   12.1889    29.8890  0.0000  top_fifo_WIDTH32_DEPTH_LOG21_0
+fifo_w_mem_ext_i                     6.1528      0.4    2.5078     3.6450  0.0000  top_fifo_WIDTH2_DEPTH_LOG21_0
+fifo_w_rd_i                          9.7103      0.6    3.4409     6.2694  0.0000  top_fifo_WIDTH5_DEPTH_LOG21_0
+fifo_w_result_i                     42.0779      2.5   12.1889    29.8890  0.0000  top_fifo_WIDTH32_DEPTH_LOG21_4
+m_trigger_i                          6.9255      0.4    3.6013     3.3242  0.0000  top_trigger_counter_WIDTH8_3
+w_trigger_i                          6.9692      0.4    3.6450     3.3242  0.0000  top_trigger_counter_WIDTH8_4
+--------------------------------  ---------  -------  --------  ---------  ------  ------------------------------
+Total                                                 735.2548   961.2740  0.0000
+
+1

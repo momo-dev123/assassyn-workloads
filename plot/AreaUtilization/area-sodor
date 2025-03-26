@@ -1,0 +1,51 @@
+ 
+****************************************
+Report : area
+Design : Core
+Version: U-2022.12-SP4
+Date   : Wed Oct 16 20:18:03 2024
+****************************************
+
+Library(s) Used:
+
+    asap7sc7p5t_AO_RVT_TT_nldm (File: /data/install/pdks/asap7/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_AO_RVT_TT_nldm.db)
+    asap7sc7p5t_INVBUF_RVT_TT_nldm (File: /data/install/pdks/asap7/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_INVBUF_RVT_TT_nldm.db)
+    asap7sc7p5t_SIMPLE_RVT_TT_nldm (File: /data/install/pdks/asap7/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_SIMPLE_RVT_TT_nldm.db)
+    asap7sc7p5t_SEQ_RVT_TT_nldm (File: /data/install/pdks/asap7/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_SEQ_RVT_TT_nldm.db)
+
+Number of ports:                          861
+Number of nets:                          9930
+Number of cells:                         9211
+Number of combinational cells:           7260
+Number of sequential cells:              1948
+Number of macros/black boxes:               0
+Number of buf/inv:                       1138
+Number of references:                      25
+
+Combinational area:                585.051664
+Buf/Inv area:                       50.592601
+Noncombinational area:             568.036778
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  1153.088443
+Total area:                 undefined
+
+The above information was reported from the logical library. The following are from the physical library:
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  --------------------
+Core                              1153.0884    100.0   14.0405     3.4992  0.0000  Core
+d                                 1135.5487     98.5  215.0550   167.9616  0.0000  Core_DatPath_0
+d/csr                              233.7320     20.3  135.7544    97.9776  0.0000  Core_CSRFile_0
+d/regfile_regfile_ext              518.8001     45.0  220.2017   298.5984  0.0000  Core_regfile_32x32_0
+--------------------------------  ---------  -------  --------  ---------  ------  --------------------
+Total                                                 585.0517   568.0368  0.0000
+
+1
