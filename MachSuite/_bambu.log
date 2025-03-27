@@ -1,0 +1,6 @@
+ ==  Bambu executed with: /tmp/.mount_bambu-zH6SK2/usr/bin/bambu -I./common --top-fname=main --simulator=VERILATOR --file-input-data=/input.data,/check.data --simulate -s --top-rtldesign-name=run_benchmark --no-iob --hls-div --benchmark-name= -DBAMBU_PROFILING -DNO_FINAL_MEMCMP_CHECK ./common/harness.c 
+
+error -> cp returns an error
+
+Please report bugs to <panda-info@polimi.it>
+

@@ -1,0 +1,625 @@
+ ==  Bambu executed with: /tmp/.mount_bambu-beRUmI/usr/bin/bambu -I./common --top-fname=main --simulator=VERILATOR --file-input-data=./ellpack/input.data,./ellpack/check.data --simulate -s --top-rtldesign-name=run_benchmark --no-iob --hls-div --benchmark-name=spmv -DBAMBU_PROFILING -DNO_FINAL_MEMCMP_CHECK ./ellpack/ellpack.c ./common/harness.c 
+
+
+********************************************************************************
+                    ____                  _
+                   | __ )  __ _ _ __ ___ | |_   _   _
+                   |  _ \ / _` | '_ ` _ \| '_ \| | | |
+                   | |_) | (_| | | | | | | |_) | |_| |
+                   |____/ \__,_|_| |_| |_|_.__/ \__,_|
+
+********************************************************************************
+                         High-Level Synthesis Tool
+
+                         Politecnico di Milano - DEIB
+                          System Architectures Group
+********************************************************************************
+                Copyright (C) 2004-2022 Politecnico di Milano
+  Version: PandA 0.9.7 - Revision 8b59b7ac7b9ab30cd20960921ab47ea5009163f1-main
+
+Target technology = FPGA
+Function call to __float_adde11m52b_1023nih inlined in run_benchmark
+Function call to __float_mule11m52b_1023nih inlined in run_benchmark
+
+  Functions to be synthesized:
+    __assert_fail
+    __internal_free
+    __internal_malloc
+    read
+    main
+    run_benchmark
+
+
+  Memory allocation information:
+    BRAM bitsize: 64
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 64
+    ADDRESS bus bitsize: 23
+    SIZE bus bitsize: 7
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 7340032
+    Internally allocated memory: 7340044
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Memory allocation information:
+    BRAM bitsize: 64
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 64
+    ADDRESS bus bitsize: 23
+    SIZE bus bitsize: 7
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 7340032
+    Internally allocated memory: 7340040
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Memory allocation information:
+    BRAM bitsize: 64
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 64
+    ADDRESS bus bitsize: 23
+    SIZE bus bitsize: 7
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 7340032
+    Internally allocated memory: 7340040
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Memory allocation information:
+    BRAM bitsize: 64
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 64
+    ADDRESS bus bitsize: 23
+    SIZE bus bitsize: 7
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 7340032
+    Internally allocated memory: 7340040
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Memory allocation information:
+    BRAM bitsize: 64
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 64
+    ADDRESS bus bitsize: 23
+    SIZE bus bitsize: 7
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 7340032
+    Internally allocated memory: 7340040
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Memory allocation information:
+    BRAM bitsize: 64
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 64
+    ADDRESS bus bitsize: 23
+    SIZE bus bitsize: 7
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 7340032
+    Internally allocated memory: 7340040
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Memory allocation information:
+    BRAM bitsize: 64
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 64
+    ADDRESS bus bitsize: 23
+    SIZE bus bitsize: 7
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 7340032
+    Internally allocated memory: 7340040
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Memory allocation information:
+    BRAM bitsize: 64
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 64
+    ADDRESS bus bitsize: 23
+    SIZE bus bitsize: 7
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 7340032
+    Internally allocated memory: 7340040
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Module allocation information for function __assert_fail:
+    Number of complex operations: 2
+    Number of complex operations: 2
+  Time to perform module allocation: 0.20 seconds
+
+
+  Module allocation information for function __internal_free:
+    Number of complex operations: 10
+    Number of complex operations: 10
+  Time to perform module allocation: 0.01 seconds
+
+
+  Module allocation information for function read:
+    Number of complex operations: 5
+    Number of complex operations: 5
+  Time to perform module allocation: 0.01 seconds
+
+
+  Module allocation information for function run_benchmark:
+    Number of complex operations: 9
+    Number of complex operations: 9
+  Time to perform module allocation: 0.06 seconds
+
+
+  Scheduling Information of function __assert_fail:
+    Number of control steps: 4
+    Minimum slack: 1.1102230246251565e-15
+    Estimated max frequency (MHz): 100.00000000000001
+  Time to perform scheduling: 0.00 seconds
+
+
+  State Transition Graph Information of function __assert_fail:
+    Number of states: 5
+    Parameters are registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Memory allocation information:
+    BRAM bitsize: 64
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 64
+    ADDRESS bus bitsize: 23
+    SIZE bus bitsize: 7
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 7340032
+    Internally allocated memory: 7340040
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Memory allocation information:
+    BRAM bitsize: 64
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 64
+    ADDRESS bus bitsize: 23
+    SIZE bus bitsize: 7
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 7340032
+    Internally allocated memory: 7340040
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Memory allocation information:
+    BRAM bitsize: 64
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 64
+    ADDRESS bus bitsize: 23
+    SIZE bus bitsize: 7
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 7340032
+    Internally allocated memory: 7340040
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Module allocation information for function __internal_free:
+    Number of complex operations: 10
+  Time to perform module allocation: 0.01 seconds
+
+
+  Scheduling Information of function __internal_free:
+    Number of control steps: 19
+    Minimum slack: 1.4458999969999919
+    Estimated max frequency (MHz): 116.90300553527433
+  Time to perform scheduling: 0.00 seconds
+
+
+  State Transition Graph Information of function __internal_free:
+    Number of states: 17
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Memory allocation information:
+    BRAM bitsize: 64
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 64
+    ADDRESS bus bitsize: 23
+    SIZE bus bitsize: 7
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 7340032
+    Internally allocated memory: 7340040
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Memory allocation information:
+    BRAM bitsize: 64
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 64
+    ADDRESS bus bitsize: 23
+    SIZE bus bitsize: 7
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 7340032
+    Internally allocated memory: 7340040
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Module allocation information for function read:
+    Number of complex operations: 5
+  Time to perform module allocation: 0.01 seconds
+
+
+  Scheduling Information of function read:
+    Number of control steps: 19
+    Minimum slack: 5.1483999949999992
+    Estimated max frequency (MHz): 206.11756924919862
+  Time to perform scheduling: 0.00 seconds
+
+
+  State Transition Graph Information of function read:
+    Number of states: 17
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Scheduling Information of function run_benchmark:
+    Number of control steps: 17
+    Minimum slack: 0.069699988999994078
+    Estimated max frequency (MHz): 100.70189207700459
+  Time to perform scheduling: 0.04 seconds
+
+
+  State Transition Graph Information of function run_benchmark:
+    Number of states: 16
+    Done port is registered
+  Time to perform creation of STG: 0.03 seconds
+
+
+  Easy binding information for function __assert_fail:
+    Bound operations:5/5
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __internal_free:
+    Bound operations:44/76
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function read:
+    Bound operations:76/97
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function run_benchmark:
+    Bound operations:416/580
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function __assert_fail:
+    Number of storage values inserted: 1
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __internal_free:
+    Number of storage values inserted: 23
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function read:
+    Number of storage values inserted: 30
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function run_benchmark:
+    Number of storage values inserted: 114
+  Time to compute storage value information: 0.00 seconds
+
+
+  Module binding information for function __assert_fail:
+    Number of modules instantiated: 5
+    Number of possible conflicts for possible false paths introduced by resource sharing: 0
+    Estimated resources area (no Muxes and address logic): 3
+    Estimated area of MUX21: 0
+    Total estimated area: 3
+    Estimated number of DSPs: 0
+    Slack computed in 0.00 seconds
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __assert_fail:
+    Register allocation algorithm obtains an optimal result: 1 registers
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __assert_fail:
+    Number of allocated multiplexers (2-to-1 equivalent): 1
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __assert_fail: 23
+
+  Register binding information for function __internal_free:
+    Register allocation algorithm obtains a sub-optimal result: 18 registers(LB:11)
+  Time to perform register binding: 0.00 seconds
+
+
+  Module binding information for function __internal_free:
+    Number of modules instantiated: 67
+    Number of possible conflicts for possible false paths introduced by resource sharing: 0
+    Estimated resources area (no Muxes and address logic): 450
+    Estimated area of MUX21: 306
+    Total estimated area: 756
+    Estimated number of DSPs: 0
+    Slack computed in 0.00 seconds
+    False-loop computation completed in 0.00 seconds
+    Weight computation completed in 0.00 seconds
+    Clique covering computation completed in 0.00 seconds
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __internal_free:
+    Register allocation algorithm obtains a sub-optimal result: 18 registers(LB:11)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __internal_free:
+    Number of allocated multiplexers (2-to-1 equivalent): 17
+  Time to perform interconnection binding: 0.01 seconds
+
+  Total number of flip-flops in function __internal_free: 462
+
+  Module allocation information for function __internal_malloc:
+    Number of complex operations: 9
+    Number of complex operations: 9
+  Time to perform module allocation: 0.01 seconds
+
+
+  Memory allocation information:
+    BRAM bitsize: 64
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 64
+    ADDRESS bus bitsize: 23
+    SIZE bus bitsize: 7
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 7340032
+    Internally allocated memory: 7340040
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Memory allocation information:
+    BRAM bitsize: 64
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 64
+    ADDRESS bus bitsize: 23
+    SIZE bus bitsize: 7
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 7340032
+    Internally allocated memory: 7340040
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Register binding information for function read:
+    Register allocation algorithm obtains a sub-optimal result: 27 registers(LB:11)
+  Time to perform register binding: 0.00 seconds
+
+
+  Module binding information for function read:
+    Number of modules instantiated: 93
+    Number of possible conflicts for possible false paths introduced by resource sharing: 0
+    Estimated resources area (no Muxes and address logic): 472
+    Estimated area of MUX21: 170
+    Total estimated area: 642
+    Estimated number of DSPs: 0
+    Slack computed in 0.00 seconds
+    False-loop computation completed in 0.00 seconds
+    Weight computation completed in 0.00 seconds
+    Clique covering computation completed in 0.00 seconds
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function run_benchmark:
+    Register allocation algorithm obtains a sub-optimal result: 109 registers(LB:57)
+  Time to perform register binding: 0.01 seconds
+
+
+  Module binding information for function run_benchmark:
+    Number of modules instantiated: 577
+    Number of possible conflicts for possible false paths introduced by resource sharing: 120
+    Estimated resources area (no Muxes and address logic): 7155
+    Estimated area of MUX21: 137
+    Total estimated area: 7292
+    Estimated number of DSPs: 12
+    Slack computed in 0.00 seconds
+    False-loop computation completed in 0.00 seconds
+    Weight computation completed in 0.00 seconds
+    Clique covering computation completed in 0.01 seconds
+  Time to perform module binding: 0.02 seconds
+
+
+  Module allocation information for function __internal_malloc:
+    Number of complex operations: 9
+  Time to perform module allocation: 0.01 seconds
+
+
+  Scheduling Information of function __internal_malloc:
+    Number of control steps: 26
+    Minimum slack: 8.2156503822261584e-15
+    Estimated max frequency (MHz): 100.00000000000009
+  Time to perform scheduling: 0.00 seconds
+
+
+  State Transition Graph Information of function __internal_malloc:
+    Number of states: 26
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function __internal_malloc:
+    Bound operations:101/130
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function __internal_malloc:
+    Number of storage values inserted: 35
+  Time to compute storage value information: 0.00 seconds
+
+
+  Register binding information for function __internal_malloc:
+    Register allocation algorithm obtains a sub-optimal result: 29 registers(LB:11)
+  Time to perform register binding: 0.01 seconds
+
+
+  Module binding information for function __internal_malloc:
+    Number of modules instantiated: 120
+    Number of possible conflicts for possible false paths introduced by resource sharing: 0
+    Estimated resources area (no Muxes and address logic): 2337
+    Estimated area of MUX21: 241
+    Total estimated area: 2578
+    Estimated number of DSPs: 0
+    Slack computed in 0.00 seconds
+    False-loop computation completed in 0.00 seconds
+    Weight computation completed in 0.00 seconds
+    Clique covering computation completed in 0.01 seconds
+  Time to perform module binding: 0.01 seconds
+
+
+  Register binding information for function __internal_malloc:
+    Register allocation algorithm obtains a sub-optimal result: 29 registers(LB:11)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __internal_malloc:
+    Number of allocated multiplexers (2-to-1 equivalent): 21
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __internal_malloc: 746
+
+  Register binding information for function read:
+    Register allocation algorithm obtains a sub-optimal result: 27 registers(LB:11)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function read:
+    Number of allocated multiplexers (2-to-1 equivalent): 20
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function read: 623
+
+  Register binding information for function run_benchmark:
+    Register allocation algorithm obtains a sub-optimal result: 109 registers(LB:57)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function run_benchmark:
+    Number of allocated multiplexers (2-to-1 equivalent): 9
+  Time to perform interconnection binding: 0.01 seconds
+
+  Total number of flip-flops in function run_benchmark: 1654
+
+  Module allocation information for function main:
+    Number of complex operations: 11
+    Number of complex operations: 11
+  Time to perform module allocation: 0.18 seconds
+
+
+  Memory allocation information:
+    BRAM bitsize: 64
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 64
+    ADDRESS bus bitsize: 23
+    SIZE bus bitsize: 7
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 7340032
+    Internally allocated memory: 7340040
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Module allocation information for function main:
+    Number of complex operations: 11
+  Time to perform module allocation: 0.01 seconds
+
+
+  Scheduling Information of function main:
+    Number of control steps: 20
+    Minimum slack: 1.1102230246251565e-15
+    Estimated max frequency (MHz): 100.00000000000001
+  Time to perform scheduling: 0.00 seconds
+
+
+  State Transition Graph Information of function main:
+    Number of states: 29
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function main:
+    Bound operations:42/66
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function main:
+    Number of storage values inserted: 26
+  Time to compute storage value information: 0.00 seconds
+
+
+  Register binding information for function main:
+    Register allocation algorithm obtains a sub-optimal result: 24 registers(LB:16)
+  Time to perform register binding: 0.00 seconds
+
+
+  Module binding information for function main:
+    Number of modules instantiated: 60
+    Number of possible conflicts for possible false paths introduced by resource sharing: 0
+    Estimated resources area (no Muxes and address logic): 8330
+    Estimated area of MUX21: 284
+    Total estimated area: 8614
+    Estimated number of DSPs: 0
+    Slack computed in 0.00 seconds
+    False-loop computation completed in 0.00 seconds
+    Weight computation completed in 0.00 seconds
+    Clique covering computation completed in 0.00 seconds
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function main:
+    Register allocation algorithm obtains a sub-optimal result: 24 registers(LB:16)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function main:
+    Number of allocated multiplexers (2-to-1 equivalent): 22
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function main: 624
+[0mWarning: XML file "/home/gaod/derui_work/MachSuite/test.xml" cannot be opened, creating a stub with random values
+  Total cycles             : 11166 cycles
+  Number of executions     : 1
+  Average execution        : 11166 cycles
