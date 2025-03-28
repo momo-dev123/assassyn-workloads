@@ -2,7 +2,7 @@ import subprocess
 import pandas as pd
 
 
-workloads=["kmp","spmv","merge","radix","stencil","fft"]
+workloads=["kmp","spmv","merge","radix","stencil"]
 all_cycles = []
 hls_kcycle_s = []
 #at ./hls_baseline

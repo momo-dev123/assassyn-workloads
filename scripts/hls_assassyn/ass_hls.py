@@ -8,7 +8,7 @@ workloads=[
     ,"merge_sort"           
     ,"radix_sort" 
     ,"conv_sum"          
-    ,"fft"
+
     
     ]
 dir = [
@@ -17,7 +17,7 @@ dir = [
     ,"merge-sort/main.py"           
     ,"radix_sort/main.py"  
     ,"conv_sum/v2.py"         
-    ,"fft/fft.py"   
+
     
 ]
 
@@ -27,7 +27,7 @@ ass_veri_kcs = []
 
 
 # Iterate workloads
-for i in range(0, 6):
+for i in range(0, 5):
     wl = workloads[i]
     file = dir[i]
     # compile

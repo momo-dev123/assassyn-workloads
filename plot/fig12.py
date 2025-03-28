@@ -58,9 +58,9 @@ def load_area_safe(path):
 
 cpu_speedup = appendgmean(cpu_speedup)[-1]
 
-base_area = ['./reports/pq.json', 'reports/gemmini-pe.json', './reports/sodor.json', './reports/hls-kmp.v.json', './reports/hls-merge.v.json', './reports/hls-radix.v.json', './reports/hls-spmv.v.json', './reports/hls-stencil.v.json', './reports/hls-fft.v.json']
-assy_area = ['./reports/priority_queue.sv.json', 'reports/out.pe.json', './reports/nocsr.sv.json', './reports/kmp.sv.json', './reports/merge_sort.sv.json', './reports/radix_sort.sv.json', './reports/spmv.sv.json', './reports/conv_sum.sv.json', './reports/fft.sv.json']
-xlabels = ['pq', 'sys-pe', 'cpu', 'kmp', 'merge', 'radix', 'spmv', 'st-2d', 'fft']
+base_area = ['./reports/pq.json', 'reports/gemmini-pe.json', './reports/sodor.json', './reports/hls-kmp.v.json', './reports/hls-merge.v.json', './reports/hls-radix.v.json', './reports/hls-spmv.v.json', './reports/hls-stencil.v.json']
+assy_area = ['./reports/priority_queue.sv.json', 'reports/out.pe.json', './reports/nocsr.sv.json', './reports/kmp.sv.json', './reports/merge_sort.sv.json', './reports/radix_sort.sv.json', './reports/spmv.sv.json', './reports/conv_sum.sv.json']
+xlabels = ['pq', 'sys-pe', 'cpu', 'kmp', 'merge', 'radix', 'spmv', 'st-2d']
 
 
 base_area = np.array([json.load(open(i, 'r'))['design']['area'] for i in base_area])
@@ -71,8 +71,8 @@ print(assy_area)
 
 norm_area = assy_area / base_area
 speedup = np.array([1.0, 1.0 , cpu_speedup] + list(hls_speedup))
-
-
+print(speedup)
+print(norm_area)
 
 grid = mpl.gridspec.GridSpec(1, 8)
 fig = plt.figure()
@@ -108,7 +108,7 @@ plot(ax, slice(0, 3), True)
 ax.set_title('Handcrafted')
 
 ax = fig.add_subplot(grid[0,3:])
-plot(ax, slice(3, 9), False)
+plot(ax, slice(3, 8), False)
 ax.set_title('HLS-generated')
 
 fig.subplots_adjust(top=0.64, bottom=0.2, left=0.12, right=0.6, wspace=0.2)

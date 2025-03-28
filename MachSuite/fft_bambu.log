@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-CEgUbS/usr/bin/bambu -I./common --top-fname=main --simulator=VERILATOR --file-input-data=./fft/input.data,./fft/check.data --simulate -s --top-rtldesign-name=run_benchmark --no-iob --hls-div --benchmark-name=fft -DBAMBU_PROFILING -DNO_FINAL_MEMCMP_CHECK ./fft/fft.c ./common/harness.c 
+ ==  Bambu executed with: /tmp/.mount_bambu-aX1943/usr/bin/bambu -I./common --top-fname=main --simulator=VERILATOR --file-input-data=./fft/input.data,./fft/check.data --simulate -s --top-rtldesign-name=run_benchmark --no-iob --hls-div --benchmark-name=fft -DBAMBU_PROFILING -DNO_FINAL_MEMCMP_CHECK ./fft/fft.c ./common/harness.c 
 
 
 ********************************************************************************
@@ -158,19 +158,19 @@ Target technology = FPGA
   Module allocation information for function __assert_fail:
     Number of complex operations: 2
     Number of complex operations: 2
-  Time to perform module allocation: 0.18 seconds
+  Time to perform module allocation: 0.17 seconds
 
 
   Module allocation information for function __internal_free:
     Number of complex operations: 10
     Number of complex operations: 10
-  Time to perform module allocation: 0.02 seconds
+  Time to perform module allocation: 0.01 seconds
 
 
   Module allocation information for function fft:
     Number of complex operations: 18
     Number of complex operations: 18
-  Time to perform module allocation: 0.02 seconds
+  Time to perform module allocation: 0.01 seconds
 
 
   Module allocation information for function read:
@@ -243,7 +243,7 @@ Target technology = FPGA
     Number of control steps: 19
     Minimum slack: 1.866399996999996
     Estimated max frequency (MHz): 122.94678858453319
-  Time to perform scheduling: 0.01 seconds
+  Time to perform scheduling: 0.00 seconds
 
 
   State Transition Graph Information of function __internal_free:
@@ -328,14 +328,14 @@ Target technology = FPGA
 
   Module allocation information for function read:
     Number of complex operations: 5
-  Time to perform module allocation: 0.01 seconds
+  Time to perform module allocation: 0.00 seconds
 
 
   Scheduling Information of function read:
     Number of control steps: 19
     Minimum slack: 5.1483999949999992
     Estimated max frequency (MHz): 206.11756924919862
-  Time to perform scheduling: 0.00 seconds
+  Time to perform scheduling: 0.01 seconds
 
 
   State Transition Graph Information of function read:
@@ -482,11 +482,11 @@ Target technology = FPGA
     Estimated area of MUX21: 175
     Total estimated area: 1086
     Estimated number of DSPs: 16
-    Slack computed in 0.01 seconds
+    Slack computed in 0.00 seconds
     False-loop computation completed in 0.00 seconds
     Weight computation completed in 0.00 seconds
     Clique covering computation completed in 0.00 seconds
-  Time to perform module binding: 0.01 seconds
+  Time to perform module binding: 0.00 seconds
 
 
   Register binding information for function read:
@@ -517,7 +517,7 @@ Target technology = FPGA
     Number of control steps: 26
     Minimum slack: 0.18439999699999388
     Estimated max frequency (MHz): 101.87864213031945
-  Time to perform scheduling: 0.00 seconds
+  Time to perform scheduling: 0.01 seconds
 
 
   State Transition Graph Information of function __internal_malloc:
@@ -553,7 +553,7 @@ Target technology = FPGA
     False-loop computation completed in 0.00 seconds
     Weight computation completed in 0.00 seconds
     Clique covering computation completed in 0.00 seconds
-  Time to perform module binding: 0.01 seconds
+  Time to perform module binding: 0.00 seconds
 
 
   Register binding information for function __internal_malloc:
@@ -574,7 +574,7 @@ Target technology = FPGA
 
   Connection Binding Information for function fft:
     Number of allocated multiplexers (2-to-1 equivalent): 15
-  Time to perform interconnection binding: 0.00 seconds
+  Time to perform interconnection binding: 0.01 seconds
 
   Total number of flip-flops in function fft: 775
 

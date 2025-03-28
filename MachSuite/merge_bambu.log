@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-ZoyzhH/usr/bin/bambu -I./common --top-fname=main --simulator=VERILATOR --file-input-data=./merge/input.data,./merge/check.data --simulate -s --top-rtldesign-name=run_benchmark --no-iob --hls-div --benchmark-name=merge -DBAMBU_PROFILING -DNO_FINAL_MEMCMP_CHECK ./merge/merge.c ./common/harness.c 
+ ==  Bambu executed with: /tmp/.mount_bambu-RZviXo/usr/bin/bambu -I./common --top-fname=main --simulator=VERILATOR --file-input-data=./merge/input.data,./merge/check.data --simulate -s --top-rtldesign-name=run_benchmark --no-iob --hls-div --benchmark-name=merge -DBAMBU_PROFILING -DNO_FINAL_MEMCMP_CHECK ./merge/merge.c ./common/harness.c 
 
 
 ********************************************************************************
@@ -143,7 +143,7 @@ Target technology = FPGA
   Module allocation information for function __assert_fail:
     Number of complex operations: 2
     Number of complex operations: 2
-  Time to perform module allocation: 0.16 seconds
+  Time to perform module allocation: 0.14 seconds
 
 
   Module allocation information for function __internal_free:
@@ -161,7 +161,7 @@ Target technology = FPGA
   Module allocation information for function run_benchmark:
     Number of complex operations: 16
     Number of complex operations: 16
-  Time to perform module allocation: 0.02 seconds
+  Time to perform module allocation: 0.03 seconds
 
 
   Scheduling Information of function __assert_fail:
@@ -262,7 +262,7 @@ Target technology = FPGA
     Code has LOADs or STOREs with unaligned accesses
     Internally allocated memory (no private memories): 7864320
     Internally allocated memory: 7864328
-  Time to perform memory allocation: 0.00 seconds
+  Time to perform memory allocation: 0.01 seconds
 
 
   Module allocation information for function read:
@@ -274,7 +274,7 @@ Target technology = FPGA
     Number of control steps: 19
     Minimum slack: 5.1483999949999992
     Estimated max frequency (MHz): 206.11756924919862
-  Time to perform scheduling: 0.01 seconds
+  Time to perform scheduling: 0.00 seconds
 
 
   State Transition Graph Information of function read:
@@ -313,20 +313,20 @@ Target technology = FPGA
 
   Module allocation information for function run_benchmark:
     Number of complex operations: 16
-  Time to perform module allocation: 0.02 seconds
+  Time to perform module allocation: 0.03 seconds
 
 
   Scheduling Information of function run_benchmark:
     Number of control steps: 32
     Minimum slack: 3.1774666626666823
     Estimated max frequency (MHz): 146.57312035808445
-  Time to perform scheduling: 0.02 seconds
+  Time to perform scheduling: 0.01 seconds
 
 
   State Transition Graph Information of function run_benchmark:
     Number of states: 30
     Done port is registered
-  Time to perform creation of STG: 0.00 seconds
+  Time to perform creation of STG: 0.01 seconds
 
 
   Easy binding information for function __assert_fail:
@@ -507,7 +507,7 @@ Target technology = FPGA
     Number of control steps: 26
     Minimum slack: 0.18439999699999388
     Estimated max frequency (MHz): 101.87864213031945
-  Time to perform scheduling: 0.01 seconds
+  Time to perform scheduling: 0.00 seconds
 
 
   State Transition Graph Information of function __internal_malloc:
@@ -529,7 +529,7 @@ Target technology = FPGA
 
   Register binding information for function __internal_malloc:
     Register allocation algorithm obtains a sub-optimal result: 29 registers(LB:11)
-  Time to perform register binding: 0.00 seconds
+  Time to perform register binding: 0.01 seconds
 
 
   Module binding information for function __internal_malloc:
@@ -542,8 +542,8 @@ Target technology = FPGA
     Slack computed in 0.00 seconds
     False-loop computation completed in 0.00 seconds
     Weight computation completed in 0.00 seconds
-    Clique covering computation completed in 0.00 seconds
-  Time to perform module binding: 0.00 seconds
+    Clique covering computation completed in 0.01 seconds
+  Time to perform module binding: 0.01 seconds
 
 
   Register binding information for function __internal_malloc:
@@ -553,13 +553,13 @@ Target technology = FPGA
 
   Connection Binding Information for function __internal_malloc:
     Number of allocated multiplexers (2-to-1 equivalent): 21
-  Time to perform interconnection binding: 0.01 seconds
+  Time to perform interconnection binding: 0.00 seconds
 
   Total number of flip-flops in function __internal_malloc: 746
 
   Register binding information for function read:
     Register allocation algorithm obtains a sub-optimal result: 27 registers(LB:11)
-  Time to perform register binding: 0.00 seconds
+  Time to perform register binding: 0.01 seconds
 
 
   Connection Binding Information for function read:
@@ -570,7 +570,7 @@ Target technology = FPGA
 
   Register binding information for function run_benchmark:
     Register allocation algorithm obtains a sub-optimal result: 65 registers(LB:36)
-  Time to perform register binding: 0.01 seconds
+  Time to perform register binding: 0.00 seconds
 
 
   Connection Binding Information for function run_benchmark:
@@ -642,7 +642,7 @@ Target technology = FPGA
     False-loop computation completed in 0.00 seconds
     Weight computation completed in 0.00 seconds
     Clique covering computation completed in 0.00 seconds
-  Time to perform module binding: 0.01 seconds
+  Time to perform module binding: 0.00 seconds
 
 
   Register binding information for function main:

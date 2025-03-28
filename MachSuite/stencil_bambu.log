@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-6mKcQI/usr/bin/bambu -I./common --top-fname=main --simulator=VERILATOR --file-input-data=./stencil2d/input.data,./stencil2d/check.data --simulate -s --top-rtldesign-name=run_benchmark --no-iob --hls-div --benchmark-name=stencil -DBAMBU_PROFILING -DNO_FINAL_MEMCMP_CHECK ./stencil2d/stencil.c ./common/harness.c 
+ ==  Bambu executed with: /tmp/.mount_bambu-DI4O1K/usr/bin/bambu -I./common --top-fname=main --simulator=VERILATOR --file-input-data=./stencil2d/input.data,./stencil2d/check.data --simulate -s --top-rtldesign-name=run_benchmark --no-iob --hls-div --benchmark-name=stencil -DBAMBU_PROFILING -DNO_FINAL_MEMCMP_CHECK ./stencil2d/stencil.c ./common/harness.c 
 
 
 ********************************************************************************
@@ -95,7 +95,7 @@ Target technology = FPGA
     Code has LOADs or STOREs with unaligned accesses
     Internally allocated memory (no private memories): 7340032
     Internally allocated memory: 7340040
-  Time to perform memory allocation: 0.00 seconds
+  Time to perform memory allocation: 0.01 seconds
 
 
   Memory allocation information:
@@ -129,7 +129,7 @@ Target technology = FPGA
   Module allocation information for function __assert_fail:
     Number of complex operations: 2
     Number of complex operations: 2
-  Time to perform module allocation: 0.17 seconds
+  Time to perform module allocation: 0.18 seconds
 
 
   Module allocation information for function __internal_free:
@@ -147,7 +147,7 @@ Target technology = FPGA
   Module allocation information for function run_benchmark:
     Number of complex operations: 4
     Number of complex operations: 4
-  Time to perform module allocation: 0.02 seconds
+  Time to perform module allocation: 0.01 seconds
 
 
   Scheduling Information of function __assert_fail:
@@ -188,7 +188,7 @@ Target technology = FPGA
     Code has LOADs or STOREs with unaligned accesses
     Internally allocated memory (no private memories): 7340032
     Internally allocated memory: 7340040
-  Time to perform memory allocation: 0.00 seconds
+  Time to perform memory allocation: 0.01 seconds
 
 
   Memory allocation information:
@@ -284,7 +284,7 @@ Target technology = FPGA
 
   Easy binding information for function __assert_fail:
     Bound operations:5/5
-  Time to perform easy binding: 0.00 seconds
+  Time to perform easy binding: 0.01 seconds
 
 
   Easy binding information for function __internal_free:
@@ -405,7 +405,7 @@ Target technology = FPGA
     Code has LOADs or STOREs with unaligned accesses
     Internally allocated memory (no private memories): 7340032
     Internally allocated memory: 7340040
-  Time to perform memory allocation: 0.01 seconds
+  Time to perform memory allocation: 0.00 seconds
 
 
   Register binding information for function read:
@@ -501,7 +501,7 @@ Target technology = FPGA
 
   Connection Binding Information for function __internal_malloc:
     Number of allocated multiplexers (2-to-1 equivalent): 21
-  Time to perform interconnection binding: 0.00 seconds
+  Time to perform interconnection binding: 0.01 seconds
 
   Total number of flip-flops in function __internal_malloc: 746
 
@@ -530,7 +530,7 @@ Target technology = FPGA
   Module allocation information for function main:
     Number of complex operations: 11
     Number of complex operations: 11
-  Time to perform module allocation: 0.15 seconds
+  Time to perform module allocation: 0.14 seconds
 
 
   Memory allocation information:
@@ -549,14 +549,14 @@ Target technology = FPGA
 
   Module allocation information for function main:
     Number of complex operations: 11
-  Time to perform module allocation: 0.01 seconds
+  Time to perform module allocation: 0.00 seconds
 
 
   Scheduling Information of function main:
     Number of control steps: 20
     Minimum slack: 1.1102230246251565e-15
     Estimated max frequency (MHz): 100.00000000000001
-  Time to perform scheduling: 0.00 seconds
+  Time to perform scheduling: 0.01 seconds
 
 
   State Transition Graph Information of function main:
@@ -600,7 +600,7 @@ Target technology = FPGA
 
   Connection Binding Information for function main:
     Number of allocated multiplexers (2-to-1 equivalent): 22
-  Time to perform interconnection binding: 0.01 seconds
+  Time to perform interconnection binding: 0.00 seconds
 
   Total number of flip-flops in function main: 624
 [0mWarning: XML file "/home/gaod/derui_work/assassyn-workloads/MachSuite/test.xml" cannot be opened, creating a stub with random values
