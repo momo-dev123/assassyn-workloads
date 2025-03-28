@@ -1,2 +1,0 @@
- 2: [WRN:PA0205] /home/ubuntu/MacUnit.sv:2:1: No timescale set for "MacUnit".
- 3: [WRN:PA0205] /home/ubuntu/PE.sv:46:1: No timescale set for "PE".
