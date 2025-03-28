@@ -14,7 +14,7 @@ cell = json.load(open('./cell.json'))
 ylim = 1.13
 
 manual = ['reports/pq.json', 'reports/gemmini-pe.json', './reports/sodor.json']
-assassyn = ['reports/priority_queue.sv.json', 'reports/out.pe.json', 'reports/report-minor_cpu_br.sv.json']
+assassyn = ['reports/priority_queue.sv.json', 'reports/out.pe.json', 'reports/nocsr.sv.json']
 
 def geomean(x):
     return functools.reduce(operator.mul, x) ** (1 / len(x))

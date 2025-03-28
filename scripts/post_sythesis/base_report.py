@@ -28,8 +28,6 @@ subprocess.run(['./synthesize.sh'], capture_output=True, text=True)
 print("hls-merge")
 os.chdir("../hls")
 subprocess.run(['./synthesize.sh',"./merge.v"], capture_output=True, text=True)
-
-
 shutil.copy("./hls-merge.v.json", "../../plot/reports/hls-merge.v.json")
 
 print("pq")
