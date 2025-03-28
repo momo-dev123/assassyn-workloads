@@ -11,4 +11,4 @@ apptainer exec \
     -design PE_16 \
     -target asap7_demo -define SYNTHESIS=1
 
-cp ./build/PE/job0/syn/0/reports/stat.json ../../plot/reports/gemmini-pe.json
+cp ./build/PE_16/job0/syn/0/reports/stat.json ../../plot/reports/gemmini-pe.json
