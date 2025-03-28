@@ -14,7 +14,7 @@ do
 
     fname=${new_names[$i]}
 
-    ~/bambu-0.9.7.AppImage "$wl" ./common/harness.c \
+    ../bambu-0.9.7.AppImage "$wl" ./common/harness.c \
         -I./common \
         --top-fname=main \
         --simulator=VERILATOR \

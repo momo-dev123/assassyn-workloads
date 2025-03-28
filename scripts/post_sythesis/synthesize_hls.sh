@@ -7,7 +7,7 @@ fname=`basename $1`
 
 sed -i "s/.*readmem.*//g" $1 -i
 
-apptainer exec --bind $1:/home/ubuntu/$fname $HOME/open_eda.sif \
+apptainer exec --bind $1:/home/ubuntu/$fname $ASSASSYN_HOME/open_eda.sif \
     sc /home/ubuntu/$fname -target asap7_demo -design run_benchmark \
     -define SYNTHESIS=1
 

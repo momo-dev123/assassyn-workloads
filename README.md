@@ -32,12 +32,13 @@
     - `cpu_test.py`: Elaborate different CPU versions, run each workload, get each cycles of them, and finally export the results to `/scripts/minor_cpu/minor_logs/cpu_all_version.csv`.
 
             ```bash
+                    sourse ./assassyn-public/setup.sh
+                    export VERILATOR_ROOT=$(cd ./assassyn-public/verilator && pwd)
+                    export PATH="$VERILATOR_ROOT/bin:$PATH"
                     cd ./scripts/my_time
                     g++ time.cpp -o my_time
                     cd ../..
-                    export VERILATOR_ROOT=(cd ./assassyn-public/verilator && pwd)
                     cd ./scripts/minor_cpu
-                    sourse ../../../assassyn-public/setup.sh
                     python ./minor_cpu.py
                     python ./cpu_test.py
                     cd ../..
