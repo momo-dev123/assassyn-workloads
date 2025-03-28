@@ -28,19 +28,19 @@ def breakdown(raw):
             res[cell[k]['type']] += area
     return res
 
-nocsr = breakdown(json.load(open('reports/nocsr.sv.json')))
-minor = breakdown(json.load(open('reports/minor_cpu.sv.json')))
+#nocsr = breakdown(json.load(open('reports/nocsr.sv.json')))
+#minor = breakdown(json.load(open('reports/minor_cpu.sv.json')))
 
-delta = {
-    'combinational': (minor['combinational'] - nocsr['combinational']),
-    'sequential': (minor['sequential'] - nocsr['sequential'])
-}
-
+#delta = {
+#    'combinational': (minor['combinational'] - nocsr['combinational']),
+#    'sequential': (minor['sequential'] - nocsr['sequential'])
+#}
+#
 manual = [breakdown(json.load(open(i, 'r'))) for i in manual]
 assassyn = [breakdown(json.load(open(i, 'r'))) for i in assassyn]
-
-assassyn[-1]['combinational'] -= delta['combinational']
-assassyn[-1]['sequential'] -= delta['sequential']
+#
+#assassyn[-1]['combinational'] -= delta['combinational']
+#assassyn[-1]['sequential'] -= delta['sequential']
 
 
 plt.style.use('bmh')
