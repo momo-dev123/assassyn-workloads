@@ -1,6 +1,6 @@
 import subprocess
 import pandas as pd
-
+import os
 
 workloads = [
     'median',
@@ -18,11 +18,11 @@ minor_vtb_kcs = []
 minor_insts = []
 
 
-
-
+os.chdir("./minor_logs")
 for wl in workloads:
     #run at minor_logs
     subprocess.run(['python', '../../../assassyn-public/examples/minor-cpu/src/main.py',wl], capture_output=True, text=True)
+    
 
 
     result = subprocess.run(["../minor_cycles_diff.sh", wl], capture_output=True, text=True)

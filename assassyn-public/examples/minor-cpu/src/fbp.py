@@ -17,14 +17,6 @@ offset = UInt(32)(0)
 current_path = os.path.dirname(os.path.abspath(__file__))
 workspace = f'{current_path}/.workspace/'
 
-NORMAL = Bits(3)(0)
-BRANCH_PREDICT = Bits(3)(1)
-PREDICT_UNVALID = Bits(3)(2)
-PREDICT_JUDGE = Bits(3)(3)
-JALR_WAIT_0=Bits(3)(4)
-JALR_JUMP=Bits(3)(5)
-
-
 class Execution(Module):
     
     def __init__(self):
@@ -54,9 +46,10 @@ class Execution(Module):
         data: str,
         depth_log: int,
         exec_br_dest: Array,
-        pre_is_failed: Array,
-
+        jump_flag_reg: Array,
+        pre_valid: Array,
         ):
+
 
         
         csr_id = Bits(4)(0)
@@ -82,10 +75,10 @@ class Execution(Module):
         with Condition(~valid):
             log("pc: 0x{:08x}   | rs1-x{:02}: {}       | rs2-x{:02}: {}   | rd-x{:02}: {} | backlogged", \
                 self.fetch_addr.peek(), rs1, a_valid, rs2, b_valid, rd, rd_valid)
-        
-        pre_failed = pre_is_failed[0]
-
-        log("pre_failed:  {}|",pre_failed)
+            
+        jump_reg=RegArray(Bits(1), 1, initializer=[0])
+        pre_failed = (jump_reg[0] & pre_valid[0]) | jump_flag_reg[0]
+        log("pre_failed: {}",pre_failed)
 
 
         valid = valid | pre_failed
@@ -164,6 +157,9 @@ class Execution(Module):
         memory_read = pre_failed.select(Bits(1)(0),signals.memory[0:0])
         memory_write = pre_failed.select(Bits(1)(0),signals.memory[1:1])
 
+
+
+
         with Condition(~pre_failed):
 
             with Condition(is_csr):
@@ -207,13 +203,13 @@ class Execution(Module):
 
             with Condition(signals.is_branch):
                 exec_br_dest[0] = condition[0:0].select(result, pc0)
+                jump_reg[0] = condition[0:0]
                 log("condition: {}.a.b | a: {:08x}  | b: {:08x}   |", condition[0:0], result, pc0)
 
             #exec_br_jumped[0] = signals.is_branch.select(condition[0:0], Bits(1)(0))
             exec_br_jump = signals.is_branch.select(condition[0:0], Bits(1)(0))
 
             is_memory = memory_read | memory_write
-            log("is_memory: {} |offset_reg:{} ", is_memory, offset_reg[0])
 
             # This `is_memory` hack is to evade rust's overflow check.
             addr = (result.bitcast(UInt(32)) - is_memory.select(offset_reg[0].bitcast(UInt(32)), UInt(32)(0))).bitcast(Bits(32))
@@ -238,7 +234,7 @@ class Execution(Module):
         bound = dcache.bound.bind(rd = rd,result = signals.link_pc.select(pc0, result), mem_ext = signals.mem_ext)
         bound.async_called()
 
-        return  rd , ex_valid ,exec_br_jump
+        return  rd , ex_valid ,exec_br_jump,pre_failed
 
 class Decoder(Module):
     
@@ -250,20 +246,20 @@ class Decoder(Module):
         self.name = 'D'
 
     @module.combinational
-    def build(self, executor: Module, pre_reg: Array):
+    def build(self, executor: Module):
         inst, fetch_addr = self.pop_all_ports(False)
 
         log("raw: 0x{:08x}  | addr: 0x{:05x} |", inst, fetch_addr)
 
         signals = decode_logic(inst)
-        is_jalr = signals.is_branch & signals.link_pc & (~signals.is_offset_br)
-
-        pre_reg[0] = (fetch_addr.bitcast(Int(32)) + (signals.imm).bitcast(Int(32))  ).bitcast(Bits(32))
+ 
         
         e_call = executor.async_called(signals=signals, fetch_addr=fetch_addr)
         e_call.bind.set_fifo_depth(signals=2, fetch_addr=2)
 
-        return signals.is_branch,is_jalr
+        return signals.is_branch
+
+
 
 class Fetcher(Module):
     
@@ -295,64 +291,49 @@ class FetcherImpl(Downstream):
               depth_log: int,
               br_sm: Array,
               br_jump: Array,
-
+              br_no_jump: Array,
               exec_br_jump: Value,
-
-              pre_reg: Array,
-              br_sm_reg: Array,
-              pre_is_failed: Array,
-              is_jalr: Value,
+              jump_flag_reg: Array,
+              pre_valid: Array,
+              pre_failed: Value,
               ):
 
         ongoing = RegArray(Int(8), 1, initializer=[0])
 
-        def is_state(state):
-            return br_sm_reg[0] == state
-
         on_branch = on_branch.optional(Bits(1)(0))
-        is_jalr = is_jalr.optional(Bits(1)(0))
         br_sm[0] = on_branch
+
         br_jump[0] = exec_br_jump.optional(Bits(1)(0))
+        br_no_jump[0] = ~ br_jump[0]
+
+        fetch_valid=RegArray(Bits(1), 1, initializer=[1])
+        wait_unvalid = Bits(1)(0)
+        #with Condition(br_sm[0]):
+        #    fetch_valid[0] = ex_valid.optional(Bits(1)(0)).select(Bits(1)(1), Bits(1)(0))
+        #    wait_unvalid = ex_valid.optional(Bits(1)(0)).select(Bits(1)(1), Bits(1)(0))
+        #with Condition(~fetch_valid[0]):
+        #    fetch_valid[0] = Bits(1)(1)
+        fetch_valid[0] = br_sm[0].select(ex_valid.optional(Bits(1)(0)), Bits(1)(1))
+        pre_valid[0] = ~fetch_valid[0]
+        should_fetch =  (~ on_branch)   & (~ wait_unvalid) & fetch_valid[0]
+
+        log("fetch_valid: {} | pre_valid: {} |", fetch_valid[0], pre_valid[0])   
 
 
+        jump_flag = br_jump[0] & br_no_jump[0]
 
-        fetch_valid = br_sm[0].select(ex_valid.optional(Bits(1)(0)), Bits(1)(1))
-        pre_failed = is_state(PREDICT_JUDGE).select(~br_jump[0], Bits(1)(0))
-
-        unvalid_stop = is_state(BRANCH_PREDICT) & (~fetch_valid)
-        should_fetch =  (~ on_branch) & (~unvalid_stop ) & (~is_state(JALR_WAIT_0))| (is_state(PREDICT_JUDGE)& ~((~pre_failed) & on_branch))  
-        
-        with Condition(is_state(NORMAL)):
-            br_sm_reg_temp = on_branch.select(BRANCH_PREDICT, NORMAL)
-            br_sm_reg_temp = is_jalr.select(JALR_WAIT_0, br_sm_reg_temp)
-            br_sm_reg[0] = br_sm_reg_temp
-        with Condition(is_state(BRANCH_PREDICT)):
-            br_sm_reg[0] = fetch_valid.select(PREDICT_JUDGE, PREDICT_UNVALID)
-        with Condition(is_state(PREDICT_JUDGE)):
-            br_sm_reg_temp = ((~pre_failed) & on_branch & (~is_jalr)).select(BRANCH_PREDICT, NORMAL)
-            br_sm_reg_temp = ((~pre_failed) & on_branch & (is_jalr)).select(JALR_WAIT_0, br_sm_reg_temp)
-            br_sm_reg[0] = br_sm_reg_temp
-        with Condition(is_state(PREDICT_UNVALID)):
-            br_sm_reg[0] = PREDICT_JUDGE
-        with Condition(is_state(JALR_WAIT_0)):
-            br_sm_reg[0] = JALR_JUMP
-        with Condition(is_state(JALR_JUMP)):
-            br_sm_reg[0] = NORMAL
-        log("state: {} | on_branch: {} | fetch_valid: {} | should_fetch: {} |", br_sm_reg[0], on_branch, fetch_valid, should_fetch)
-        
-        pre_is_failed[0] = pre_failed
+        jump_flag_reg[0] = jump_flag
 
         icache = SRAM(width=32, depth=1<<depth_log, init_file=data)
         icache.name = 'icache'
 
         new_cnt = ongoing[0] - (ex_valid.optional(Bits(1)(0))).select(Int(8)(1), Int(8)(0))
         to_fetch = Bits(32)(0)
-        to_fetch = (is_state(BRANCH_PREDICT) | is_state(PREDICT_UNVALID)).select(pre_reg[0].bitcast(Bits(32)), pc_addr)
-        to_fetch = (pre_failed | is_state(JALR_JUMP)).select(ex_bypass[0].bitcast(Bits(32)), to_fetch)
 
+        to_fetch = (jump_flag).select(ex_bypass[0].bitcast(Bits(32)), pc_addr)
         real_fetch = (should_fetch  )& (new_cnt < Int(8)(3))
-        log("on_br: {}         | br_sm: {}     | br_jump: {}      | fetch: {}      | ex_bypass: 0x{:05x} | ongoing: {} ",
-             on_branch, br_sm[0], br_jump[0], should_fetch, ex_bypass[0], ongoing[0])
+        log("on_br: {}         | br_sm: {}     | pre_failed: {}     | br_jump: {}      | fetch: {}      | ex_bypass: 0x{:05x} | ongoing: {} | jump_flag: {}",
+             on_branch, br_sm[0],pre_failed.optional(Bits(1)(0)), br_jump[0], should_fetch, ex_bypass[0], ongoing[0],jump_flag)
         icache.build(Bits(1)(0), real_fetch, to_fetch[2:2+depth_log-1].bitcast(Int(depth_log)), Bits(32)(0), decoder)
         log("on_br: {}         | de_by: {}     | fetch: {}      | addr: 0x{:05x} | new_cnt: {}",
             on_branch, ex_valid.optional(Bits(1)(0)), real_fetch, to_fetch, new_cnt)
@@ -415,7 +396,7 @@ class Driver(Module):
             d_call = fetcher.async_called()
 
 def build_cpu(depth_log):
-    sys = SysBuilder('minor_cpu_br_pre')
+    sys = SysBuilder('minor_cpu')
 
     with sys:
         # Data Types
@@ -448,13 +429,11 @@ def build_cpu(depth_log):
 
         exec_br_dest = RegArray(Bits(32), 1)
         exec_br_jumped = RegArray(Bits(1), 1)
-
+        mem_br_no_jump = RegArray(Bits(1), 1)
         d_br_buffer = RegArray(Bits(1), 1)
 
-        pre_reg = RegArray(Bits(32), 1)
-
-        br_pre_sm = RegArray(Bits(3), 1, initializer=[0])
-        pre_justified = RegArray(Bits(1), 1)
+        jump_flag_reg = RegArray(Bits(1), 1)
+        pre_valid = RegArray(Bits(1), 1)
 
         writeback = WriteBack()
         wb_rd = writeback.build(reg_file = reg_file)
@@ -463,7 +442,7 @@ def build_cpu(depth_log):
 
         executor = Execution()
 
-        exec_rd, ex_valid, exec_br_jump = executor.build(
+        exec_rd, ex_valid, exec_br_jump ,pre_failed= executor.build(
             pc = pc_reg,
             exec_bypass_reg = exec_bypass_reg,
             exec_bypass_data = exec_bypass_data,
@@ -480,7 +459,9 @@ def build_cpu(depth_log):
             data = f'{workspace}/workload.data',
             depth_log = depth_log,
             exec_br_dest = exec_br_dest,
-            pre_is_failed = pre_justified,
+            jump_flag_reg = jump_flag_reg,
+            pre_valid = pre_valid,
+
         )
 
         memory_access.build(
@@ -493,12 +474,13 @@ def build_cpu(depth_log):
         )
 
         decoder = Decoder()
-        on_br,is_jalr = decoder.build(executor=executor,pre_reg=pre_reg)
+        on_br = decoder.build(executor=executor)
 
         fetcher_impl.build(on_br, exec_br_dest, ex_valid, pc_reg,
                             pc_addr, decoder, f'{workspace}/workload.exe',
                               depth_log, d_br_buffer , exec_br_jumped , 
-                              exec_br_jump,pre_reg,br_pre_sm,pre_justified,is_jalr)
+                              mem_br_no_jump,exec_br_jump,
+                              jump_flag_reg,pre_valid,pre_failed)
 
         onwrite_downstream = Onwrite()
 
@@ -594,6 +576,7 @@ def init_workspace(base_path, case):
     cp_if_exists(f'{base_path}/{case}.data', f'{workspace}/workload.data', True)
     cp_if_exists(f'{base_path}/{case}.config', f'{workspace}/workload.config', False)
     cp_if_exists(f'{base_path}/{case}.sh', f'{workspace}/workload.sh', False)
+
 
 if __name__ == '__main__':
     # Build the CPU Module only once

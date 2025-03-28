@@ -18,14 +18,32 @@
 ## Replicating the Results
 
 1. Elaborate the CPU and run all the RISCV benchmarks.
-    - `minor_cpu.py`: Elaborate the CPU, run each workload, synthesize, and finally export the results to `/scripts/minor_cpu/minor_logs/minor.csv`.
-    cd ./scripts/minor_cpu/minor_logs
+    - `minor_cpu.py`: Elaborate the CPU written in our language, run each workload, simulate both simulator and verilog, and finally export the results to `/scripts/minor_cpu/minor_logs/minor.csv`.
+    - `cpu_test.py`: Elaborate different CPU versions, run each workload, get each cycles of them, and finally export the results to `/scripts/minor_cpu/minor_logs/cpu_all_version.csv`.
+
+    export VERILATOR_ROOT=(cd ./assassyn-public/verilator && pwd)
+    cd ./scripts/minor_cpu
     sourse ../../../assassyn-public/setup.sh
-    python ../minor_cpu.py
-    - `sodor_cpu.py`: Elaborate the CPU, run each workload, synthesize, and finally export the results to `/scripts/sodor_cpu/sodor_logs/sodor.csv`.
+    python ./minor_cpu.py
+    python ./cpu_test.py
+
+    - `sodor_cpu.py`: Elaborate the Sodor CPU from chipyard, run each workload,simulate and finally export the results to `/scripts/sodor_cpu/sodor_logs/sodor.csv`.
+
+    cd ./scripts/sodor_cpu
+    python ./sodor_cpu.py
+
+    - `machsuite_hls.py`: Elaborate the HLS Baseline, run each benchmarks, synthesize, and finally export the results to `/scripts/hls_baseline/machsuite_logs/hls_baseline.csv`.
+
+    cd ./scripts/hls_baseline
+    python ./machsuite_hls.py
+
+    - `ass_hls.py`: Elaborate the HLS using Assassyn, run each benchmarks, synthesize, and finally export the results to `/scripts/hls_baseline/ass_hls_logs/ass_hls.csv`.
+
+    cd ./scripts/hls_assassyn
+    python ./ass_hls.py
 
 
-2. Synthesize and simulate all the HLS workloads.
+2. Post Synthesize.
     - `HLS.sh`: Synthesize all the C workloads, and gather the result, export the results to `yyyy.csv`.
 
 
