@@ -2,11 +2,21 @@
 
 ## Folder Structure
 
-1. `assassyn`: The repo of the assassyn language
+1. `assassyn-public`: The repo of the assassyn language
 2. Workloads & Evaluation:
-    1. `riscv-benchmarks`: The workloads repo for the CPU evaluation
+    1. `riscv-bmark`: The workloads repo for the CPU evaluation
     2. `MachSuite`: The workloads for the HLS evaluation
     3. `components`: The scripts for the architectural component breakdown.
+    4. `gem5`: The simulator to be compared with.
+    5. `sv-source`: Some special verilog source for post-synthesis while some of those original design are very difficult to be synthesized.
+    6. `scripts`: Automation scripts for generating and summarizing of experiment data.
+        1. `gem5_cpu`: Scripts about using gem5.
+        2. `hls_assassyn`: Scripts about using assassyn for hls benchmarks.
+        3. `hls_baseline`: Scripts about using verilator and Bambu for the hls benchmarks baseline.
+        4. `minor_cpu`: Scripts about simulating assassyn minor cpu with different version.
+        5. `sodor_cpu`: Scripts about simulating 5 pipeline sodor core of chipyard.
+        6. `post_synthesis`: Scripts about post synthesis.
+        7. `my_time`: Scripts for generating preciser timer.
 3. `plot`: The scripts for the figure ploting. Each `fig-x.py` is a script for the corresponding figure in the paper.
 
 ## Prerequisites
@@ -56,18 +66,20 @@
                     python ./ass_hls.py
                     cd ../..
 
-    - `gem5_cpu.py`: Simulate the benchmarks using gem5 and finally export the results to `/scripts/gem5_cpu/gem5_logs/gem5.csv`.
+    - `csv_combine.py`: Combine distributed data together `/plot/HLS.csv`,`/plot/cpu-bmarks.csv`.
                 
             ```bash
                     cd ./scripts/gem5_cpu
                     python ./gem5_cpu.py
-                    cd ../..               
+                    cd ../..   
+
+    - `gem5_cpu.py`: Simulate the benchmarks using gem5 and finally export the results to `/scripts/gem5_cpu/gem5_logs/gem5.csv`.                
 
 2. Post Synthesize.
-    - `base_report.py`: Post Synthesize all the baseline workloads, and gather the json format area result, export the results to `yyyy.csv`.
+    - `base_report.py`: Post Synthesize all the baseline workloads, and gather the json format area result, export the results to `/plot/reports`.
 
 
-    - `assassyn_report.py`: Post Synthesize all the assassyn workloads, and gather the json format area result, export the results to `yyyy.csv`.
+    - `assassyn_report.py`: Post Synthesize all the assassyn workloads, and gather the json format area result, export the results to `/plot/reports`.
 
 3. Plot the figures.
     - `fig-x.py`: Run each script to plot the corresponding figure in the paper.
