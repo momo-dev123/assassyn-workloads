@@ -18,6 +18,7 @@
         6. `post_synthesis`: Scripts about post synthesis.
         7. `my_time`: Scripts for generating preciser timer.
 3. `plot`: The scripts for the figure ploting. Each `fig-x.py` is a script for the corresponding figure in the paper.
+4. `bambu-0.9.7.AppImage`,`open_eda.sif`: Prerequisites package.
 
 ## Prerequisites
 
