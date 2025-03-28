@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-16usnZ/usr/bin/bambu -I./common --top-fname=main --simulator=VERILATOR --file-input-data=./radix/input.data,./radix/check.data --simulate -s --top-rtldesign-name=run_benchmark --no-iob --hls-div --benchmark-name=radix -DBAMBU_PROFILING -DNO_FINAL_MEMCMP_CHECK ./radix/radix.c ./common/harness.c 
+ ==  Bambu executed with: /tmp/.mount_bambu-dgfXjr/usr/bin/bambu -I./common --top-fname=main --simulator=VERILATOR --file-input-data=./radix/input.data,./radix/check.data --simulate -s --top-rtldesign-name=run_benchmark --no-iob --hls-div --benchmark-name=radix -DBAMBU_PROFILING -DNO_FINAL_MEMCMP_CHECK ./radix/radix.c ./common/harness.c 
 
 
 ********************************************************************************
@@ -96,7 +96,7 @@ Target technology = FPGA
     Code has LOADs or STOREs with unaligned accesses
     Internally allocated memory (no private memories): 7340032
     Internally allocated memory: 7340040
-  Time to perform memory allocation: 0.01 seconds
+  Time to perform memory allocation: 0.00 seconds
 
 
   Memory allocation information:
@@ -144,7 +144,7 @@ Target technology = FPGA
   Module allocation information for function __assert_fail:
     Number of complex operations: 2
     Number of complex operations: 2
-  Time to perform module allocation: 0.16 seconds
+  Time to perform module allocation: 0.18 seconds
 
 
   Module allocation information for function __internal_free:
@@ -217,7 +217,7 @@ Target technology = FPGA
     Code has LOADs or STOREs with unaligned accesses
     Internally allocated memory (no private memories): 7340032
     Internally allocated memory: 7340040
-  Time to perform memory allocation: 0.00 seconds
+  Time to perform memory allocation: 0.01 seconds
 
 
   Module allocation information for function __internal_free:
@@ -350,7 +350,7 @@ Target technology = FPGA
 
   Register binding information for function __assert_fail:
     Register allocation algorithm obtains an optimal result: 1 registers
-  Time to perform register binding: 0.00 seconds
+  Time to perform register binding: 0.01 seconds
 
 
   Connection Binding Information for function __assert_fail:
@@ -392,7 +392,7 @@ Target technology = FPGA
   Module allocation information for function __internal_malloc:
     Number of complex operations: 9
     Number of complex operations: 9
-  Time to perform module allocation: 0.01 seconds
+  Time to perform module allocation: 0.00 seconds
 
 
   Memory allocation information:
@@ -438,8 +438,8 @@ Target technology = FPGA
     Slack computed in 0.00 seconds
     False-loop computation completed in 0.00 seconds
     Weight computation completed in 0.00 seconds
-    Clique covering computation completed in 0.01 seconds
-  Time to perform module binding: 0.01 seconds
+    Clique covering computation completed in 0.00 seconds
+  Time to perform module binding: 0.00 seconds
 
 
   Register binding information for function ss_sort:
@@ -463,7 +463,7 @@ Target technology = FPGA
     False-loop computation completed in 0.00 seconds
     Weight computation completed in 0.00 seconds
     Clique covering computation completed in 0.02 seconds
-  Time to perform module binding: 0.02 seconds
+  Time to perform module binding: 0.03 seconds
 
 
   Module allocation information for function __internal_malloc:
@@ -550,7 +550,7 @@ Target technology = FPGA
   Module allocation information for function run_benchmark:
     Number of complex operations: 1
     Number of complex operations: 1
-  Time to perform module allocation: 0.01 seconds
+  Time to perform module allocation: 0.00 seconds
 
 
   Scheduling Information of function run_benchmark:
@@ -642,7 +642,7 @@ Target technology = FPGA
 
   Register binding information for function main:
     Register allocation algorithm obtains a sub-optimal result: 24 registers(LB:16)
-  Time to perform register binding: 0.00 seconds
+  Time to perform register binding: 0.01 seconds
 
 
   Module binding information for function main:
@@ -655,8 +655,8 @@ Target technology = FPGA
     Slack computed in 0.00 seconds
     False-loop computation completed in 0.00 seconds
     Weight computation completed in 0.00 seconds
-    Clique covering computation completed in 0.00 seconds
-  Time to perform module binding: 0.00 seconds
+    Clique covering computation completed in 0.01 seconds
+  Time to perform module binding: 0.01 seconds
 
 
   Register binding information for function main:

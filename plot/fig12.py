@@ -28,7 +28,7 @@ cpu_speedup = scycle / mcycle
 raw = pandas.read_csv('HLS.csv')
 
 bambu_cycle = pandas.to_numeric(raw['bambu.cycle'], errors='coerce').fillna(1000) # handle NA, need to change
-assassyn_cycle = pandas.to_numeric(raw['assassyn.cycles'], errors='coerce').fillna(1000) # handle NA, need to change
+assassyn_cycle = pandas.to_numeric(raw['assassyn.cycle'], errors='coerce').fillna(1000) # handle NA, need to change
 
 hls_speedup = bambu_cycle / assassyn_cycle
 
@@ -45,17 +45,34 @@ def appendgmean(a):
     a.append(functools.reduce(operator.mul, a) ** (1/len(a)))
     return a
 
+def load_area_safe(path):
+    with open(path, 'r') as f:
+        data = json.load(f)
+        try:
+            return data['design']['area']
+        except KeyError:
+            print(f"Missing ['design']['area'] in file: {path}")
+            return None
+        
+
+
 cpu_speedup = appendgmean(cpu_speedup)[-1]
 
 base_area = ['./reports/pq.json', 'reports/gemmini-pe.json', './reports/sodor.json', './reports/hls-kmp.v.json', './reports/hls-merge.v.json', './reports/hls-radix.v.json', './reports/hls-spmv.v.json', './reports/hls-stencil.v.json', './reports/hls-fft.v.json']
 assy_area = ['./reports/priority_queue.sv.json', 'reports/out.pe.json', './reports/nocsr.sv.json', './reports/kmp.sv.json', './reports/merge_sort.sv.json', './reports/radix_sort.sv.json', './reports/spmv.sv.json', './reports/conv_sum.sv.json', './reports/fft.sv.json']
 xlabels = ['pq', 'sys-pe', 'cpu', 'kmp', 'merge', 'radix', 'spmv', 'st-2d', 'fft']
 
+
 base_area = np.array([json.load(open(i, 'r'))['design']['area'] for i in base_area])
 assy_area = np.array([json.load(open(i, 'r'))['design']['area'] for i in assy_area])
 
+print(base_area.size)
+print(assy_area.size)
+
 norm_area = assy_area / base_area
-speedup = np.array([1.0, 1.0, cpu_speedup] + list(hls_speedup))
+speedup = np.array([1.0, 1.0, 1.0 , cpu_speedup] + list(hls_speedup))
+
+
 
 grid = mpl.gridspec.GridSpec(1, 8)
 fig = plt.figure()

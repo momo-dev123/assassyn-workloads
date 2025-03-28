@@ -87,7 +87,7 @@ ax = axes[1]
 raw = pandas.read_csv('HLS.csv')
 
 bambu_cycle = pandas.to_numeric(raw['bambu.cycle'], errors='coerce').fillna(1000) # handle NA, need to change
-assassyn_cycle = pandas.to_numeric(raw['assassyn.cycles'], errors='coerce').fillna(1000) # handle NA, need to change
+assassyn_cycle = pandas.to_numeric(raw['assassyn.cycle'], errors='coerce').fillna(1000) # handle NA, need to change
 
 def average(a):
     return sum(a) / len(a)

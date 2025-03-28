@@ -6,17 +6,19 @@ workloads=[
     "kmp"
     ,"spmv"
     ,"merge_sort"           
-    ,"radix_sort"           
+    ,"radix_sort" 
+    ,"conv_sum"          
     ,"fft"
-    ,"conv_sum"
+    
     ]
 dir = [
     "kmp/main.py"
     ,"spmv/spmv.py"
     ,"merge-sort/main.py"           
-    ,"radix_sort/main.py"           
+    ,"radix_sort/main.py"  
+    ,"conv_sum/v2.py"         
     ,"fft/fft.py"   
-    ,"conv_sum/v2.py"
+    
 ]
 
 ass_cycles = []
@@ -89,9 +91,9 @@ for i in range(0, 6):
 
 data = {
     "workloads": workloads,
-    "ass_cycles": ass_cycles,
-    "ass_sim_kcs": ass_sim_kcs,   
-    "ass_veri_kcs": ass_veri_kcs,
+    "assassyn.cycle": ass_cycles,
+    "assassyn.k/s": ass_sim_kcs,   
+    "av.k/s": ass_veri_kcs,
 
 }
 

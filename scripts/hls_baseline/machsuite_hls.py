@@ -2,7 +2,7 @@ import subprocess
 import pandas as pd
 
 
-workloads=["kmp","stencil","spmv","merge","radix","fft"]
+workloads=["kmp","spmv","merge","radix","stencil","fft"]
 all_cycles = []
 hls_kcycle_s = []
 #at ./hls_baseline
@@ -38,8 +38,8 @@ for wl in workloads:
 
 data = {
     "workloads": workloads,  
-    "all_cycles": all_cycles,
-    "hls_kcycle_s": hls_kcycle_s,
+    "bambu.cycle": all_cycles,
+    "verilator.k/s": hls_kcycle_s,
 }
 
 
