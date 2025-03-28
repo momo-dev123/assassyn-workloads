@@ -1,59 +1,37 @@
 import subprocess
-import shutil
 import os
+import shutil
 
-#workloads=[
-#    "kmp"
-#    ,"spmv"
-#    ,"merge_sort"           
-#    ,"radix_sort"           
-#    ,"fft"
-#    ,"conv_sum"
+#workloads=[ 
+#    "kmp","stencil","spmv", 
+#    "radix",
+#    "fft"
 #    ]
-#
-dir = "/tmp/"
+#dir = "../../MachSuite/verilogs/"
 #
 #for wl in workloads:
 #    #run at minor_logs
-#    file = dir + wl + "/" + wl + "_verilog/" + wl + ".sv"
+#    file = dir + wl + ".v"
 #    print(file)
-#    subprocess.run(['./synthesize.sh',file], capture_output=True, text=True)
-    
+#    subprocess.run(['./synthesize_hls.sh',file], capture_output=True, text=True)
+#    shutil.move( f"../../plot/reports/report-{wl}.v.json", f"../../plot/reports/hls-{wl}.v.json")
 
-
-
-#subprocess.run(
-#    ['python', f"../../assassyn-public/examples/minor-cpu/src/nocsr.py"],
-#    stdout=subprocess.DEVNULL,
-#    stderr=subprocess.DEVNULL
-#)
-#wl = "minor_cpu"
-#file = dir + wl + "/" + wl + "_verilog/" + wl + ".sv"
-#print(file)
-#subprocess.run(['./synthesize.sh',file], capture_output=True, text=True)
-
-#shutil.move( "../../plot/reports/report-minor_cpu.sv.json", "../../plot/reports/nocsr.sv.json")
-
-#print("priority-queue")
-#subprocess.run(
-#    ['python', f"../../assassyn-public/examples/priority-queue/main.py"],
-#    stdout=subprocess.DEVNULL,
-#    stderr=subprocess.DEVNULL
-#)
-#wl = "priority_queue"
-#file = dir + wl + "/" + wl + "_verilog/" + wl + ".sv"
-#print(file)
-#subprocess.run(['./synthesize.sh',file], capture_output=True, text=True)
-#shutil.move( "../../plot/reports/report-priority_queue.sv.json", "../../plot/reports/priority_queue.sv.json")
-#
-#print("systolic-pe")
-#os.chdir("../../sv-source/systolic-pe")
+print("gemini-mesh")
+os.chdir("../../sv-source/gemini-mesh")
 #subprocess.run(['./synthesize.sh'], capture_output=True, text=True) 
+#
+#print("sodor-core")
+#os.chdir("../sodor-core")
+#subprocess.run(['./synthesize.sh'], capture_output=True, text=True) 
+#
+#
+#print("hls-merge")
+#os.chdir("../hls")
+#subprocess.run(['./synthesize.sh',"./merge.v"], capture_output=True, text=True)
+#
+#
+#shutil.copy("./hls-merge.v.json", "../../plot/reports/hls-merge.v.json")
 
-shutil.move( "../../plot/reports/report-kmp.sv.json", "../../plot/reports/kmp.sv.json")
-shutil.move( "../../plot/reports/report-spmv.sv.json", "../../plot/reports/spmv.sv.json")
-shutil.move( "../../plot/reports/report-merge_sort.sv.json", "../../plot/reports/merge_sort.sv.json")
-shutil.move( "../../plot/reports/report-radix_sort.sv.json", "../../plot/reports/radix_sort.sv.json")
-shutil.move( "../../plot/reports/report-conv_sum.sv.json", "../../plot/reports/conv_sum.sv.json")
-shutil.move( "../../plot/reports/report-fft.sv.json", "../../plot/reports/fft.sv.json")
-
+print("pq")
+os.chdir("../pq")
+subprocess.run(['./synthesize.sh'], capture_output=True, text=True)

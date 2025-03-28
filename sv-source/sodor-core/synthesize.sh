@@ -1,12 +1,26 @@
 #!/usr/bin/bash
 
+
 export XDG_RUNTIME_DIR=/tmp/runtime_$USER
 mkdir -p "$XDG_RUNTIME_DIR"
 
-#bind=`ls *.sv | awk '{ print "--bind " $1":/home/ubuntu/"$1 }'`
-#files=`ls *.sv | awk '{ print "/home/ubuntu/"$1 }'`
-bind=`ls Core.sv | awk '{ print "--bind " $1":/home/ubuntu/"$1 }'`
-files=`ls Core.sv | awk '{ print "/home/ubuntu/"$1 }'`
+bind=()
+files=()
+for f in *.sv; do
+    abs_path="$(realpath "$f")"
+    container_path="/home/ubuntu/$f"
+    bind+=("--bind" "${abs_path}:${container_path}")
+    files+=("${container_path}")
+done
 
-apptainer exec $bind $HOME/open_eda.sif \
-    sc $files -target asap7_demo -define SYNTHESIS=1
+echo "binds: ${bind[@]}"
+echo "FILES: ${files[@]}"
+
+for f in "${files[@]}"; do
+  echo "$f"
+done > filelist.f
+
+apptainer exec "${bind[@]}" "$HOME/open_eda.sif" \
+    sc "${files[@]}" -target asap7_demo -define SYNTHESIS=1 -design Core
+
+cp ./build/Core/job0/syn/0/reports/stat.json ../../plot/reports/sodor.json

@@ -8,5 +8,12 @@ surelog \
     -nouhdm \
     +libext+.sv+.v \
     -DSYNTHESIS=1 \
+    /home/ubuntu/CSRFile.sv \
     /home/ubuntu/Core.sv \
+    /home/ubuntu/CtlPath.sv \
+    /home/ubuntu/DatPath.sv \
+    /home/ubuntu/Queue1_MemResp.sv \
+    /home/ubuntu/Queue1_UInt32.sv \
+    /home/ubuntu/RegisterFile.sv \
+    /home/ubuntu/regfile_32x32.sv \
     -top Core
