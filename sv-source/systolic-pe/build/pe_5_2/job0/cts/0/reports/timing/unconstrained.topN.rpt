@@ -1,0 +1,411 @@
+Startpoint: fifo_north_pop_data[2] (input port)
+Endpoint: array_array_6632d_d[28] (output port)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 v input external delay
+   7.39    7.39 v fifo_north_pop_data[2] (in)
+  31.45   38.84 ^ _534_/Y (NAND2x1_ASAP7_75t_R)
+  26.24   65.07 v _535_/Y (INVx1_ASAP7_75t_R)
+ 233.63  298.71 v _814_/SN (FAx1_ASAP7_75t_R)
+  60.49  359.19 ^ _816_/CON (FAx1_ASAP7_75t_R)
+  31.82  391.02 v _816_/SN (FAx1_ASAP7_75t_R)
+  42.23  433.25 ^ _622_/Y (INVx1_ASAP7_75t_R)
+  68.94  502.19 v _818_/SN (FAx1_ASAP7_75t_R)
+  28.97  531.17 ^ _681_/Y (INVx1_ASAP7_75t_R)
+  74.14  605.30 v _819_/SN (FAx1_ASAP7_75t_R)
+ 106.51  711.82 v _873_/SN (HAxp5_ASAP7_75t_R)
+  52.03  763.85 v _590_/Y (OA21x2_ASAP7_75t_R)
+  38.05  801.90 v _597_/Y (OA21x2_ASAP7_75t_R)
+  41.18  843.08 v _598_/Y (OA21x2_ASAP7_75t_R)
+  40.08  883.16 v _599_/Y (XOR2x1_ASAP7_75t_R)
+  82.86  966.02 v _881_/SN (HAxp5_ASAP7_75t_R)
+  47.93 1013.95 v _728_/Y (OA21x2_ASAP7_75t_R)
+  36.83 1050.78 v _733_/Y (OA21x2_ASAP7_75t_R)
+  40.82 1091.60 v _734_/Y (OA21x2_ASAP7_75t_R)
+  25.92 1117.53 ^ _740_/Y (NOR2x1_ASAP7_75t_R)
+  70.82 1188.35 ^ _754_/Y (AND5x1_ASAP7_75t_R)
+  39.36 1227.70 ^ _761_/Y (AND2x2_ASAP7_75t_R)
+  40.92 1268.62 ^ _765_/Y (AND3x1_ASAP7_75t_R)
+  80.06 1348.69 ^ _766_/Y (XOR2x2_ASAP7_75t_R)
+   0.58 1349.27 ^ array_array_6632d_d[28] (out)
+        1349.27   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: fifo_north_pop_data[2] (input port)
+Endpoint: array_array_6632d_d[30] (output port)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 v input external delay
+   7.39    7.39 v fifo_north_pop_data[2] (in)
+  31.45   38.84 ^ _534_/Y (NAND2x1_ASAP7_75t_R)
+  26.24   65.07 v _535_/Y (INVx1_ASAP7_75t_R)
+ 233.63  298.71 v _814_/SN (FAx1_ASAP7_75t_R)
+  60.49  359.19 ^ _816_/CON (FAx1_ASAP7_75t_R)
+  31.82  391.02 v _816_/SN (FAx1_ASAP7_75t_R)
+  42.23  433.25 ^ _622_/Y (INVx1_ASAP7_75t_R)
+  68.94  502.19 v _818_/SN (FAx1_ASAP7_75t_R)
+  28.97  531.17 ^ _681_/Y (INVx1_ASAP7_75t_R)
+  74.14  605.30 v _819_/SN (FAx1_ASAP7_75t_R)
+ 106.51  711.82 v _873_/SN (HAxp5_ASAP7_75t_R)
+  52.03  763.85 v _590_/Y (OA21x2_ASAP7_75t_R)
+  38.05  801.90 v _597_/Y (OA21x2_ASAP7_75t_R)
+  41.18  843.08 v _598_/Y (OA21x2_ASAP7_75t_R)
+  40.08  883.16 v _599_/Y (XOR2x1_ASAP7_75t_R)
+  82.86  966.02 v _881_/SN (HAxp5_ASAP7_75t_R)
+  47.93 1013.95 v _728_/Y (OA21x2_ASAP7_75t_R)
+  36.83 1050.78 v _733_/Y (OA21x2_ASAP7_75t_R)
+  40.82 1091.60 v _734_/Y (OA21x2_ASAP7_75t_R)
+  25.92 1117.53 ^ _740_/Y (NOR2x1_ASAP7_75t_R)
+  70.82 1188.35 ^ _754_/Y (AND5x1_ASAP7_75t_R)
+  39.36 1227.70 ^ _761_/Y (AND2x2_ASAP7_75t_R)
+  40.11 1267.81 ^ _772_/Y (AND3x1_ASAP7_75t_R)
+  79.60 1347.41 ^ _773_/Y (XOR2x2_ASAP7_75t_R)
+   0.46 1347.87 ^ array_array_6632d_d[30] (out)
+        1347.87   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: fifo_north_pop_data[1] (input port)
+Endpoint: array_array_6632d_d[29] (output port)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 v input external delay
+   6.55    6.55 v fifo_north_pop_data[1] (in)
+  28.05   34.60 ^ _496_/Y (NAND2x1_ASAP7_75t_R)
+  89.83  124.43 v _785_/SN (FAx1_ASAP7_75t_R)
+  61.03  185.45 ^ _786_/CON (FAx1_ASAP7_75t_R)
+  32.62  218.07 v _786_/SN (FAx1_ASAP7_75t_R)
+  29.09  247.16 ^ _650_/Y (INVx1_ASAP7_75t_R)
+  62.38  309.54 v _787_/SN (FAx1_ASAP7_75t_R)
+  20.78  330.32 ^ _648_/Y (INVx1_ASAP7_75t_R)
+  80.40  410.72 ^ _850_/SN (HAxp5_ASAP7_75t_R)
+  27.81  438.53 v _693_/Y (INVx1_ASAP7_75t_R)
+  46.53  485.06 v _851_/SN (HAxp5_ASAP7_75t_R)
+  38.76  523.82 v _569_/Y (OA21x2_ASAP7_75t_R)
+  40.99  564.80 v _570_/Y (OA21x2_ASAP7_75t_R)
+  37.92  602.72 v _578_/Y (OA21x2_ASAP7_75t_R)
+  41.23  643.95 v _579_/Y (OA21x2_ASAP7_75t_R)
+  38.19  682.14 v _586_/Y (OA21x2_ASAP7_75t_R)
+  41.12  723.26 v _587_/Y (OA21x2_ASAP7_75t_R)
+  38.09  761.35 v _593_/Y (OA21x2_ASAP7_75t_R)
+  41.21  802.56 v _594_/Y (OA21x2_ASAP7_75t_R)
+  40.53  843.09 v _595_/Y (XOR2x1_ASAP7_75t_R)
+  84.26  927.36 v _878_/SN (HAxp5_ASAP7_75t_R)
+  48.07  975.42 v _725_/Y (OA21x2_ASAP7_75t_R)
+  36.92 1012.34 v _730_/Y (OA21x2_ASAP7_75t_R)
+  39.27 1051.61 v _731_/Y (OA21x2_ASAP7_75t_R)
+  42.01 1093.62 v _737_/Y (OA21x2_ASAP7_75t_R)
+  22.88 1116.50 ^ _738_/Y (NOR2x2_ASAP7_75t_R)
+  71.91 1188.41 ^ _752_/Y (AND5x2_ASAP7_75t_R)
+  65.94 1254.35 ^ _768_/Y (AND5x1_ASAP7_75t_R)
+  81.04 1335.39 ^ _769_/Y (XOR2x2_ASAP7_75t_R)
+   0.45 1335.84 ^ array_array_6632d_d[29] (out)
+        1335.84   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: fifo_north_pop_data[1] (input port)
+Endpoint: array_array_6632d_d[31] (output port)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 v input external delay
+   6.55    6.55 v fifo_north_pop_data[1] (in)
+  28.05   34.60 ^ _496_/Y (NAND2x1_ASAP7_75t_R)
+  89.83  124.43 v _785_/SN (FAx1_ASAP7_75t_R)
+  61.03  185.45 ^ _786_/CON (FAx1_ASAP7_75t_R)
+  32.62  218.07 v _786_/SN (FAx1_ASAP7_75t_R)
+  29.09  247.16 ^ _650_/Y (INVx1_ASAP7_75t_R)
+  62.38  309.54 v _787_/SN (FAx1_ASAP7_75t_R)
+  20.78  330.32 ^ _648_/Y (INVx1_ASAP7_75t_R)
+  80.40  410.72 ^ _850_/SN (HAxp5_ASAP7_75t_R)
+  27.81  438.53 v _693_/Y (INVx1_ASAP7_75t_R)
+  46.53  485.06 v _851_/SN (HAxp5_ASAP7_75t_R)
+  38.76  523.82 v _569_/Y (OA21x2_ASAP7_75t_R)
+  40.99  564.80 v _570_/Y (OA21x2_ASAP7_75t_R)
+  37.92  602.72 v _578_/Y (OA21x2_ASAP7_75t_R)
+  41.23  643.95 v _579_/Y (OA21x2_ASAP7_75t_R)
+  38.19  682.14 v _586_/Y (OA21x2_ASAP7_75t_R)
+  41.12  723.26 v _587_/Y (OA21x2_ASAP7_75t_R)
+  38.09  761.35 v _593_/Y (OA21x2_ASAP7_75t_R)
+  41.21  802.56 v _594_/Y (OA21x2_ASAP7_75t_R)
+  40.53  843.09 v _595_/Y (XOR2x1_ASAP7_75t_R)
+  84.26  927.36 v _878_/SN (HAxp5_ASAP7_75t_R)
+  48.07  975.42 v _725_/Y (OA21x2_ASAP7_75t_R)
+  36.92 1012.34 v _730_/Y (OA21x2_ASAP7_75t_R)
+  39.27 1051.61 v _731_/Y (OA21x2_ASAP7_75t_R)
+  42.01 1093.62 v _737_/Y (OA21x2_ASAP7_75t_R)
+  22.88 1116.50 ^ _738_/Y (NOR2x2_ASAP7_75t_R)
+  71.91 1188.41 ^ _752_/Y (AND5x2_ASAP7_75t_R)
+  65.71 1254.12 ^ _774_/Y (AND5x1_ASAP7_75t_R)
+  80.90 1335.02 ^ _775_/Y (XOR2x2_ASAP7_75t_R)
+   0.43 1335.45 ^ array_array_6632d_d[31] (out)
+        1335.45   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: fifo_north_pop_data[1] (input port)
+Endpoint: array_array_6632d_d[27] (output port)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 v input external delay
+   6.55    6.55 v fifo_north_pop_data[1] (in)
+  28.05   34.60 ^ _496_/Y (NAND2x1_ASAP7_75t_R)
+  89.83  124.43 v _785_/SN (FAx1_ASAP7_75t_R)
+  61.03  185.45 ^ _786_/CON (FAx1_ASAP7_75t_R)
+  32.62  218.07 v _786_/SN (FAx1_ASAP7_75t_R)
+  29.09  247.16 ^ _650_/Y (INVx1_ASAP7_75t_R)
+  62.38  309.54 v _787_/SN (FAx1_ASAP7_75t_R)
+  20.78  330.32 ^ _648_/Y (INVx1_ASAP7_75t_R)
+  80.40  410.72 ^ _850_/SN (HAxp5_ASAP7_75t_R)
+  27.81  438.53 v _693_/Y (INVx1_ASAP7_75t_R)
+  46.53  485.06 v _851_/SN (HAxp5_ASAP7_75t_R)
+  38.76  523.82 v _569_/Y (OA21x2_ASAP7_75t_R)
+  40.99  564.80 v _570_/Y (OA21x2_ASAP7_75t_R)
+  37.92  602.72 v _578_/Y (OA21x2_ASAP7_75t_R)
+  41.23  643.95 v _579_/Y (OA21x2_ASAP7_75t_R)
+  38.19  682.14 v _586_/Y (OA21x2_ASAP7_75t_R)
+  41.12  723.26 v _587_/Y (OA21x2_ASAP7_75t_R)
+  38.09  761.35 v _593_/Y (OA21x2_ASAP7_75t_R)
+  41.21  802.56 v _594_/Y (OA21x2_ASAP7_75t_R)
+  40.53  843.09 v _595_/Y (XOR2x1_ASAP7_75t_R)
+  84.26  927.36 v _878_/SN (HAxp5_ASAP7_75t_R)
+  48.07  975.42 v _725_/Y (OA21x2_ASAP7_75t_R)
+  36.92 1012.34 v _730_/Y (OA21x2_ASAP7_75t_R)
+  39.27 1051.61 v _731_/Y (OA21x2_ASAP7_75t_R)
+  42.01 1093.62 v _737_/Y (OA21x2_ASAP7_75t_R)
+  22.88 1116.50 ^ _738_/Y (NOR2x2_ASAP7_75t_R)
+  71.91 1188.41 ^ _752_/Y (AND5x2_ASAP7_75t_R)
+  44.47 1232.88 ^ _763_/Y (AND3x1_ASAP7_75t_R)
+  79.84 1312.72 ^ _764_/Y (XOR2x2_ASAP7_75t_R)
+   0.50 1313.22 ^ array_array_6632d_d[27] (out)
+        1313.22   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: fifo_north_pop_data[2] (input port)
+Endpoint: array_array_6632d_d[26] (output port)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 v input external delay
+   7.39    7.39 v fifo_north_pop_data[2] (in)
+  31.45   38.84 ^ _534_/Y (NAND2x1_ASAP7_75t_R)
+  26.24   65.07 v _535_/Y (INVx1_ASAP7_75t_R)
+ 233.63  298.71 v _814_/SN (FAx1_ASAP7_75t_R)
+  60.49  359.19 ^ _816_/CON (FAx1_ASAP7_75t_R)
+  31.82  391.02 v _816_/SN (FAx1_ASAP7_75t_R)
+  42.23  433.25 ^ _622_/Y (INVx1_ASAP7_75t_R)
+  68.94  502.19 v _818_/SN (FAx1_ASAP7_75t_R)
+  28.97  531.17 ^ _681_/Y (INVx1_ASAP7_75t_R)
+  74.14  605.30 v _819_/SN (FAx1_ASAP7_75t_R)
+ 106.51  711.82 v _873_/SN (HAxp5_ASAP7_75t_R)
+  52.03  763.85 v _590_/Y (OA21x2_ASAP7_75t_R)
+  38.05  801.90 v _597_/Y (OA21x2_ASAP7_75t_R)
+  41.18  843.08 v _598_/Y (OA21x2_ASAP7_75t_R)
+  40.08  883.16 v _599_/Y (XOR2x1_ASAP7_75t_R)
+  82.86  966.02 v _881_/SN (HAxp5_ASAP7_75t_R)
+  47.93 1013.95 v _728_/Y (OA21x2_ASAP7_75t_R)
+  36.83 1050.78 v _733_/Y (OA21x2_ASAP7_75t_R)
+  40.82 1091.60 v _734_/Y (OA21x2_ASAP7_75t_R)
+  25.92 1117.53 ^ _740_/Y (NOR2x1_ASAP7_75t_R)
+  70.82 1188.35 ^ _754_/Y (AND5x1_ASAP7_75t_R)
+  39.36 1227.70 ^ _761_/Y (AND2x2_ASAP7_75t_R)
+  79.76 1307.46 ^ _762_/Y (XOR2x2_ASAP7_75t_R)
+   0.54 1308.01 ^ array_array_6632d_d[26] (out)
+        1308.01   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: fifo_north_pop_data[2] (input port)
+Endpoint: array_array_6632d_d[24] (output port)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 v input external delay
+   7.39    7.39 v fifo_north_pop_data[2] (in)
+  31.45   38.84 ^ _534_/Y (NAND2x1_ASAP7_75t_R)
+  26.24   65.07 v _535_/Y (INVx1_ASAP7_75t_R)
+ 233.63  298.71 v _814_/SN (FAx1_ASAP7_75t_R)
+  60.49  359.19 ^ _816_/CON (FAx1_ASAP7_75t_R)
+  31.82  391.02 v _816_/SN (FAx1_ASAP7_75t_R)
+  42.23  433.25 ^ _622_/Y (INVx1_ASAP7_75t_R)
+  68.94  502.19 v _818_/SN (FAx1_ASAP7_75t_R)
+  28.97  531.17 ^ _681_/Y (INVx1_ASAP7_75t_R)
+  74.14  605.30 v _819_/SN (FAx1_ASAP7_75t_R)
+ 106.51  711.82 v _873_/SN (HAxp5_ASAP7_75t_R)
+  52.03  763.85 v _590_/Y (OA21x2_ASAP7_75t_R)
+  38.05  801.90 v _597_/Y (OA21x2_ASAP7_75t_R)
+  41.18  843.08 v _598_/Y (OA21x2_ASAP7_75t_R)
+  40.08  883.16 v _599_/Y (XOR2x1_ASAP7_75t_R)
+  82.86  966.02 v _881_/SN (HAxp5_ASAP7_75t_R)
+  47.93 1013.95 v _728_/Y (OA21x2_ASAP7_75t_R)
+  36.83 1050.78 v _733_/Y (OA21x2_ASAP7_75t_R)
+  40.82 1091.60 v _734_/Y (OA21x2_ASAP7_75t_R)
+  25.92 1117.53 ^ _740_/Y (NOR2x1_ASAP7_75t_R)
+  70.82 1188.35 ^ _754_/Y (AND5x1_ASAP7_75t_R)
+  18.30 1206.64 v _755_/Y (NAND2x1_ASAP7_75t_R)
+  86.42 1293.07 ^ _756_/Y (XNOR2x2_ASAP7_75t_R)
+   0.54 1293.61 ^ array_array_6632d_d[24] (out)
+        1293.61   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: fifo_north_pop_data[1] (input port)
+Endpoint: array_array_6632d_d[25] (output port)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 v input external delay
+   6.55    6.55 v fifo_north_pop_data[1] (in)
+  28.05   34.60 ^ _496_/Y (NAND2x1_ASAP7_75t_R)
+  89.83  124.43 v _785_/SN (FAx1_ASAP7_75t_R)
+  61.03  185.45 ^ _786_/CON (FAx1_ASAP7_75t_R)
+  32.62  218.07 v _786_/SN (FAx1_ASAP7_75t_R)
+  29.09  247.16 ^ _650_/Y (INVx1_ASAP7_75t_R)
+  62.38  309.54 v _787_/SN (FAx1_ASAP7_75t_R)
+  20.78  330.32 ^ _648_/Y (INVx1_ASAP7_75t_R)
+  80.40  410.72 ^ _850_/SN (HAxp5_ASAP7_75t_R)
+  27.81  438.53 v _693_/Y (INVx1_ASAP7_75t_R)
+  46.53  485.06 v _851_/SN (HAxp5_ASAP7_75t_R)
+  38.76  523.82 v _569_/Y (OA21x2_ASAP7_75t_R)
+  40.99  564.80 v _570_/Y (OA21x2_ASAP7_75t_R)
+  37.92  602.72 v _578_/Y (OA21x2_ASAP7_75t_R)
+  41.23  643.95 v _579_/Y (OA21x2_ASAP7_75t_R)
+  38.19  682.14 v _586_/Y (OA21x2_ASAP7_75t_R)
+  41.12  723.26 v _587_/Y (OA21x2_ASAP7_75t_R)
+  38.09  761.35 v _593_/Y (OA21x2_ASAP7_75t_R)
+  41.21  802.56 v _594_/Y (OA21x2_ASAP7_75t_R)
+  40.53  843.09 v _595_/Y (XOR2x1_ASAP7_75t_R)
+  84.26  927.36 v _878_/SN (HAxp5_ASAP7_75t_R)
+  48.07  975.42 v _725_/Y (OA21x2_ASAP7_75t_R)
+  36.92 1012.34 v _730_/Y (OA21x2_ASAP7_75t_R)
+  39.27 1051.61 v _731_/Y (OA21x2_ASAP7_75t_R)
+  42.01 1093.62 v _737_/Y (OA21x2_ASAP7_75t_R)
+  22.88 1116.50 ^ _738_/Y (NOR2x2_ASAP7_75t_R)
+  71.91 1188.41 ^ _752_/Y (AND5x2_ASAP7_75t_R)
+  19.30 1207.71 v _758_/Y (NAND2x1_ASAP7_75t_R)
+  85.45 1293.16 ^ _759_/Y (XNOR2x2_ASAP7_75t_R)
+   0.41 1293.57 ^ array_array_6632d_d[25] (out)
+        1293.57   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: fifo_north_pop_data[2] (input port)
+Endpoint: array_array_6632d_d[22] (output port)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 v input external delay
+   7.39    7.39 v fifo_north_pop_data[2] (in)
+  31.45   38.84 ^ _534_/Y (NAND2x1_ASAP7_75t_R)
+  26.24   65.07 v _535_/Y (INVx1_ASAP7_75t_R)
+ 233.63  298.71 v _814_/SN (FAx1_ASAP7_75t_R)
+  60.49  359.19 ^ _816_/CON (FAx1_ASAP7_75t_R)
+  31.82  391.02 v _816_/SN (FAx1_ASAP7_75t_R)
+  42.23  433.25 ^ _622_/Y (INVx1_ASAP7_75t_R)
+  68.94  502.19 v _818_/SN (FAx1_ASAP7_75t_R)
+  28.97  531.17 ^ _681_/Y (INVx1_ASAP7_75t_R)
+  74.14  605.30 v _819_/SN (FAx1_ASAP7_75t_R)
+ 106.51  711.82 v _873_/SN (HAxp5_ASAP7_75t_R)
+  52.03  763.85 v _590_/Y (OA21x2_ASAP7_75t_R)
+  38.05  801.90 v _597_/Y (OA21x2_ASAP7_75t_R)
+  41.18  843.08 v _598_/Y (OA21x2_ASAP7_75t_R)
+  40.08  883.16 v _599_/Y (XOR2x1_ASAP7_75t_R)
+  82.86  966.02 v _881_/SN (HAxp5_ASAP7_75t_R)
+  47.93 1013.95 v _728_/Y (OA21x2_ASAP7_75t_R)
+  36.83 1050.78 v _733_/Y (OA21x2_ASAP7_75t_R)
+  40.82 1091.60 v _734_/Y (OA21x2_ASAP7_75t_R)
+  25.92 1117.53 ^ _740_/Y (NOR2x1_ASAP7_75t_R)
+  37.43 1154.96 ^ _746_/Y (AND2x2_ASAP7_75t_R)
+  39.26 1194.22 ^ _750_/Y (AND3x1_ASAP7_75t_R)
+  79.50 1273.72 ^ _751_/Y (XOR2x2_ASAP7_75t_R)
+   0.41 1274.13 ^ array_array_6632d_d[22] (out)
+        1274.13   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: fifo_north_pop_data[1] (input port)
+Endpoint: array_array_6632d_d[23] (output port)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 v input external delay
+   6.55    6.55 v fifo_north_pop_data[1] (in)
+  28.05   34.60 ^ _496_/Y (NAND2x1_ASAP7_75t_R)
+  89.83  124.43 v _785_/SN (FAx1_ASAP7_75t_R)
+  61.03  185.45 ^ _786_/CON (FAx1_ASAP7_75t_R)
+  32.62  218.07 v _786_/SN (FAx1_ASAP7_75t_R)
+  29.09  247.16 ^ _650_/Y (INVx1_ASAP7_75t_R)
+  62.38  309.54 v _787_/SN (FAx1_ASAP7_75t_R)
+  20.78  330.32 ^ _648_/Y (INVx1_ASAP7_75t_R)
+  80.40  410.72 ^ _850_/SN (HAxp5_ASAP7_75t_R)
+  27.81  438.53 v _693_/Y (INVx1_ASAP7_75t_R)
+  46.53  485.06 v _851_/SN (HAxp5_ASAP7_75t_R)
+  38.76  523.82 v _569_/Y (OA21x2_ASAP7_75t_R)
+  40.99  564.80 v _570_/Y (OA21x2_ASAP7_75t_R)
+  37.92  602.72 v _578_/Y (OA21x2_ASAP7_75t_R)
+  41.23  643.95 v _579_/Y (OA21x2_ASAP7_75t_R)
+  38.19  682.14 v _586_/Y (OA21x2_ASAP7_75t_R)
+  41.12  723.26 v _587_/Y (OA21x2_ASAP7_75t_R)
+  38.09  761.35 v _593_/Y (OA21x2_ASAP7_75t_R)
+  41.21  802.56 v _594_/Y (OA21x2_ASAP7_75t_R)
+  40.53  843.09 v _595_/Y (XOR2x1_ASAP7_75t_R)
+  84.26  927.36 v _878_/SN (HAxp5_ASAP7_75t_R)
+  48.07  975.42 v _725_/Y (OA21x2_ASAP7_75t_R)
+  36.92 1012.34 v _730_/Y (OA21x2_ASAP7_75t_R)
+  39.27 1051.61 v _731_/Y (OA21x2_ASAP7_75t_R)
+  42.01 1093.62 v _737_/Y (OA21x2_ASAP7_75t_R)
+  22.88 1116.50 ^ _738_/Y (NOR2x2_ASAP7_75t_R)
+  71.91 1188.41 ^ _752_/Y (AND5x2_ASAP7_75t_R)
+  83.78 1272.19 ^ _753_/Y (XOR2x2_ASAP7_75t_R)
+   0.51 1272.70 ^ array_array_6632d_d[23] (out)
+        1272.70   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+

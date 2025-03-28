@@ -1,0 +1,5 @@
+ 2: [WRN:PA0205] /home/ubuntu/Core.sv:2:1: No timescale set for "Core".
+12: [WRN:EL0500] /home/ubuntu/Core.sv:54:3: Cannot find a module definition for "work@Core::CtlPath".
+13: [WRN:EL0500] /home/ubuntu/Core.sv:90:3: Cannot find a module definition for "work@Core::DatPath".
+18: [WRN:EL0512] Nb undefined modules: 2.
+19: [WRN:EL0513] Nb undefined instances: 2.

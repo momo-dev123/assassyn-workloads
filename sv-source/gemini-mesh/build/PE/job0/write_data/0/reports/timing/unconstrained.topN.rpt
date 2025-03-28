@@ -1,0 +1,180 @@
+Startpoint: io_outL[6]$_DFFE_PP_ (rising edge-triggered flip-flop)
+Endpoint: io_outU[6] (output port)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ io_outL[6]$_DFFE_PP_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 111.00  111.00 ^ io_outL[6]$_DFFE_PP_/QN (DFFHQNx1_ASAP7_75t_R)
+  37.31  148.31 v _44_/Y (INVx8_ASAP7_75t_R)
+  50.91  199.22 v _92_/Y (BUFx10_ASAP7_75t_R)
+   0.00  199.22 v io_outU[6] (out)
+         199.22   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: io_outL[2]$_DFFE_PP_ (rising edge-triggered flip-flop)
+Endpoint: io_outU[2] (output port)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ io_outL[2]$_DFFE_PP_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 110.63  110.63 ^ io_outL[2]$_DFFE_PP_/QN (DFFHQNx1_ASAP7_75t_R)
+  37.20  147.83 v _48_/Y (INVx8_ASAP7_75t_R)
+  50.87  198.71 v _88_/Y (BUFx10_ASAP7_75t_R)
+   0.00  198.71 v io_outU[2] (out)
+         198.71   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: io_outL[3]$_DFFE_PP_ (rising edge-triggered flip-flop)
+Endpoint: io_outU[3] (output port)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ io_outL[3]$_DFFE_PP_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 110.42  110.42 ^ io_outL[3]$_DFFE_PP_/QN (DFFHQNx1_ASAP7_75t_R)
+  37.15  147.57 v _47_/Y (INVx8_ASAP7_75t_R)
+  50.85  198.42 v _89_/Y (BUFx10_ASAP7_75t_R)
+   0.00  198.42 v io_outU[3] (out)
+         198.42   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: io_outL[0]$_DFFE_PP_ (rising edge-triggered flip-flop)
+Endpoint: io_outU[0] (output port)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ io_outL[0]$_DFFE_PP_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 110.07  110.07 v io_outL[0]$_DFFE_PP_/QN (DFFHQNx1_ASAP7_75t_R)
+  39.29  149.36 ^ _50_/Y (INVx8_ASAP7_75t_R)
+  48.99  198.34 ^ _86_/Y (BUFx10_ASAP7_75t_R)
+   0.00  198.34 ^ io_outU[0] (out)
+         198.34   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: io_outL[1]$_DFFE_PP_ (rising edge-triggered flip-flop)
+Endpoint: io_outU[1] (output port)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ io_outL[1]$_DFFE_PP_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 109.98  109.98 v io_outL[1]$_DFFE_PP_/QN (DFFHQNx1_ASAP7_75t_R)
+  39.28  149.26 ^ _49_/Y (INVx8_ASAP7_75t_R)
+  48.98  198.24 ^ _87_/Y (BUFx10_ASAP7_75t_R)
+   0.00  198.24 ^ io_outU[1] (out)
+         198.24   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: io_outL[7]$_DFFE_PP_ (rising edge-triggered flip-flop)
+Endpoint: io_outU[7] (output port)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ io_outL[7]$_DFFE_PP_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 109.98  109.98 v io_outL[7]$_DFFE_PP_/QN (DFFHQNx1_ASAP7_75t_R)
+  39.27  149.25 ^ _43_/Y (INVx8_ASAP7_75t_R)
+  48.98  198.23 ^ _93_/Y (BUFx10_ASAP7_75t_R)
+   0.00  198.23 ^ io_outU[7] (out)
+         198.23   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: io_outL[4]$_DFFE_PP_ (rising edge-triggered flip-flop)
+Endpoint: io_outU[4] (output port)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ io_outL[4]$_DFFE_PP_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 109.95  109.95 v io_outL[4]$_DFFE_PP_/QN (DFFHQNx1_ASAP7_75t_R)
+  39.23  149.18 ^ _46_/Y (INVx8_ASAP7_75t_R)
+  48.97  198.15 ^ _90_/Y (BUFx10_ASAP7_75t_R)
+   0.00  198.15 ^ io_outU[4] (out)
+         198.15   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: io_outL[5]$_DFFE_PP_ (rising edge-triggered flip-flop)
+Endpoint: io_outU[5] (output port)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ io_outL[5]$_DFFE_PP_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 109.91  109.91 v io_outL[5]$_DFFE_PP_/QN (DFFHQNx1_ASAP7_75t_R)
+  39.21  149.12 ^ _45_/Y (INVx8_ASAP7_75t_R)
+  48.97  198.09 ^ _91_/Y (BUFx10_ASAP7_75t_R)
+   0.00  198.09 ^ io_outU[5] (out)
+         198.09   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: io_outL[6]$_DFFE_PP_ (rising edge-triggered flip-flop)
+Endpoint: io_outL[6]$_DFFE_PP_ (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ io_outL[6]$_DFFE_PP_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 111.00  111.00 ^ io_outL[6]$_DFFE_PP_/QN (DFFHQNx1_ASAP7_75t_R)
+  33.64  144.64 v _80_/Y (NOR2x1_ASAP7_75t_R)
+  36.45  181.09 v _81_/Y (AO21x1_ASAP7_75t_R)
+   0.04  181.13 v io_outL[6]$_DFFE_PP_/D (DFFHQNx1_ASAP7_75t_R)
+         181.13   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: io_outL[2]$_DFFE_PP_ (rising edge-triggered flip-flop)
+Endpoint: io_outL[2]$_DFFE_PP_ (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ io_outL[2]$_DFFE_PP_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 110.63  110.63 ^ io_outL[2]$_DFFE_PP_/QN (DFFHQNx1_ASAP7_75t_R)
+  33.68  144.31 v _64_/Y (NOR2x1_ASAP7_75t_R)
+  36.72  181.03 v _65_/Y (AO21x1_ASAP7_75t_R)
+   0.05  181.08 v io_outL[2]$_DFFE_PP_/D (DFFHQNx1_ASAP7_75t_R)
+         181.08   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+

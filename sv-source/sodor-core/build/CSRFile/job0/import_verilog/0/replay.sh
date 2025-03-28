@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+export PATH="/usr/local/lib/python3.10/dist-packages/surelog/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+export LD_LIBRARY_PATH="/.singularity.d/libs"
+cd /home/gaod/derui_work/assassyn-workloads/sv-source/sodor-core/build/CSRFile/job0/import_verilog/0
+surelog \
+    -nocache \
+    -parse \
+    -nouhdm \
+    +libext+.sv+.v \
+    -DSYNTHESIS=1 \
+    /home/ubuntu/CSRFile.sv \
+    /home/ubuntu/Core.sv \
+    /home/ubuntu/CtlPath.sv \
+    /home/ubuntu/DatPath.sv \
+    /home/ubuntu/Queue1_MemResp.sv \
+    /home/ubuntu/Queue1_UInt32.sv \
+    /home/ubuntu/RegisterFile.sv \
+    /home/ubuntu/regfile_32x32.sv \
+    -top CSRFile

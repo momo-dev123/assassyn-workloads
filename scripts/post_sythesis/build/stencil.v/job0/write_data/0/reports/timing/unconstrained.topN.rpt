@@ -1,0 +1,565 @@
+Startpoint: Datapath_i.reg_20.reg_out1[5]$_DFF_P_
+            (rising edge-triggered flip-flop)
+Endpoint: Datapath_i.reg_21.reg_out1[31]$_DFF_P_
+          (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ Datapath_i.reg_20.reg_out1[5]$_DFF_P_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 139.00  139.00 ^ Datapath_i.reg_20.reg_out1[5]$_DFF_P_/QN (DFFHQNx1_ASAP7_75t_R)
+  55.03  194.03 ^ load_slew65/Y (BUFx12f_ASAP7_75t_R)
+  45.40  239.43 ^ max_cap64/Y (BUFx6f_ASAP7_75t_R)
+  31.65  271.07 v _5407_/Y (NOR2x1_ASAP7_75t_R)
+  66.33  337.40 ^ _8918_/CON (FAx1_ASAP7_75t_R)
+  42.84  380.24 v _8918_/SN (FAx1_ASAP7_75t_R)
+  65.24  445.48 ^ _8919_/CON (FAx1_ASAP7_75t_R)
+  43.05  488.53 v _8919_/SN (FAx1_ASAP7_75t_R)
+  65.32  553.85 ^ _8920_/CON (FAx1_ASAP7_75t_R)
+  33.62  587.46 v _8920_/SN (FAx1_ASAP7_75t_R)
+  31.73  619.19 ^ _7839_/Y (INVx1_ASAP7_75t_R)
+  63.11  682.29 v _8921_/SN (FAx1_ASAP7_75t_R)
+  20.18  702.48 ^ _7794_/Y (INVx1_ASAP7_75t_R)
+  32.07  734.54 v _9436_/CON (HAxp5_ASAP7_75t_R)
+  22.96  757.50 ^ _9436_/SN (HAxp5_ASAP7_75t_R)
+  22.76  780.27 v _7805_/Y (INVx1_ASAP7_75t_R)
+  49.94  830.20 ^ _8922_/CON (FAx1_ASAP7_75t_R)
+  41.41  871.62 v _8922_/SN (FAx1_ASAP7_75t_R)
+  46.11  917.72 ^ _8923_/CON (FAx1_ASAP7_75t_R)
+  27.93  945.65 v _8923_/SN (FAx1_ASAP7_75t_R)
+  28.43  974.09 ^ _7845_/Y (INVx1_ASAP7_75t_R)
+  69.26 1043.35 v _8924_/SN (FAx1_ASAP7_75t_R)
+ 104.31 1147.66 v _9437_/SN (HAxp5_ASAP7_75t_R)
+  52.69 1200.35 v _8404_/Y (OA21x2_ASAP7_75t_R)
+  41.40 1241.76 v _8405_/Y (OA21x2_ASAP7_75t_R)
+  38.27 1280.03 v _8410_/Y (OA21x2_ASAP7_75t_R)
+  41.46 1321.49 v _8411_/Y (OA21x2_ASAP7_75t_R)
+  38.94 1360.43 v _8416_/Y (OA21x2_ASAP7_75t_R)
+  41.64 1402.07 v _8417_/Y (OA21x2_ASAP7_75t_R)
+  38.63 1440.71 v _8422_/Y (OA21x2_ASAP7_75t_R)
+  41.64 1482.35 v _8423_/Y (OA21x2_ASAP7_75t_R)
+  40.73 1523.08 v _8429_/Y (OA21x2_ASAP7_75t_R)
+  42.93 1566.01 v _8430_/Y (OA21x2_ASAP7_75t_R)
+  38.85 1604.86 v _8435_/Y (OA21x2_ASAP7_75t_R)
+  41.56 1646.42 v _8436_/Y (OA21x2_ASAP7_75t_R)
+  38.34 1684.76 v _8441_/Y (OA21x2_ASAP7_75t_R)
+  41.70 1726.46 v _8442_/Y (OA21x2_ASAP7_75t_R)
+  38.90 1765.36 v _8447_/Y (OA21x2_ASAP7_75t_R)
+  41.74 1807.09 v _8448_/Y (OA21x2_ASAP7_75t_R)
+  38.49 1845.58 v _8453_/Y (OA21x2_ASAP7_75t_R)
+  41.58 1887.17 v _8454_/Y (OA21x2_ASAP7_75t_R)
+  38.49 1925.65 v _8460_/Y (OA21x2_ASAP7_75t_R)
+  39.28 1964.93 v _8461_/Y (OA21x2_ASAP7_75t_R)
+  33.78 1998.71 v _8558_/Y (XNOR2x1_ASAP7_75t_R)
+   0.26 1998.97 v Datapath_i.reg_21.reg_out1[31]$_DFF_P_/D (DFFHQNx1_ASAP7_75t_R)
+        1998.97   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: Datapath_i.reg_20.reg_out1[5]$_DFF_P_
+            (rising edge-triggered flip-flop)
+Endpoint: Datapath_i.reg_21.reg_out1[30]$_DFF_P_
+          (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ Datapath_i.reg_20.reg_out1[5]$_DFF_P_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 139.00  139.00 ^ Datapath_i.reg_20.reg_out1[5]$_DFF_P_/QN (DFFHQNx1_ASAP7_75t_R)
+  55.03  194.03 ^ load_slew65/Y (BUFx12f_ASAP7_75t_R)
+  45.40  239.43 ^ max_cap64/Y (BUFx6f_ASAP7_75t_R)
+  31.65  271.07 v _5407_/Y (NOR2x1_ASAP7_75t_R)
+  66.33  337.40 ^ _8918_/CON (FAx1_ASAP7_75t_R)
+  42.84  380.24 v _8918_/SN (FAx1_ASAP7_75t_R)
+  65.24  445.48 ^ _8919_/CON (FAx1_ASAP7_75t_R)
+  43.05  488.53 v _8919_/SN (FAx1_ASAP7_75t_R)
+  65.32  553.85 ^ _8920_/CON (FAx1_ASAP7_75t_R)
+  33.62  587.46 v _8920_/SN (FAx1_ASAP7_75t_R)
+  31.73  619.19 ^ _7839_/Y (INVx1_ASAP7_75t_R)
+  63.11  682.29 v _8921_/SN (FAx1_ASAP7_75t_R)
+  20.18  702.48 ^ _7794_/Y (INVx1_ASAP7_75t_R)
+  32.07  734.54 v _9436_/CON (HAxp5_ASAP7_75t_R)
+  22.96  757.50 ^ _9436_/SN (HAxp5_ASAP7_75t_R)
+  22.76  780.27 v _7805_/Y (INVx1_ASAP7_75t_R)
+  49.94  830.20 ^ _8922_/CON (FAx1_ASAP7_75t_R)
+  41.41  871.62 v _8922_/SN (FAx1_ASAP7_75t_R)
+  46.11  917.72 ^ _8923_/CON (FAx1_ASAP7_75t_R)
+  27.93  945.65 v _8923_/SN (FAx1_ASAP7_75t_R)
+  28.43  974.09 ^ _7845_/Y (INVx1_ASAP7_75t_R)
+  69.26 1043.35 v _8924_/SN (FAx1_ASAP7_75t_R)
+ 104.31 1147.66 v _9437_/SN (HAxp5_ASAP7_75t_R)
+  58.57 1206.23 v _8402_/Y (OA21x2_ASAP7_75t_R)
+  38.79 1245.02 v _8407_/Y (OA21x2_ASAP7_75t_R)
+  41.43 1286.45 v _8408_/Y (OA21x2_ASAP7_75t_R)
+  38.28 1324.73 v _8413_/Y (OA21x2_ASAP7_75t_R)
+  41.97 1366.69 v _8414_/Y (OA21x2_ASAP7_75t_R)
+  38.93 1405.62 v _8419_/Y (OA21x2_ASAP7_75t_R)
+  41.45 1447.07 v _8420_/Y (OA21x2_ASAP7_75t_R)
+  38.08 1485.15 v _8426_/Y (OA21x2_ASAP7_75t_R)
+  44.11 1529.26 v _8427_/Y (OA21x2_ASAP7_75t_R)
+  40.73 1569.99 v _8432_/Y (OA21x2_ASAP7_75t_R)
+  41.50 1611.49 v _8433_/Y (OA21x2_ASAP7_75t_R)
+  38.14 1649.64 v _8438_/Y (OA21x2_ASAP7_75t_R)
+  41.56 1691.20 v _8439_/Y (OA21x2_ASAP7_75t_R)
+  38.70 1729.90 v _8444_/Y (OA21x2_ASAP7_75t_R)
+  42.09 1771.98 v _8445_/Y (OA21x2_ASAP7_75t_R)
+  38.99 1810.98 v _8450_/Y (OA21x2_ASAP7_75t_R)
+  41.42 1852.40 v _8451_/Y (OA21x2_ASAP7_75t_R)
+  38.33 1890.73 v _8457_/Y (OA21x2_ASAP7_75t_R)
+  39.30 1930.03 v _8458_/Y (OA21x2_ASAP7_75t_R)
+  37.32 1967.34 v _8459_/Y (XOR2x1_ASAP7_75t_R)
+   0.03 1967.37 v Datapath_i.reg_21.reg_out1[30]$_DFF_P_/D (DFFHQNx1_ASAP7_75t_R)
+        1967.37   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: Datapath_i.reg_20.reg_out1[5]$_DFF_P_
+            (rising edge-triggered flip-flop)
+Endpoint: Datapath_i.reg_21.reg_out1[29]$_DFF_P_
+          (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ Datapath_i.reg_20.reg_out1[5]$_DFF_P_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 139.00  139.00 ^ Datapath_i.reg_20.reg_out1[5]$_DFF_P_/QN (DFFHQNx1_ASAP7_75t_R)
+  55.03  194.03 ^ load_slew65/Y (BUFx12f_ASAP7_75t_R)
+  45.40  239.43 ^ max_cap64/Y (BUFx6f_ASAP7_75t_R)
+  31.65  271.07 v _5407_/Y (NOR2x1_ASAP7_75t_R)
+  66.33  337.40 ^ _8918_/CON (FAx1_ASAP7_75t_R)
+  42.84  380.24 v _8918_/SN (FAx1_ASAP7_75t_R)
+  65.24  445.48 ^ _8919_/CON (FAx1_ASAP7_75t_R)
+  43.05  488.53 v _8919_/SN (FAx1_ASAP7_75t_R)
+  65.32  553.85 ^ _8920_/CON (FAx1_ASAP7_75t_R)
+  33.62  587.46 v _8920_/SN (FAx1_ASAP7_75t_R)
+  31.73  619.19 ^ _7839_/Y (INVx1_ASAP7_75t_R)
+  63.11  682.29 v _8921_/SN (FAx1_ASAP7_75t_R)
+  20.18  702.48 ^ _7794_/Y (INVx1_ASAP7_75t_R)
+  32.07  734.54 v _9436_/CON (HAxp5_ASAP7_75t_R)
+  22.96  757.50 ^ _9436_/SN (HAxp5_ASAP7_75t_R)
+  22.76  780.27 v _7805_/Y (INVx1_ASAP7_75t_R)
+  49.94  830.20 ^ _8922_/CON (FAx1_ASAP7_75t_R)
+  41.41  871.62 v _8922_/SN (FAx1_ASAP7_75t_R)
+  46.11  917.72 ^ _8923_/CON (FAx1_ASAP7_75t_R)
+  27.93  945.65 v _8923_/SN (FAx1_ASAP7_75t_R)
+  28.43  974.09 ^ _7845_/Y (INVx1_ASAP7_75t_R)
+  69.26 1043.35 v _8924_/SN (FAx1_ASAP7_75t_R)
+ 104.31 1147.66 v _9437_/SN (HAxp5_ASAP7_75t_R)
+  52.69 1200.35 v _8404_/Y (OA21x2_ASAP7_75t_R)
+  41.40 1241.76 v _8405_/Y (OA21x2_ASAP7_75t_R)
+  38.27 1280.03 v _8410_/Y (OA21x2_ASAP7_75t_R)
+  41.46 1321.49 v _8411_/Y (OA21x2_ASAP7_75t_R)
+  38.94 1360.43 v _8416_/Y (OA21x2_ASAP7_75t_R)
+  41.64 1402.07 v _8417_/Y (OA21x2_ASAP7_75t_R)
+  38.63 1440.71 v _8422_/Y (OA21x2_ASAP7_75t_R)
+  41.64 1482.35 v _8423_/Y (OA21x2_ASAP7_75t_R)
+  40.73 1523.08 v _8429_/Y (OA21x2_ASAP7_75t_R)
+  42.93 1566.01 v _8430_/Y (OA21x2_ASAP7_75t_R)
+  38.85 1604.86 v _8435_/Y (OA21x2_ASAP7_75t_R)
+  41.56 1646.42 v _8436_/Y (OA21x2_ASAP7_75t_R)
+  38.34 1684.76 v _8441_/Y (OA21x2_ASAP7_75t_R)
+  41.70 1726.46 v _8442_/Y (OA21x2_ASAP7_75t_R)
+  38.90 1765.36 v _8447_/Y (OA21x2_ASAP7_75t_R)
+  41.74 1807.09 v _8448_/Y (OA21x2_ASAP7_75t_R)
+  38.49 1845.58 v _8453_/Y (OA21x2_ASAP7_75t_R)
+  41.58 1887.17 v _8454_/Y (OA21x2_ASAP7_75t_R)
+  38.48 1925.64 v _8455_/Y (XOR2x1_ASAP7_75t_R)
+   0.05 1925.69 v Datapath_i.reg_21.reg_out1[29]$_DFF_P_/D (DFFHQNx1_ASAP7_75t_R)
+        1925.69   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: Datapath_i.reg_20.reg_out1[5]$_DFF_P_
+            (rising edge-triggered flip-flop)
+Endpoint: Datapath_i.reg_21.reg_out1[28]$_DFF_P_
+          (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ Datapath_i.reg_20.reg_out1[5]$_DFF_P_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 139.00  139.00 ^ Datapath_i.reg_20.reg_out1[5]$_DFF_P_/QN (DFFHQNx1_ASAP7_75t_R)
+  55.03  194.03 ^ load_slew65/Y (BUFx12f_ASAP7_75t_R)
+  45.40  239.43 ^ max_cap64/Y (BUFx6f_ASAP7_75t_R)
+  31.65  271.07 v _5407_/Y (NOR2x1_ASAP7_75t_R)
+  66.33  337.40 ^ _8918_/CON (FAx1_ASAP7_75t_R)
+  42.84  380.24 v _8918_/SN (FAx1_ASAP7_75t_R)
+  65.24  445.48 ^ _8919_/CON (FAx1_ASAP7_75t_R)
+  43.05  488.53 v _8919_/SN (FAx1_ASAP7_75t_R)
+  65.32  553.85 ^ _8920_/CON (FAx1_ASAP7_75t_R)
+  33.62  587.46 v _8920_/SN (FAx1_ASAP7_75t_R)
+  31.73  619.19 ^ _7839_/Y (INVx1_ASAP7_75t_R)
+  63.11  682.29 v _8921_/SN (FAx1_ASAP7_75t_R)
+  20.18  702.48 ^ _7794_/Y (INVx1_ASAP7_75t_R)
+  32.07  734.54 v _9436_/CON (HAxp5_ASAP7_75t_R)
+  22.96  757.50 ^ _9436_/SN (HAxp5_ASAP7_75t_R)
+  22.76  780.27 v _7805_/Y (INVx1_ASAP7_75t_R)
+  49.94  830.20 ^ _8922_/CON (FAx1_ASAP7_75t_R)
+  41.41  871.62 v _8922_/SN (FAx1_ASAP7_75t_R)
+  46.11  917.72 ^ _8923_/CON (FAx1_ASAP7_75t_R)
+  27.93  945.65 v _8923_/SN (FAx1_ASAP7_75t_R)
+  28.43  974.09 ^ _7845_/Y (INVx1_ASAP7_75t_R)
+  69.26 1043.35 v _8924_/SN (FAx1_ASAP7_75t_R)
+ 104.31 1147.66 v _9437_/SN (HAxp5_ASAP7_75t_R)
+  58.57 1206.23 v _8402_/Y (OA21x2_ASAP7_75t_R)
+  38.79 1245.02 v _8407_/Y (OA21x2_ASAP7_75t_R)
+  41.43 1286.45 v _8408_/Y (OA21x2_ASAP7_75t_R)
+  38.28 1324.73 v _8413_/Y (OA21x2_ASAP7_75t_R)
+  41.97 1366.69 v _8414_/Y (OA21x2_ASAP7_75t_R)
+  38.93 1405.62 v _8419_/Y (OA21x2_ASAP7_75t_R)
+  41.45 1447.07 v _8420_/Y (OA21x2_ASAP7_75t_R)
+  38.08 1485.15 v _8426_/Y (OA21x2_ASAP7_75t_R)
+  44.11 1529.26 v _8427_/Y (OA21x2_ASAP7_75t_R)
+  40.73 1569.99 v _8432_/Y (OA21x2_ASAP7_75t_R)
+  41.50 1611.49 v _8433_/Y (OA21x2_ASAP7_75t_R)
+  38.14 1649.64 v _8438_/Y (OA21x2_ASAP7_75t_R)
+  41.56 1691.20 v _8439_/Y (OA21x2_ASAP7_75t_R)
+  38.70 1729.90 v _8444_/Y (OA21x2_ASAP7_75t_R)
+  42.09 1771.98 v _8445_/Y (OA21x2_ASAP7_75t_R)
+  38.99 1810.98 v _8450_/Y (OA21x2_ASAP7_75t_R)
+  41.42 1852.40 v _8451_/Y (OA21x2_ASAP7_75t_R)
+  38.46 1890.86 v _8452_/Y (XOR2x1_ASAP7_75t_R)
+   0.05 1890.91 v Datapath_i.reg_21.reg_out1[28]$_DFF_P_/D (DFFHQNx1_ASAP7_75t_R)
+        1890.91   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: Datapath_i.reg_20.reg_out1[5]$_DFF_P_
+            (rising edge-triggered flip-flop)
+Endpoint: Datapath_i.reg_21.reg_out1[27]$_DFF_P_
+          (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ Datapath_i.reg_20.reg_out1[5]$_DFF_P_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 139.00  139.00 ^ Datapath_i.reg_20.reg_out1[5]$_DFF_P_/QN (DFFHQNx1_ASAP7_75t_R)
+  55.03  194.03 ^ load_slew65/Y (BUFx12f_ASAP7_75t_R)
+  45.40  239.43 ^ max_cap64/Y (BUFx6f_ASAP7_75t_R)
+  31.65  271.07 v _5407_/Y (NOR2x1_ASAP7_75t_R)
+  66.33  337.40 ^ _8918_/CON (FAx1_ASAP7_75t_R)
+  42.84  380.24 v _8918_/SN (FAx1_ASAP7_75t_R)
+  65.24  445.48 ^ _8919_/CON (FAx1_ASAP7_75t_R)
+  43.05  488.53 v _8919_/SN (FAx1_ASAP7_75t_R)
+  65.32  553.85 ^ _8920_/CON (FAx1_ASAP7_75t_R)
+  33.62  587.46 v _8920_/SN (FAx1_ASAP7_75t_R)
+  31.73  619.19 ^ _7839_/Y (INVx1_ASAP7_75t_R)
+  63.11  682.29 v _8921_/SN (FAx1_ASAP7_75t_R)
+  20.18  702.48 ^ _7794_/Y (INVx1_ASAP7_75t_R)
+  32.07  734.54 v _9436_/CON (HAxp5_ASAP7_75t_R)
+  22.96  757.50 ^ _9436_/SN (HAxp5_ASAP7_75t_R)
+  22.76  780.27 v _7805_/Y (INVx1_ASAP7_75t_R)
+  49.94  830.20 ^ _8922_/CON (FAx1_ASAP7_75t_R)
+  41.41  871.62 v _8922_/SN (FAx1_ASAP7_75t_R)
+  46.11  917.72 ^ _8923_/CON (FAx1_ASAP7_75t_R)
+  27.93  945.65 v _8923_/SN (FAx1_ASAP7_75t_R)
+  28.43  974.09 ^ _7845_/Y (INVx1_ASAP7_75t_R)
+  69.26 1043.35 v _8924_/SN (FAx1_ASAP7_75t_R)
+ 104.31 1147.66 v _9437_/SN (HAxp5_ASAP7_75t_R)
+  52.69 1200.35 v _8404_/Y (OA21x2_ASAP7_75t_R)
+  41.40 1241.76 v _8405_/Y (OA21x2_ASAP7_75t_R)
+  38.27 1280.03 v _8410_/Y (OA21x2_ASAP7_75t_R)
+  41.46 1321.49 v _8411_/Y (OA21x2_ASAP7_75t_R)
+  38.94 1360.43 v _8416_/Y (OA21x2_ASAP7_75t_R)
+  41.64 1402.07 v _8417_/Y (OA21x2_ASAP7_75t_R)
+  38.63 1440.71 v _8422_/Y (OA21x2_ASAP7_75t_R)
+  41.64 1482.35 v _8423_/Y (OA21x2_ASAP7_75t_R)
+  40.73 1523.08 v _8429_/Y (OA21x2_ASAP7_75t_R)
+  42.93 1566.01 v _8430_/Y (OA21x2_ASAP7_75t_R)
+  38.85 1604.86 v _8435_/Y (OA21x2_ASAP7_75t_R)
+  41.56 1646.42 v _8436_/Y (OA21x2_ASAP7_75t_R)
+  38.34 1684.76 v _8441_/Y (OA21x2_ASAP7_75t_R)
+  41.70 1726.46 v _8442_/Y (OA21x2_ASAP7_75t_R)
+  38.90 1765.36 v _8447_/Y (OA21x2_ASAP7_75t_R)
+  41.74 1807.09 v _8448_/Y (OA21x2_ASAP7_75t_R)
+  38.45 1845.55 v _8449_/Y (XOR2x1_ASAP7_75t_R)
+   0.05 1845.59 v Datapath_i.reg_21.reg_out1[27]$_DFF_P_/D (DFFHQNx1_ASAP7_75t_R)
+        1845.59   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: Datapath_i.reg_20.reg_out1[5]$_DFF_P_
+            (rising edge-triggered flip-flop)
+Endpoint: Datapath_i.reg_21.reg_out1[26]$_DFF_P_
+          (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ Datapath_i.reg_20.reg_out1[5]$_DFF_P_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 139.00  139.00 ^ Datapath_i.reg_20.reg_out1[5]$_DFF_P_/QN (DFFHQNx1_ASAP7_75t_R)
+  55.03  194.03 ^ load_slew65/Y (BUFx12f_ASAP7_75t_R)
+  45.40  239.43 ^ max_cap64/Y (BUFx6f_ASAP7_75t_R)
+  31.65  271.07 v _5407_/Y (NOR2x1_ASAP7_75t_R)
+  66.33  337.40 ^ _8918_/CON (FAx1_ASAP7_75t_R)
+  42.84  380.24 v _8918_/SN (FAx1_ASAP7_75t_R)
+  65.24  445.48 ^ _8919_/CON (FAx1_ASAP7_75t_R)
+  43.05  488.53 v _8919_/SN (FAx1_ASAP7_75t_R)
+  65.32  553.85 ^ _8920_/CON (FAx1_ASAP7_75t_R)
+  33.62  587.46 v _8920_/SN (FAx1_ASAP7_75t_R)
+  31.73  619.19 ^ _7839_/Y (INVx1_ASAP7_75t_R)
+  63.11  682.29 v _8921_/SN (FAx1_ASAP7_75t_R)
+  20.18  702.48 ^ _7794_/Y (INVx1_ASAP7_75t_R)
+  32.07  734.54 v _9436_/CON (HAxp5_ASAP7_75t_R)
+  22.96  757.50 ^ _9436_/SN (HAxp5_ASAP7_75t_R)
+  22.76  780.27 v _7805_/Y (INVx1_ASAP7_75t_R)
+  49.94  830.20 ^ _8922_/CON (FAx1_ASAP7_75t_R)
+  41.41  871.62 v _8922_/SN (FAx1_ASAP7_75t_R)
+  46.11  917.72 ^ _8923_/CON (FAx1_ASAP7_75t_R)
+  27.93  945.65 v _8923_/SN (FAx1_ASAP7_75t_R)
+  28.43  974.09 ^ _7845_/Y (INVx1_ASAP7_75t_R)
+  69.26 1043.35 v _8924_/SN (FAx1_ASAP7_75t_R)
+ 104.31 1147.66 v _9437_/SN (HAxp5_ASAP7_75t_R)
+  58.57 1206.23 v _8402_/Y (OA21x2_ASAP7_75t_R)
+  38.79 1245.02 v _8407_/Y (OA21x2_ASAP7_75t_R)
+  41.43 1286.45 v _8408_/Y (OA21x2_ASAP7_75t_R)
+  38.28 1324.73 v _8413_/Y (OA21x2_ASAP7_75t_R)
+  41.97 1366.69 v _8414_/Y (OA21x2_ASAP7_75t_R)
+  38.93 1405.62 v _8419_/Y (OA21x2_ASAP7_75t_R)
+  41.45 1447.07 v _8420_/Y (OA21x2_ASAP7_75t_R)
+  38.08 1485.15 v _8426_/Y (OA21x2_ASAP7_75t_R)
+  44.11 1529.26 v _8427_/Y (OA21x2_ASAP7_75t_R)
+  40.73 1569.99 v _8432_/Y (OA21x2_ASAP7_75t_R)
+  41.50 1611.49 v _8433_/Y (OA21x2_ASAP7_75t_R)
+  38.14 1649.64 v _8438_/Y (OA21x2_ASAP7_75t_R)
+  41.56 1691.20 v _8439_/Y (OA21x2_ASAP7_75t_R)
+  38.70 1729.90 v _8444_/Y (OA21x2_ASAP7_75t_R)
+  42.09 1771.98 v _8445_/Y (OA21x2_ASAP7_75t_R)
+  39.07 1811.05 v _8446_/Y (XOR2x1_ASAP7_75t_R)
+   0.08 1811.13 v Datapath_i.reg_21.reg_out1[26]$_DFF_P_/D (DFFHQNx1_ASAP7_75t_R)
+        1811.13   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: Datapath_i.reg_20.reg_out1[5]$_DFF_P_
+            (rising edge-triggered flip-flop)
+Endpoint: Datapath_i.reg_21.reg_out1[25]$_DFF_P_
+          (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ Datapath_i.reg_20.reg_out1[5]$_DFF_P_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 139.00  139.00 ^ Datapath_i.reg_20.reg_out1[5]$_DFF_P_/QN (DFFHQNx1_ASAP7_75t_R)
+  55.03  194.03 ^ load_slew65/Y (BUFx12f_ASAP7_75t_R)
+  45.40  239.43 ^ max_cap64/Y (BUFx6f_ASAP7_75t_R)
+  31.65  271.07 v _5407_/Y (NOR2x1_ASAP7_75t_R)
+  66.33  337.40 ^ _8918_/CON (FAx1_ASAP7_75t_R)
+  42.84  380.24 v _8918_/SN (FAx1_ASAP7_75t_R)
+  65.24  445.48 ^ _8919_/CON (FAx1_ASAP7_75t_R)
+  43.05  488.53 v _8919_/SN (FAx1_ASAP7_75t_R)
+  65.32  553.85 ^ _8920_/CON (FAx1_ASAP7_75t_R)
+  33.62  587.46 v _8920_/SN (FAx1_ASAP7_75t_R)
+  31.73  619.19 ^ _7839_/Y (INVx1_ASAP7_75t_R)
+  63.11  682.29 v _8921_/SN (FAx1_ASAP7_75t_R)
+  20.18  702.48 ^ _7794_/Y (INVx1_ASAP7_75t_R)
+  32.07  734.54 v _9436_/CON (HAxp5_ASAP7_75t_R)
+  22.96  757.50 ^ _9436_/SN (HAxp5_ASAP7_75t_R)
+  22.76  780.27 v _7805_/Y (INVx1_ASAP7_75t_R)
+  49.94  830.20 ^ _8922_/CON (FAx1_ASAP7_75t_R)
+  41.41  871.62 v _8922_/SN (FAx1_ASAP7_75t_R)
+  46.11  917.72 ^ _8923_/CON (FAx1_ASAP7_75t_R)
+  27.93  945.65 v _8923_/SN (FAx1_ASAP7_75t_R)
+  28.43  974.09 ^ _7845_/Y (INVx1_ASAP7_75t_R)
+  69.26 1043.35 v _8924_/SN (FAx1_ASAP7_75t_R)
+ 104.31 1147.66 v _9437_/SN (HAxp5_ASAP7_75t_R)
+  52.69 1200.35 v _8404_/Y (OA21x2_ASAP7_75t_R)
+  41.40 1241.76 v _8405_/Y (OA21x2_ASAP7_75t_R)
+  38.27 1280.03 v _8410_/Y (OA21x2_ASAP7_75t_R)
+  41.46 1321.49 v _8411_/Y (OA21x2_ASAP7_75t_R)
+  38.94 1360.43 v _8416_/Y (OA21x2_ASAP7_75t_R)
+  41.64 1402.07 v _8417_/Y (OA21x2_ASAP7_75t_R)
+  38.63 1440.71 v _8422_/Y (OA21x2_ASAP7_75t_R)
+  41.64 1482.35 v _8423_/Y (OA21x2_ASAP7_75t_R)
+  40.73 1523.08 v _8429_/Y (OA21x2_ASAP7_75t_R)
+  42.93 1566.01 v _8430_/Y (OA21x2_ASAP7_75t_R)
+  38.85 1604.86 v _8435_/Y (OA21x2_ASAP7_75t_R)
+  41.56 1646.42 v _8436_/Y (OA21x2_ASAP7_75t_R)
+  38.34 1684.76 v _8441_/Y (OA21x2_ASAP7_75t_R)
+  41.70 1726.46 v _8442_/Y (OA21x2_ASAP7_75t_R)
+  38.67 1765.12 v _8443_/Y (XOR2x1_ASAP7_75t_R)
+   0.05 1765.17 v Datapath_i.reg_21.reg_out1[25]$_DFF_P_/D (DFFHQNx1_ASAP7_75t_R)
+        1765.17   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: Datapath_i.reg_20.reg_out1[5]$_DFF_P_
+            (rising edge-triggered flip-flop)
+Endpoint: Datapath_i.reg_21.reg_out1[24]$_DFF_P_
+          (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ Datapath_i.reg_20.reg_out1[5]$_DFF_P_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 139.00  139.00 ^ Datapath_i.reg_20.reg_out1[5]$_DFF_P_/QN (DFFHQNx1_ASAP7_75t_R)
+  55.03  194.03 ^ load_slew65/Y (BUFx12f_ASAP7_75t_R)
+  45.40  239.43 ^ max_cap64/Y (BUFx6f_ASAP7_75t_R)
+  31.65  271.07 v _5407_/Y (NOR2x1_ASAP7_75t_R)
+  66.33  337.40 ^ _8918_/CON (FAx1_ASAP7_75t_R)
+  42.84  380.24 v _8918_/SN (FAx1_ASAP7_75t_R)
+  65.24  445.48 ^ _8919_/CON (FAx1_ASAP7_75t_R)
+  43.05  488.53 v _8919_/SN (FAx1_ASAP7_75t_R)
+  65.32  553.85 ^ _8920_/CON (FAx1_ASAP7_75t_R)
+  33.62  587.46 v _8920_/SN (FAx1_ASAP7_75t_R)
+  31.73  619.19 ^ _7839_/Y (INVx1_ASAP7_75t_R)
+  63.11  682.29 v _8921_/SN (FAx1_ASAP7_75t_R)
+  20.18  702.48 ^ _7794_/Y (INVx1_ASAP7_75t_R)
+  32.07  734.54 v _9436_/CON (HAxp5_ASAP7_75t_R)
+  22.96  757.50 ^ _9436_/SN (HAxp5_ASAP7_75t_R)
+  22.76  780.27 v _7805_/Y (INVx1_ASAP7_75t_R)
+  49.94  830.20 ^ _8922_/CON (FAx1_ASAP7_75t_R)
+  41.41  871.62 v _8922_/SN (FAx1_ASAP7_75t_R)
+  46.11  917.72 ^ _8923_/CON (FAx1_ASAP7_75t_R)
+  27.93  945.65 v _8923_/SN (FAx1_ASAP7_75t_R)
+  28.43  974.09 ^ _7845_/Y (INVx1_ASAP7_75t_R)
+  69.26 1043.35 v _8924_/SN (FAx1_ASAP7_75t_R)
+ 104.31 1147.66 v _9437_/SN (HAxp5_ASAP7_75t_R)
+  58.57 1206.23 v _8402_/Y (OA21x2_ASAP7_75t_R)
+  38.79 1245.02 v _8407_/Y (OA21x2_ASAP7_75t_R)
+  41.43 1286.45 v _8408_/Y (OA21x2_ASAP7_75t_R)
+  38.28 1324.73 v _8413_/Y (OA21x2_ASAP7_75t_R)
+  41.97 1366.69 v _8414_/Y (OA21x2_ASAP7_75t_R)
+  38.93 1405.62 v _8419_/Y (OA21x2_ASAP7_75t_R)
+  41.45 1447.07 v _8420_/Y (OA21x2_ASAP7_75t_R)
+  38.08 1485.15 v _8426_/Y (OA21x2_ASAP7_75t_R)
+  44.11 1529.26 v _8427_/Y (OA21x2_ASAP7_75t_R)
+  40.73 1569.99 v _8432_/Y (OA21x2_ASAP7_75t_R)
+  41.50 1611.49 v _8433_/Y (OA21x2_ASAP7_75t_R)
+  38.14 1649.64 v _8438_/Y (OA21x2_ASAP7_75t_R)
+  41.56 1691.20 v _8439_/Y (OA21x2_ASAP7_75t_R)
+  38.55 1729.75 v _8440_/Y (XOR2x1_ASAP7_75t_R)
+   0.03 1729.77 v Datapath_i.reg_21.reg_out1[24]$_DFF_P_/D (DFFHQNx1_ASAP7_75t_R)
+        1729.77   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: Datapath_i.reg_20.reg_out1[5]$_DFF_P_
+            (rising edge-triggered flip-flop)
+Endpoint: Datapath_i.reg_21.reg_out1[23]$_DFF_P_
+          (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ Datapath_i.reg_20.reg_out1[5]$_DFF_P_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 139.00  139.00 ^ Datapath_i.reg_20.reg_out1[5]$_DFF_P_/QN (DFFHQNx1_ASAP7_75t_R)
+  55.03  194.03 ^ load_slew65/Y (BUFx12f_ASAP7_75t_R)
+  45.40  239.43 ^ max_cap64/Y (BUFx6f_ASAP7_75t_R)
+  31.65  271.07 v _5407_/Y (NOR2x1_ASAP7_75t_R)
+  66.33  337.40 ^ _8918_/CON (FAx1_ASAP7_75t_R)
+  42.84  380.24 v _8918_/SN (FAx1_ASAP7_75t_R)
+  65.24  445.48 ^ _8919_/CON (FAx1_ASAP7_75t_R)
+  43.05  488.53 v _8919_/SN (FAx1_ASAP7_75t_R)
+  65.32  553.85 ^ _8920_/CON (FAx1_ASAP7_75t_R)
+  33.62  587.46 v _8920_/SN (FAx1_ASAP7_75t_R)
+  31.73  619.19 ^ _7839_/Y (INVx1_ASAP7_75t_R)
+  63.11  682.29 v _8921_/SN (FAx1_ASAP7_75t_R)
+  20.18  702.48 ^ _7794_/Y (INVx1_ASAP7_75t_R)
+  32.07  734.54 v _9436_/CON (HAxp5_ASAP7_75t_R)
+  22.96  757.50 ^ _9436_/SN (HAxp5_ASAP7_75t_R)
+  22.76  780.27 v _7805_/Y (INVx1_ASAP7_75t_R)
+  49.94  830.20 ^ _8922_/CON (FAx1_ASAP7_75t_R)
+  41.41  871.62 v _8922_/SN (FAx1_ASAP7_75t_R)
+  46.11  917.72 ^ _8923_/CON (FAx1_ASAP7_75t_R)
+  27.93  945.65 v _8923_/SN (FAx1_ASAP7_75t_R)
+  28.43  974.09 ^ _7845_/Y (INVx1_ASAP7_75t_R)
+  69.26 1043.35 v _8924_/SN (FAx1_ASAP7_75t_R)
+ 104.31 1147.66 v _9437_/SN (HAxp5_ASAP7_75t_R)
+  52.69 1200.35 v _8404_/Y (OA21x2_ASAP7_75t_R)
+  41.40 1241.76 v _8405_/Y (OA21x2_ASAP7_75t_R)
+  38.27 1280.03 v _8410_/Y (OA21x2_ASAP7_75t_R)
+  41.46 1321.49 v _8411_/Y (OA21x2_ASAP7_75t_R)
+  38.94 1360.43 v _8416_/Y (OA21x2_ASAP7_75t_R)
+  41.64 1402.07 v _8417_/Y (OA21x2_ASAP7_75t_R)
+  38.63 1440.71 v _8422_/Y (OA21x2_ASAP7_75t_R)
+  41.64 1482.35 v _8423_/Y (OA21x2_ASAP7_75t_R)
+  40.73 1523.08 v _8429_/Y (OA21x2_ASAP7_75t_R)
+  42.93 1566.01 v _8430_/Y (OA21x2_ASAP7_75t_R)
+  38.85 1604.86 v _8435_/Y (OA21x2_ASAP7_75t_R)
+  41.56 1646.42 v _8436_/Y (OA21x2_ASAP7_75t_R)
+  38.59 1685.00 v _8437_/Y (XOR2x1_ASAP7_75t_R)
+   0.05 1685.06 v Datapath_i.reg_21.reg_out1[23]$_DFF_P_/D (DFFHQNx1_ASAP7_75t_R)
+        1685.06   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: Datapath_i.reg_20.reg_out1[5]$_DFF_P_
+            (rising edge-triggered flip-flop)
+Endpoint: Datapath_i.reg_21.reg_out1[22]$_DFF_P_
+          (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ Datapath_i.reg_20.reg_out1[5]$_DFF_P_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 139.00  139.00 ^ Datapath_i.reg_20.reg_out1[5]$_DFF_P_/QN (DFFHQNx1_ASAP7_75t_R)
+  55.03  194.03 ^ load_slew65/Y (BUFx12f_ASAP7_75t_R)
+  45.40  239.43 ^ max_cap64/Y (BUFx6f_ASAP7_75t_R)
+  31.65  271.07 v _5407_/Y (NOR2x1_ASAP7_75t_R)
+  66.33  337.40 ^ _8918_/CON (FAx1_ASAP7_75t_R)
+  42.84  380.24 v _8918_/SN (FAx1_ASAP7_75t_R)
+  65.24  445.48 ^ _8919_/CON (FAx1_ASAP7_75t_R)
+  43.05  488.53 v _8919_/SN (FAx1_ASAP7_75t_R)
+  65.32  553.85 ^ _8920_/CON (FAx1_ASAP7_75t_R)
+  33.62  587.46 v _8920_/SN (FAx1_ASAP7_75t_R)
+  31.73  619.19 ^ _7839_/Y (INVx1_ASAP7_75t_R)
+  63.11  682.29 v _8921_/SN (FAx1_ASAP7_75t_R)
+  20.18  702.48 ^ _7794_/Y (INVx1_ASAP7_75t_R)
+  32.07  734.54 v _9436_/CON (HAxp5_ASAP7_75t_R)
+  22.96  757.50 ^ _9436_/SN (HAxp5_ASAP7_75t_R)
+  22.76  780.27 v _7805_/Y (INVx1_ASAP7_75t_R)
+  49.94  830.20 ^ _8922_/CON (FAx1_ASAP7_75t_R)
+  41.41  871.62 v _8922_/SN (FAx1_ASAP7_75t_R)
+  46.11  917.72 ^ _8923_/CON (FAx1_ASAP7_75t_R)
+  27.93  945.65 v _8923_/SN (FAx1_ASAP7_75t_R)
+  28.43  974.09 ^ _7845_/Y (INVx1_ASAP7_75t_R)
+  69.26 1043.35 v _8924_/SN (FAx1_ASAP7_75t_R)
+ 104.31 1147.66 v _9437_/SN (HAxp5_ASAP7_75t_R)
+  58.57 1206.23 v _8402_/Y (OA21x2_ASAP7_75t_R)
+  38.79 1245.02 v _8407_/Y (OA21x2_ASAP7_75t_R)
+  41.43 1286.45 v _8408_/Y (OA21x2_ASAP7_75t_R)
+  38.28 1324.73 v _8413_/Y (OA21x2_ASAP7_75t_R)
+  41.97 1366.69 v _8414_/Y (OA21x2_ASAP7_75t_R)
+  38.93 1405.62 v _8419_/Y (OA21x2_ASAP7_75t_R)
+  41.45 1447.07 v _8420_/Y (OA21x2_ASAP7_75t_R)
+  38.08 1485.15 v _8426_/Y (OA21x2_ASAP7_75t_R)
+  44.11 1529.26 v _8427_/Y (OA21x2_ASAP7_75t_R)
+  40.73 1569.99 v _8432_/Y (OA21x2_ASAP7_75t_R)
+  41.50 1611.49 v _8433_/Y (OA21x2_ASAP7_75t_R)
+  41.60 1653.09 v _8434_/Y (XOR2x1_ASAP7_75t_R)
+   0.26 1653.35 v Datapath_i.reg_21.reg_out1[22]$_DFF_P_/D (DFFHQNx1_ASAP7_75t_R)
+        1653.35   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+

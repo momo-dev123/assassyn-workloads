@@ -5,17 +5,17 @@
 
 # Simulation script for COMPONENT: main
 
-cd /home/gaod/derui_work/MachSuite
+cd /home/gaod/derui_work/assassyn-workloads/MachSuite
 export VM_PARALLEL_BUILDS=1
-verilator --cc --exe --Mdir /home/gaod/derui_work/MachSuite/HLS_output//verilator_beh/verilator_obj -Wno-fatal -Wno-lint -sv -O3 --output-split-cfuncs 3000 --output-split-ctrace 3000 --x-assign fast --x-initial fast --noassert -LDFLAGS -static --timescale-override "1ps/1ps" /home/gaod/derui_work/MachSuite/main.v /home/gaod/derui_work/MachSuite/HLS_output//simulation/testbench_main_main.cpp /home/gaod/derui_work/MachSuite/HLS_output//simulation/testbench_main_tb.v --top-module main_tb
+verilator --cc --exe --Mdir /home/gaod/derui_work/assassyn-workloads/MachSuite/HLS_output//verilator_beh/verilator_obj -Wno-fatal -Wno-lint -sv -O3 --output-split-cfuncs 3000 --output-split-ctrace 3000 --x-assign fast --x-initial fast --noassert -LDFLAGS -static --timescale-override "1ps/1ps" /home/gaod/derui_work/assassyn-workloads/MachSuite/main.v /home/gaod/derui_work/assassyn-workloads/MachSuite/HLS_output//simulation/testbench_main_main.cpp /home/gaod/derui_work/assassyn-workloads/MachSuite/HLS_output//simulation/testbench_main_tb.v --top-module main_tb
 if [ $? -ne 0 ]; then
    exit 1;
 fi
 
 
-ln -s /home/gaod/derui_work/MachSuite/HLS_output/ /home/gaod/derui_work/MachSuite/HLS_output//verilator_beh/verilator_obj
-make -C /home/gaod/derui_work/MachSuite/HLS_output//verilator_beh/verilator_obj -j OPT="-fstrict-aliasing" -f Vmain_tb.mk Vmain_tb
+ln -s /home/gaod/derui_work/assassyn-workloads/MachSuite/HLS_output/ /home/gaod/derui_work/assassyn-workloads/MachSuite/HLS_output//verilator_beh/verilator_obj
+make -C /home/gaod/derui_work/assassyn-workloads/MachSuite/HLS_output//verilator_beh/verilator_obj -j OPT="-fstrict-aliasing" -f Vmain_tb.mk Vmain_tb
 
-/home/gaod/derui_work/MachSuite/HLS_output//verilator_beh/verilator_obj/Vmain_tb 2>&1 | tee /home/gaod/derui_work/MachSuite/HLS_output//verilator_beh/main_verilator.log
+/home/gaod/derui_work/assassyn-workloads/MachSuite/HLS_output//verilator_beh/verilator_obj/Vmain_tb 2>&1 | tee /home/gaod/derui_work/assassyn-workloads/MachSuite/HLS_output//verilator_beh/main_verilator.log
 
 

@@ -1,0 +1,44 @@
+Startpoint: fifo_north_pop_data[2] (input port)
+Endpoint: array_array_6632d_d[29] (output port)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+    Cap   Delay    Time   Description
+----------------------------------------------------------------
+           0.00    0.00 v input external delay
+   6.84    5.31    5.31 v fifo_north_pop_data[2] (in)
+   1.68   26.14   31.45 ^ _497_/Y (NAND2x1_ASAP7_75t_R)
+   1.40   86.80  118.24 v _785_/SN (FAx1_ASAP7_75t_R)
+   1.84   58.27  176.52 ^ _786_/CON (FAx1_ASAP7_75t_R)
+   0.58   31.46  207.98 v _786_/SN (FAx1_ASAP7_75t_R)
+   1.39   28.15  236.13 ^ _650_/Y (INVx1_ASAP7_75t_R)
+   0.58   59.62  295.74 v _787_/SN (FAx1_ASAP7_75t_R)
+   0.79   19.95  315.69 ^ _648_/Y (INVx1_ASAP7_75t_R)
+   2.42   76.97  392.67 ^ _850_/SN (HAxp5_ASAP7_75t_R)
+   0.90   26.45  419.12 v _693_/Y (INVx1_ASAP7_75t_R)
+   0.54   45.28  464.39 v _851_/SN (HAxp5_ASAP7_75t_R)
+   0.54   38.27  502.66 v _569_/Y (OA21x2_ASAP7_75t_R)
+   1.44   38.68  541.34 v _570_/Y (OA21x2_ASAP7_75t_R)
+   0.54   36.55  577.90 v _578_/Y (OA21x2_ASAP7_75t_R)
+   1.44   38.65  616.55 v _579_/Y (OA21x2_ASAP7_75t_R)
+   0.54   36.56  653.11 v _586_/Y (OA21x2_ASAP7_75t_R)
+   1.44   38.65  691.76 v _587_/Y (OA21x2_ASAP7_75t_R)
+   0.54   36.56  728.33 v _593_/Y (OA21x2_ASAP7_75t_R)
+   1.44   38.65  766.98 v _594_/Y (OA21x2_ASAP7_75t_R)
+   0.85   41.19  808.17 v _595_/Y (XOR2x2_ASAP7_75t_R)
+   1.87   75.10  883.26 v _878_/SN (HAxp5_ASAP7_75t_R)
+   1.44   47.10  930.36 v _725_/Y (OA21x2_ASAP7_75t_R)
+   0.54   36.56  966.93 v _730_/Y (OA21x2_ASAP7_75t_R)
+   1.44   38.65 1005.58 v _731_/Y (OA21x2_ASAP7_75t_R)
+   1.92   41.65 1047.23 v _737_/Y (OA21x2_ASAP7_75t_R)
+   2.80   21.51 1068.74 ^ _738_/Y (NOR2x2_ASAP7_75t_R)
+   3.20   69.86 1138.60 ^ _752_/Y (AND5x2_ASAP7_75t_R)
+   1.42   67.84 1206.44 ^ _768_/Y (AND5x1_ASAP7_75t_R)
+  13.35  114.94 1321.38 ^ _769_/Y (XOR2x1_ASAP7_75t_R)
+           0.00 1321.38 ^ array_array_6632d_d[29] (out)
+                1321.38   data arrival time
+----------------------------------------------------------------
+(Path is unconstrained)
+
+

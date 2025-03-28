@@ -1,0 +1,20 @@
+ 2: [WRN:PA0205] /home/ubuntu/minor_cpu.sv:2:1: No timescale set for "memuser_30344".
+ 3: [WRN:PA0205] /home/ubuntu/minor_cpu.sv:46:1: No timescale set for "dcache".
+ 4: [WRN:PA0205] /home/ubuntu/minor_cpu.sv:112:1: No timescale set for "memory_blackbox_array_36c8f".
+ 5: [WRN:PA0205] /home/ubuntu/minor_cpu.sv:144:1: No timescale set for "m".
+ 6: [WRN:PA0205] /home/ubuntu/minor_cpu.sv:332:1: No timescale set for "W1".
+ 7: [WRN:PA0205] /home/ubuntu/minor_cpu.sv:424:1: No timescale set for "e".
+ 8: [WRN:PA0205] /home/ubuntu/minor_cpu.sv:1605:1: No timescale set for "w".
+ 9: [WRN:PA0205] /home/ubuntu/minor_cpu.sv:1666:1: No timescale set for "f".
+10: [WRN:PA0205] /home/ubuntu/minor_cpu.sv:1695:1: No timescale set for "icache".
+11: [WRN:PA0205] /home/ubuntu/minor_cpu.sv:1755:1: No timescale set for "memory_blackbox_array_3e6a8".
+12: [WRN:PA0205] /home/ubuntu/minor_cpu.sv:1787:1: No timescale set for "driver".
+13: [WRN:PA0205] /home/ubuntu/minor_cpu.sv:1848:1: No timescale set for "F1".
+14: [WRN:PA0205] /home/ubuntu/minor_cpu.sv:2118:1: No timescale set for "init_cache".
+15: [WRN:PA0205] /home/ubuntu/minor_cpu.sv:2175:1: No timescale set for "memory_blackbox_array_3e7da".
+16: [WRN:PA0205] /home/ubuntu/minor_cpu.sv:2207:1: No timescale set for "d".
+17: [WRN:PA0205] /home/ubuntu/minor_cpu.sv:5069:1: No timescale set for "top".
+18: [WRN:PA0205] /home/ubuntu/minor_cpu.sv:6337:1: No timescale set for "fifo".
+19: [WRN:PA0205] /home/ubuntu/minor_cpu.sv:6459:1: No timescale set for "trigger_counter".
+20: [WRN:PA0205] /home/ubuntu/minor_cpu.sv:6497:1: No timescale set for "tb".
+56: [WRN:EL0534] Cmd line top level is not a top level "top".

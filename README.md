@@ -18,8 +18,16 @@
 ## Replicating the Results
 
 1. Elaborate the CPU and run all the RISCV benchmarks.
-    - `CPU.sh`: Elaborate the CPU, run each workload, synthesize, and finally export the results to `xxxx.csv`.
+    - `minor_cpu.py`: Elaborate the CPU, run each workload, synthesize, and finally export the results to `/scripts/minor_cpu/minor_logs/minor.csv`.
+    cd ./scripts/minor_cpu/minor_logs
+    sourse ../../../assassyn-public/setup.sh
+    python ../minor_cpu.py
+    - `sodor_cpu.py`: Elaborate the CPU, run each workload, synthesize, and finally export the results to `/scripts/sodor_cpu/sodor_logs/sodor.csv`.
+
+
 2. Synthesize and simulate all the HLS workloads.
     - `HLS.sh`: Synthesize all the C workloads, and gather the result, export the results to `yyyy.csv`.
+
+
 3. Plot the figures.
     - `fig-x.py`: Run each script to plot the corresponding figure in the paper.

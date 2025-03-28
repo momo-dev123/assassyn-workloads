@@ -1,0 +1,290 @@
+Startpoint: io_time[0]$_SDFFE_PP0P_ (rising edge-triggered flip-flop)
+Endpoint: large_1[48]$_SDFFE_PP0P_ (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ io_time[0]$_SDFFE_PP0P_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 138.64  138.64 v io_time[0]$_SDFFE_PP0P_/QN (DFFHQNx1_ASAP7_75t_R)
+  41.40  180.05 ^ _2686_/Y (INVx8_ASAP7_75t_R)
+  36.89  216.93 v _4974_/CON (HAxp5_ASAP7_75t_R)
+  23.67  240.60 ^ _2693_/Y (INVx1_ASAP7_75t_R)
+  33.13  273.74 v _4975_/CON (HAxp5_ASAP7_75t_R)
+ 110.43  384.16 v _3960_/Y (OR5x2_ASAP7_75t_R)
+ 105.29  489.45 v _3992_/Y (OR5x2_ASAP7_75t_R)
+ 105.36  594.81 v _4044_/Y (OR5x2_ASAP7_75t_R)
+ 110.10  704.91 v _4093_/Y (OR5x2_ASAP7_75t_R)
+ 106.28  811.19 v _4194_/Y (OR5x2_ASAP7_75t_R)
+  96.82  908.02 v _4332_/Y (OR5x2_ASAP7_75t_R)
+  37.74  945.75 v _4333_/Y (XNOR2x1_ASAP7_75t_R)
+  31.51  977.26 v _4335_/Y (AO21x1_ASAP7_75t_R)
+  30.46 1007.72 v _4336_/Y (AND2x2_ASAP7_75t_R)
+   0.06 1007.78 v large_1[48]$_SDFFE_PP0P_/D (DFFHQNx1_ASAP7_75t_R)
+        1007.78   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: io_time[0]$_SDFFE_PP0P_ (rising edge-triggered flip-flop)
+Endpoint: large_1[46]$_SDFFE_PP0P_ (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ io_time[0]$_SDFFE_PP0P_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 138.64  138.64 v io_time[0]$_SDFFE_PP0P_/QN (DFFHQNx1_ASAP7_75t_R)
+  41.40  180.05 ^ _2686_/Y (INVx8_ASAP7_75t_R)
+  36.89  216.93 v _4974_/CON (HAxp5_ASAP7_75t_R)
+  23.67  240.60 ^ _2693_/Y (INVx1_ASAP7_75t_R)
+  33.13  273.74 v _4975_/CON (HAxp5_ASAP7_75t_R)
+ 110.43  384.16 v _3960_/Y (OR5x2_ASAP7_75t_R)
+ 105.29  489.45 v _3992_/Y (OR5x2_ASAP7_75t_R)
+ 105.36  594.81 v _4044_/Y (OR5x2_ASAP7_75t_R)
+ 110.10  704.91 v _4093_/Y (OR5x2_ASAP7_75t_R)
+ 106.28  811.19 v _4194_/Y (OR5x2_ASAP7_75t_R)
+  93.87  905.06 v _4317_/Y (OR5x2_ASAP7_75t_R)
+  36.54  941.60 v _4318_/Y (XNOR2x1_ASAP7_75t_R)
+  31.28  972.88 v _4320_/Y (AO21x1_ASAP7_75t_R)
+  30.48 1003.36 v _4321_/Y (AND2x2_ASAP7_75t_R)
+   0.04 1003.40 v large_1[46]$_SDFFE_PP0P_/D (DFFHQNx1_ASAP7_75t_R)
+        1003.40   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: io_time[0]$_SDFFE_PP0P_ (rising edge-triggered flip-flop)
+Endpoint: large_1[45]$_SDFFE_PP0P_ (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ io_time[0]$_SDFFE_PP0P_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 138.64  138.64 v io_time[0]$_SDFFE_PP0P_/QN (DFFHQNx1_ASAP7_75t_R)
+  41.40  180.05 ^ _2686_/Y (INVx8_ASAP7_75t_R)
+  36.89  216.93 v _4974_/CON (HAxp5_ASAP7_75t_R)
+  23.67  240.60 ^ _2693_/Y (INVx1_ASAP7_75t_R)
+  33.13  273.74 v _4975_/CON (HAxp5_ASAP7_75t_R)
+ 110.43  384.16 v _3960_/Y (OR5x2_ASAP7_75t_R)
+ 102.87  487.04 v _4002_/Y (OR5x2_ASAP7_75t_R)
+ 109.73  596.76 v _4039_/Y (OR5x2_ASAP7_75t_R)
+ 108.07  704.83 v _4130_/Y (OR5x2_ASAP7_75t_R)
+  92.84  797.67 v _4280_/Y (OR5x2_ASAP7_75t_R)
+  94.73  892.40 v _4309_/Y (OR5x2_ASAP7_75t_R)
+  35.00  927.40 v _4310_/Y (XNOR2x1_ASAP7_75t_R)
+  30.38  957.78 v _4311_/Y (AND2x2_ASAP7_75t_R)
+  36.74  994.51 v _4313_/Y (OA21x2_ASAP7_75t_R)
+   0.04  994.55 v large_1[45]$_SDFFE_PP0P_/D (DFFHQNx1_ASAP7_75t_R)
+         994.55   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: io_time[0]$_SDFFE_PP0P_ (rising edge-triggered flip-flop)
+Endpoint: large_1[36]$_SDFFE_PP0P_ (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ io_time[0]$_SDFFE_PP0P_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 138.64  138.64 v io_time[0]$_SDFFE_PP0P_/QN (DFFHQNx1_ASAP7_75t_R)
+  41.40  180.05 ^ _2686_/Y (INVx8_ASAP7_75t_R)
+  36.89  216.93 v _4974_/CON (HAxp5_ASAP7_75t_R)
+  23.67  240.60 ^ _2693_/Y (INVx1_ASAP7_75t_R)
+  33.13  273.74 v _4975_/CON (HAxp5_ASAP7_75t_R)
+ 110.43  384.16 v _3960_/Y (OR5x2_ASAP7_75t_R)
+ 105.29  489.45 v _3992_/Y (OR5x2_ASAP7_75t_R)
+ 105.36  594.81 v _4044_/Y (OR5x2_ASAP7_75t_R)
+ 110.10  704.91 v _4093_/Y (OR5x2_ASAP7_75t_R)
+ 106.28  811.19 v _4194_/Y (OR5x2_ASAP7_75t_R)
+  70.69  881.88 v _4239_/Y (OR4x1_ASAP7_75t_R)
+  35.51  917.39 v _4240_/Y (XNOR2x1_ASAP7_75t_R)
+  30.92  948.31 v _4241_/Y (AND2x2_ASAP7_75t_R)
+  36.36  984.67 v _4243_/Y (OA21x2_ASAP7_75t_R)
+   0.03  984.69 v large_1[36]$_SDFFE_PP0P_/D (DFFHQNx1_ASAP7_75t_R)
+         984.69   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: io_time[0]$_SDFFE_PP0P_ (rising edge-triggered flip-flop)
+Endpoint: large_1[50]$_SDFFE_PP0P_ (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ io_time[0]$_SDFFE_PP0P_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 138.64  138.64 v io_time[0]$_SDFFE_PP0P_/QN (DFFHQNx1_ASAP7_75t_R)
+  41.40  180.05 ^ _2686_/Y (INVx8_ASAP7_75t_R)
+  36.89  216.93 v _4974_/CON (HAxp5_ASAP7_75t_R)
+  23.67  240.60 ^ _2693_/Y (INVx1_ASAP7_75t_R)
+  33.13  273.74 v _4975_/CON (HAxp5_ASAP7_75t_R)
+ 110.43  384.16 v _3960_/Y (OR5x2_ASAP7_75t_R)
+ 105.29  489.45 v _3992_/Y (OR5x2_ASAP7_75t_R)
+ 105.36  594.81 v _4044_/Y (OR5x2_ASAP7_75t_R)
+ 110.10  704.91 v _4093_/Y (OR5x2_ASAP7_75t_R)
+  95.01  799.92 v _4223_/Y (OR3x4_ASAP7_75t_R)
+  65.28  865.20 v _4346_/Y (OR4x1_ASAP7_75t_R)
+  41.59  906.79 v _4347_/Y (XOR2x1_ASAP7_75t_R)
+  34.37  941.15 v _4348_/Y (AND2x2_ASAP7_75t_R)
+  36.74  977.89 v _4350_/Y (OA21x2_ASAP7_75t_R)
+   0.06  977.95 v large_1[50]$_SDFFE_PP0P_/D (DFFHQNx1_ASAP7_75t_R)
+         977.95   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: io_time[0]$_SDFFE_PP0P_ (rising edge-triggered flip-flop)
+Endpoint: large_1[56]$_SDFFE_PP0P_ (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ io_time[0]$_SDFFE_PP0P_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 138.64  138.64 v io_time[0]$_SDFFE_PP0P_/QN (DFFHQNx1_ASAP7_75t_R)
+  41.40  180.05 ^ _2686_/Y (INVx8_ASAP7_75t_R)
+  36.89  216.93 v _4974_/CON (HAxp5_ASAP7_75t_R)
+  23.67  240.60 ^ _2693_/Y (INVx1_ASAP7_75t_R)
+  33.13  273.74 v _4975_/CON (HAxp5_ASAP7_75t_R)
+ 110.43  384.16 v _3960_/Y (OR5x2_ASAP7_75t_R)
+ 105.29  489.45 v _3992_/Y (OR5x2_ASAP7_75t_R)
+ 105.36  594.81 v _4044_/Y (OR5x2_ASAP7_75t_R)
+ 110.10  704.91 v _4093_/Y (OR5x2_ASAP7_75t_R)
+  98.91  803.82 v _4273_/Y (OR5x2_ASAP7_75t_R)
+  67.84  871.66 v _4386_/Y (OR4x1_ASAP7_75t_R)
+  34.68  906.34 v _4387_/Y (XNOR2x1_ASAP7_75t_R)
+  30.14  936.48 v _4388_/Y (AND2x2_ASAP7_75t_R)
+  36.79  973.27 v _4390_/Y (OA21x2_ASAP7_75t_R)
+   0.04  973.31 v large_1[56]$_SDFFE_PP0P_/D (DFFHQNx1_ASAP7_75t_R)
+         973.31   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: io_time[0]$_SDFFE_PP0P_ (rising edge-triggered flip-flop)
+Endpoint: large_1[54]$_SDFFE_PP0P_ (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ io_time[0]$_SDFFE_PP0P_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 138.64  138.64 v io_time[0]$_SDFFE_PP0P_/QN (DFFHQNx1_ASAP7_75t_R)
+  41.40  180.05 ^ _2686_/Y (INVx8_ASAP7_75t_R)
+  36.89  216.93 v _4974_/CON (HAxp5_ASAP7_75t_R)
+  23.67  240.60 ^ _2693_/Y (INVx1_ASAP7_75t_R)
+  33.13  273.74 v _4975_/CON (HAxp5_ASAP7_75t_R)
+ 110.43  384.16 v _3960_/Y (OR5x2_ASAP7_75t_R)
+ 105.29  489.45 v _3992_/Y (OR5x2_ASAP7_75t_R)
+ 105.36  594.81 v _4044_/Y (OR5x2_ASAP7_75t_R)
+ 110.10  704.91 v _4093_/Y (OR5x2_ASAP7_75t_R)
+  95.01  799.92 v _4223_/Y (OR3x4_ASAP7_75t_R)
+  59.84  859.76 v _4369_/Y (OR3x1_ASAP7_75t_R)
+  48.07  907.82 v _4371_/Y (OR3x1_ASAP7_75t_R)
+  27.95  935.77 v _4373_/Y (AND3x1_ASAP7_75t_R)
+  36.72  972.48 v _4376_/Y (OA21x2_ASAP7_75t_R)
+   0.06  972.55 v large_1[54]$_SDFFE_PP0P_/D (DFFHQNx1_ASAP7_75t_R)
+         972.55   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: io_time[0]$_SDFFE_PP0P_ (rising edge-triggered flip-flop)
+Endpoint: large_1[44]$_SDFFE_PP0P_ (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ io_time[0]$_SDFFE_PP0P_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 138.64  138.64 v io_time[0]$_SDFFE_PP0P_/QN (DFFHQNx1_ASAP7_75t_R)
+  41.40  180.05 ^ _2686_/Y (INVx8_ASAP7_75t_R)
+  36.89  216.93 v _4974_/CON (HAxp5_ASAP7_75t_R)
+  23.67  240.60 ^ _2693_/Y (INVx1_ASAP7_75t_R)
+  33.13  273.74 v _4975_/CON (HAxp5_ASAP7_75t_R)
+ 110.43  384.16 v _3960_/Y (OR5x2_ASAP7_75t_R)
+ 104.17  488.33 v _3995_/Y (OR5x2_ASAP7_75t_R)
+ 105.86  594.19 v _4030_/Y (OR5x2_ASAP7_75t_R)
+  82.27  676.46 v _4071_/Y (OR5x1_ASAP7_75t_R)
+  89.62  766.08 v _4170_/Y (OR4x2_ASAP7_75t_R)
+  89.26  855.35 v _4300_/Y (OR4x2_ASAP7_75t_R)
+  51.75  907.10 v _4302_/Y (OR3x1_ASAP7_75t_R)
+  26.37  933.47 v _4304_/Y (AND3x1_ASAP7_75t_R)
+  35.31  968.78 v _4307_/Y (OA21x2_ASAP7_75t_R)
+   0.03  968.81 v large_1[44]$_SDFFE_PP0P_/D (DFFHQNx1_ASAP7_75t_R)
+         968.81   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: io_time[0]$_SDFFE_PP0P_ (rising edge-triggered flip-flop)
+Endpoint: large_1[52]$_SDFFE_PP0P_ (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ io_time[0]$_SDFFE_PP0P_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 138.64  138.64 v io_time[0]$_SDFFE_PP0P_/QN (DFFHQNx1_ASAP7_75t_R)
+  41.40  180.05 ^ _2686_/Y (INVx8_ASAP7_75t_R)
+  36.89  216.93 v _4974_/CON (HAxp5_ASAP7_75t_R)
+  23.67  240.60 ^ _2693_/Y (INVx1_ASAP7_75t_R)
+  33.13  273.74 v _4975_/CON (HAxp5_ASAP7_75t_R)
+ 110.43  384.16 v _3960_/Y (OR5x2_ASAP7_75t_R)
+ 104.17  488.33 v _3995_/Y (OR5x2_ASAP7_75t_R)
+ 105.86  594.19 v _4030_/Y (OR5x2_ASAP7_75t_R)
+  82.27  676.46 v _4071_/Y (OR5x1_ASAP7_75t_R)
+  89.62  766.08 v _4170_/Y (OR4x2_ASAP7_75t_R)
+  89.26  855.35 v _4300_/Y (OR4x2_ASAP7_75t_R)
+  50.61  905.96 v _4357_/Y (OR3x1_ASAP7_75t_R)
+  25.91  931.87 v _4359_/Y (AND3x1_ASAP7_75t_R)
+  35.69  967.56 v _4362_/Y (OA21x2_ASAP7_75t_R)
+   0.04  967.60 v large_1[52]$_SDFFE_PP0P_/D (DFFHQNx1_ASAP7_75t_R)
+         967.60   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
+Startpoint: io_time[0]$_SDFFE_PP0P_ (rising edge-triggered flip-flop)
+Endpoint: large_1[57]$_SDFFE_PP0P_ (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00 ^ io_time[0]$_SDFFE_PP0P_/CLK (DFFHQNx1_ASAP7_75t_R)
+ 138.64  138.64 v io_time[0]$_SDFFE_PP0P_/QN (DFFHQNx1_ASAP7_75t_R)
+  41.40  180.05 ^ _2686_/Y (INVx8_ASAP7_75t_R)
+  36.89  216.93 v _4974_/CON (HAxp5_ASAP7_75t_R)
+  23.67  240.60 ^ _2693_/Y (INVx1_ASAP7_75t_R)
+  33.13  273.74 v _4975_/CON (HAxp5_ASAP7_75t_R)
+ 110.43  384.16 v _3960_/Y (OR5x2_ASAP7_75t_R)
+  94.91  479.07 v _4024_/Y (OR5x2_ASAP7_75t_R)
+ 106.41  585.48 v _4053_/Y (OR5x2_ASAP7_75t_R)
+ 105.89  691.37 v _4184_/Y (OR5x2_ASAP7_75t_R)
+  93.66  785.03 v _4337_/Y (OR5x2_ASAP7_75t_R)
+  68.26  853.29 v _4392_/Y (OR4x1_ASAP7_75t_R)
+  42.51  895.80 v _4394_/Y (OA21x2_ASAP7_75t_R)
+  38.20  934.00 v _4395_/Y (AO22x1_ASAP7_75t_R)
+  31.67  965.67 v _4396_/Y (AND2x2_ASAP7_75t_R)
+   0.03  965.70 v large_1[57]$_SDFFE_PP0P_/D (DFFHQNx1_ASAP7_75t_R)
+         965.70   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+

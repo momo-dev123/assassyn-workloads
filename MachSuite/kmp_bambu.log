@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-UvqAFA/usr/bin/bambu -I./common --top-fname=main --simulator=VERILATOR --file-input-data=./kmp/input.data,./kmp/check.data --simulate -s --top-rtldesign-name=run_benchmark --no-iob --hls-div --benchmark-name=kmp -DBAMBU_PROFILING -DNO_FINAL_MEMCMP_CHECK ./kmp/kmp.c ./common/harness.c 
+ ==  Bambu executed with: /tmp/.mount_bambu-JbeVuM/usr/bin/bambu -I./common --top-fname=main --simulator=VERILATOR --file-input-data=./kmp/input.data,./kmp/check.data --simulate -s --top-rtldesign-name=run_benchmark --no-iob --hls-div --benchmark-name=kmp -DBAMBU_PROFILING -DNO_FINAL_MEMCMP_CHECK ./kmp/kmp.c ./common/harness.c 
 
 
 ********************************************************************************
@@ -110,7 +110,7 @@ Target technology = FPGA
     Code has LOADs or STOREs with unaligned accesses
     Internally allocated memory (no private memories): 7340032
     Internally allocated memory: 7340040
-  Time to perform memory allocation: 0.01 seconds
+  Time to perform memory allocation: 0.00 seconds
 
 
   Memory allocation information:
@@ -158,7 +158,7 @@ Target technology = FPGA
   Module allocation information for function __assert_fail:
     Number of complex operations: 2
     Number of complex operations: 2
-  Time to perform module allocation: 0.15 seconds
+  Time to perform module allocation: 0.13 seconds
 
 
   Module allocation information for function __internal_free:
@@ -170,7 +170,7 @@ Target technology = FPGA
   Module allocation information for function kmp:
     Number of complex operations: 15
     Number of complex operations: 15
-  Time to perform module allocation: 0.02 seconds
+  Time to perform module allocation: 0.01 seconds
 
 
   Module allocation information for function read:
@@ -243,7 +243,7 @@ Target technology = FPGA
     Number of control steps: 19
     Minimum slack: 1.866399996999996
     Estimated max frequency (MHz): 122.94678858453319
-  Time to perform scheduling: 0.01 seconds
+  Time to perform scheduling: 0.00 seconds
 
 
   State Transition Graph Information of function __internal_free:
@@ -289,13 +289,13 @@ Target technology = FPGA
     Number of control steps: 29
     Minimum slack: 2.2296666646666177
     Estimated max frequency (MHz): 128.69460766281213
-  Time to perform scheduling: 0.02 seconds
+  Time to perform scheduling: 0.03 seconds
 
 
   State Transition Graph Information of function kmp:
     Number of states: 30
     Done port is registered
-  Time to perform creation of STG: 0.01 seconds
+  Time to perform creation of STG: 0.00 seconds
 
 
   Memory allocation information:
@@ -309,7 +309,7 @@ Target technology = FPGA
     Code has LOADs or STOREs with unaligned accesses
     Internally allocated memory (no private memories): 7340032
     Internally allocated memory: 7340040
-  Time to perform memory allocation: 0.01 seconds
+  Time to perform memory allocation: 0.00 seconds
 
 
   Memory allocation information:
@@ -335,7 +335,7 @@ Target technology = FPGA
     Number of control steps: 19
     Minimum slack: 5.1483999949999992
     Estimated max frequency (MHz): 206.11756924919862
-  Time to perform scheduling: 0.00 seconds
+  Time to perform scheduling: 0.01 seconds
 
 
   State Transition Graph Information of function read:
@@ -427,7 +427,7 @@ Target technology = FPGA
 
   Register binding information for function __internal_free:
     Register allocation algorithm obtains a sub-optimal result: 18 registers(LB:11)
-  Time to perform register binding: 0.00 seconds
+  Time to perform register binding: 0.01 seconds
 
 
   Connection Binding Information for function __internal_free:
@@ -482,16 +482,16 @@ Target technology = FPGA
     Estimated area of MUX21: 244
     Total estimated area: 1295
     Estimated number of DSPs: 0
-    Slack computed in 0.01 seconds
+    Slack computed in 0.00 seconds
     False-loop computation completed in 0.00 seconds
     Weight computation completed in 0.00 seconds
     Clique covering computation completed in 0.00 seconds
-  Time to perform module binding: 0.01 seconds
+  Time to perform module binding: 0.00 seconds
 
 
   Register binding information for function read:
     Register allocation algorithm obtains a sub-optimal result: 27 registers(LB:11)
-  Time to perform register binding: 0.00 seconds
+  Time to perform register binding: 0.01 seconds
 
 
   Module binding information for function read:
@@ -504,13 +504,13 @@ Target technology = FPGA
     Slack computed in 0.00 seconds
     False-loop computation completed in 0.00 seconds
     Weight computation completed in 0.00 seconds
-    Clique covering computation completed in 0.00 seconds
-  Time to perform module binding: 0.00 seconds
+    Clique covering computation completed in 0.01 seconds
+  Time to perform module binding: 0.01 seconds
 
 
   Module allocation information for function __internal_malloc:
     Number of complex operations: 9
-  Time to perform module allocation: 0.01 seconds
+  Time to perform module allocation: 0.00 seconds
 
 
   Scheduling Information of function __internal_malloc:
@@ -558,12 +558,12 @@ Target technology = FPGA
 
   Register binding information for function __internal_malloc:
     Register allocation algorithm obtains a sub-optimal result: 29 registers(LB:11)
-  Time to perform register binding: 0.00 seconds
+  Time to perform register binding: 0.01 seconds
 
 
   Connection Binding Information for function __internal_malloc:
     Number of allocated multiplexers (2-to-1 equivalent): 21
-  Time to perform interconnection binding: 0.01 seconds
+  Time to perform interconnection binding: 0.00 seconds
 
   Total number of flip-flops in function __internal_malloc: 746
 
@@ -638,7 +638,7 @@ Target technology = FPGA
   Module allocation information for function main:
     Number of complex operations: 11
     Number of complex operations: 11
-  Time to perform module allocation: 0.16 seconds
+  Time to perform module allocation: 0.15 seconds
 
 
   Memory allocation information:
@@ -652,7 +652,7 @@ Target technology = FPGA
     Code has LOADs or STOREs with unaligned accesses
     Internally allocated memory (no private memories): 7340032
     Internally allocated memory: 7340040
-  Time to perform memory allocation: 0.01 seconds
+  Time to perform memory allocation: 0.00 seconds
 
 
   Module allocation information for function main:
@@ -711,7 +711,7 @@ Target technology = FPGA
   Time to perform interconnection binding: 0.00 seconds
 
   Total number of flip-flops in function main: 624
-[0mWarning: XML file "/home/gaod/derui_work/MachSuite/test.xml" cannot be opened, creating a stub with random values
+[0mWarning: XML file "/home/gaod/derui_work/assassyn-workloads/MachSuite/test.xml" cannot be opened, creating a stub with random values
   Total cycles             : 39155 cycles
   Number of executions     : 1
   Average execution        : 39155 cycles

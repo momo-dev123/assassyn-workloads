@@ -1,0 +1,4268 @@
+library (run_benchmark_slow) {
+  comment                        : "";
+  delay_model                    : table_lookup;
+  simulation                     : false;
+  capacitive_load_unit (1,fF);
+  leakage_power_unit             : 1pW;
+  current_unit                   : "1A";
+  pulling_resistance_unit        : "1kohm";
+  time_unit                      : "1ps";
+  voltage_unit                   : "1v";
+  library_features(report_delay_calculation);
+
+  input_threshold_pct_rise : 50;
+  input_threshold_pct_fall : 50;
+  output_threshold_pct_rise : 50;
+  output_threshold_pct_fall : 50;
+  slew_lower_threshold_pct_rise : 10;
+  slew_lower_threshold_pct_fall : 10;
+  slew_upper_threshold_pct_rise : 90;
+  slew_upper_threshold_pct_fall : 90;
+  slew_derate_from_library : 1.0;
+
+
+  nom_process                    : 1.0;
+  nom_temperature                : 100.0;
+  nom_voltage                    : 0.63;
+
+  lu_table_template(template_1) {
+    variable_1 : total_output_net_capacitance;
+    index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+  }
+  lu_table_template(template_2) {
+    variable_1 : total_output_net_capacitance;
+    index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+  }
+  lu_table_template(template_3) {
+    variable_1 : total_output_net_capacitance;
+    index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+  }
+  lu_table_template(template_4) {
+    variable_1 : total_output_net_capacitance;
+    index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+  }
+  type ("M_DataRdy") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 2;
+    bit_from : 1;
+    bit_to : 0;
+  }
+  type ("M_Rdata_ram") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 64;
+    bit_from : 63;
+    bit_to : 0;
+  }
+  type ("Min_Wdata_ram") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 64;
+    bit_from : 63;
+    bit_to : 0;
+  }
+  type ("Min_addr_ram") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 46;
+    bit_from : 45;
+    bit_to : 0;
+  }
+  type ("Min_data_ram_size") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 12;
+    bit_from : 11;
+    bit_to : 0;
+  }
+  type ("Min_oe_ram") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 2;
+    bit_from : 1;
+    bit_to : 0;
+  }
+  type ("Min_we_ram") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 2;
+    bit_from : 1;
+    bit_to : 0;
+  }
+  type ("Mout_Wdata_ram") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 64;
+    bit_from : 63;
+    bit_to : 0;
+  }
+  type ("Mout_addr_ram") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 46;
+    bit_from : 45;
+    bit_to : 0;
+  }
+  type ("Mout_data_ram_size") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 12;
+    bit_from : 11;
+    bit_to : 0;
+  }
+  type ("Mout_oe_ram") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 2;
+    bit_from : 1;
+    bit_to : 0;
+  }
+  type ("Mout_we_ram") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 2;
+    bit_from : 1;
+    bit_to : 0;
+  }
+  type ("vargs") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 32;
+    bit_from : 31;
+    bit_to : 0;
+  }
+
+  cell ("run_benchmark") {
+    area : 591.252 
+    is_macro_cell : true;
+    pin("clock") {
+      direction : input;
+      capacitance : 44.2656;
+    }
+    pin("done_port") {
+      direction : output;
+      capacitance : 0.2816;
+    }
+    pin("reset") {
+      direction : input;
+      capacitance : 2.6040;
+    }
+    pin("start_port") {
+      direction : input;
+      capacitance : 14.1997;
+    }
+    bus("M_DataRdy") {
+      bus_type : M_DataRdy;
+      direction : input;
+      capacitance : 0.0000;
+    pin("M_DataRdy[1]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("M_DataRdy[0]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    }
+    bus("M_Rdata_ram") {
+      bus_type : M_Rdata_ram;
+      direction : input;
+      capacitance : 0.0000;
+    pin("M_Rdata_ram[63]") {
+      direction : input;
+      capacitance : 0.6092;
+    }
+    pin("M_Rdata_ram[62]") {
+      direction : input;
+      capacitance : 0.6339;
+    }
+    pin("M_Rdata_ram[61]") {
+      direction : input;
+      capacitance : 0.6051;
+    }
+    pin("M_Rdata_ram[60]") {
+      direction : input;
+      capacitance : 0.6086;
+    }
+    pin("M_Rdata_ram[59]") {
+      direction : input;
+      capacitance : 0.7107;
+    }
+    pin("M_Rdata_ram[58]") {
+      direction : input;
+      capacitance : 0.7143;
+    }
+    pin("M_Rdata_ram[57]") {
+      direction : input;
+      capacitance : 0.7748;
+    }
+    pin("M_Rdata_ram[56]") {
+      direction : input;
+      capacitance : 0.7101;
+    }
+    pin("M_Rdata_ram[55]") {
+      direction : input;
+      capacitance : 0.6889;
+    }
+    pin("M_Rdata_ram[54]") {
+      direction : input;
+      capacitance : 0.7451;
+    }
+    pin("M_Rdata_ram[53]") {
+      direction : input;
+      capacitance : 0.7785;
+    }
+    pin("M_Rdata_ram[52]") {
+      direction : input;
+      capacitance : 0.7107;
+    }
+    pin("M_Rdata_ram[51]") {
+      direction : input;
+      capacitance : 0.8619;
+    }
+    pin("M_Rdata_ram[50]") {
+      direction : input;
+      capacitance : 0.9168;
+    }
+    pin("M_Rdata_ram[49]") {
+      direction : input;
+      capacitance : 0.8363;
+    }
+    pin("M_Rdata_ram[48]") {
+      direction : input;
+      capacitance : 0.9280;
+    }
+    pin("M_Rdata_ram[47]") {
+      direction : input;
+      capacitance : 0.7373;
+    }
+    pin("M_Rdata_ram[46]") {
+      direction : input;
+      capacitance : 0.7406;
+    }
+    pin("M_Rdata_ram[45]") {
+      direction : input;
+      capacitance : 0.7650;
+    }
+    pin("M_Rdata_ram[44]") {
+      direction : input;
+      capacitance : 0.7169;
+    }
+    pin("M_Rdata_ram[43]") {
+      direction : input;
+      capacitance : 0.6392;
+    }
+    pin("M_Rdata_ram[42]") {
+      direction : input;
+      capacitance : 0.6727;
+    }
+    pin("M_Rdata_ram[41]") {
+      direction : input;
+      capacitance : 0.6645;
+    }
+    pin("M_Rdata_ram[40]") {
+      direction : input;
+      capacitance : 0.8037;
+    }
+    pin("M_Rdata_ram[39]") {
+      direction : input;
+      capacitance : 0.9755;
+    }
+    pin("M_Rdata_ram[38]") {
+      direction : input;
+      capacitance : 0.8704;
+    }
+    pin("M_Rdata_ram[37]") {
+      direction : input;
+      capacitance : 0.9440;
+    }
+    pin("M_Rdata_ram[36]") {
+      direction : input;
+      capacitance : 0.9357;
+    }
+    pin("M_Rdata_ram[35]") {
+      direction : input;
+      capacitance : 0.9879;
+    }
+    pin("M_Rdata_ram[34]") {
+      direction : input;
+      capacitance : 0.8586;
+    }
+    pin("M_Rdata_ram[33]") {
+      direction : input;
+      capacitance : 1.0496;
+    }
+    pin("M_Rdata_ram[32]") {
+      direction : input;
+      capacitance : 1.4252;
+    }
+    pin("M_Rdata_ram[31]") {
+      direction : input;
+      capacitance : 0.6688;
+    }
+    pin("M_Rdata_ram[30]") {
+      direction : input;
+      capacitance : 0.7851;
+    }
+    pin("M_Rdata_ram[29]") {
+      direction : input;
+      capacitance : 0.6818;
+    }
+    pin("M_Rdata_ram[28]") {
+      direction : input;
+      capacitance : 0.6691;
+    }
+    pin("M_Rdata_ram[27]") {
+      direction : input;
+      capacitance : 0.6051;
+    }
+    pin("M_Rdata_ram[26]") {
+      direction : input;
+      capacitance : 0.8884;
+    }
+    pin("M_Rdata_ram[25]") {
+      direction : input;
+      capacitance : 0.8988;
+    }
+    pin("M_Rdata_ram[24]") {
+      direction : input;
+      capacitance : 0.8699;
+    }
+    pin("M_Rdata_ram[23]") {
+      direction : input;
+      capacitance : 0.6442;
+    }
+    pin("M_Rdata_ram[22]") {
+      direction : input;
+      capacitance : 0.6579;
+    }
+    pin("M_Rdata_ram[21]") {
+      direction : input;
+      capacitance : 0.6255;
+    }
+    pin("M_Rdata_ram[20]") {
+      direction : input;
+      capacitance : 0.6433;
+    }
+    pin("M_Rdata_ram[19]") {
+      direction : input;
+      capacitance : 0.6807;
+    }
+    pin("M_Rdata_ram[18]") {
+      direction : input;
+      capacitance : 0.7202;
+    }
+    pin("M_Rdata_ram[17]") {
+      direction : input;
+      capacitance : 0.7266;
+    }
+    pin("M_Rdata_ram[16]") {
+      direction : input;
+      capacitance : 0.6817;
+    }
+    pin("M_Rdata_ram[15]") {
+      direction : input;
+      capacitance : 0.7728;
+    }
+    pin("M_Rdata_ram[14]") {
+      direction : input;
+      capacitance : 0.7140;
+    }
+    pin("M_Rdata_ram[13]") {
+      direction : input;
+      capacitance : 0.7039;
+    }
+    pin("M_Rdata_ram[12]") {
+      direction : input;
+      capacitance : 0.7668;
+    }
+    pin("M_Rdata_ram[11]") {
+      direction : input;
+      capacitance : 0.8709;
+    }
+    pin("M_Rdata_ram[10]") {
+      direction : input;
+      capacitance : 0.9723;
+    }
+    pin("M_Rdata_ram[9]") {
+      direction : input;
+      capacitance : 0.8154;
+    }
+    pin("M_Rdata_ram[8]") {
+      direction : input;
+      capacitance : 0.8094;
+    }
+    pin("M_Rdata_ram[7]") {
+      direction : input;
+      capacitance : 0.7271;
+    }
+    pin("M_Rdata_ram[6]") {
+      direction : input;
+      capacitance : 0.8547;
+    }
+    pin("M_Rdata_ram[5]") {
+      direction : input;
+      capacitance : 0.7285;
+    }
+    pin("M_Rdata_ram[4]") {
+      direction : input;
+      capacitance : 0.6973;
+    }
+    pin("M_Rdata_ram[3]") {
+      direction : input;
+      capacitance : 0.6434;
+    }
+    pin("M_Rdata_ram[2]") {
+      direction : input;
+      capacitance : 0.6643;
+    }
+    pin("M_Rdata_ram[1]") {
+      direction : input;
+      capacitance : 0.6830;
+    }
+    pin("M_Rdata_ram[0]") {
+      direction : input;
+      capacitance : 0.6513;
+    }
+    }
+    bus("Min_Wdata_ram") {
+      bus_type : Min_Wdata_ram;
+      direction : input;
+      capacitance : 0.0000;
+    pin("Min_Wdata_ram[63]") {
+      direction : input;
+      capacitance : 1.2273;
+    }
+    pin("Min_Wdata_ram[62]") {
+      direction : input;
+      capacitance : 1.2550;
+    }
+    pin("Min_Wdata_ram[61]") {
+      direction : input;
+      capacitance : 1.2263;
+    }
+    pin("Min_Wdata_ram[60]") {
+      direction : input;
+      capacitance : 1.2731;
+    }
+    pin("Min_Wdata_ram[59]") {
+      direction : input;
+      capacitance : 1.2794;
+    }
+    pin("Min_Wdata_ram[58]") {
+      direction : input;
+      capacitance : 1.2277;
+    }
+    pin("Min_Wdata_ram[57]") {
+      direction : input;
+      capacitance : 1.2305;
+    }
+    pin("Min_Wdata_ram[56]") {
+      direction : input;
+      capacitance : 1.2552;
+    }
+    pin("Min_Wdata_ram[55]") {
+      direction : input;
+      capacitance : 1.2270;
+    }
+    pin("Min_Wdata_ram[54]") {
+      direction : input;
+      capacitance : 1.2504;
+    }
+    pin("Min_Wdata_ram[53]") {
+      direction : input;
+      capacitance : 1.2276;
+    }
+    pin("Min_Wdata_ram[52]") {
+      direction : input;
+      capacitance : 1.2904;
+    }
+    pin("Min_Wdata_ram[51]") {
+      direction : input;
+      capacitance : 1.2313;
+    }
+    pin("Min_Wdata_ram[50]") {
+      direction : input;
+      capacitance : 1.2599;
+    }
+    pin("Min_Wdata_ram[49]") {
+      direction : input;
+      capacitance : 1.2252;
+    }
+    pin("Min_Wdata_ram[48]") {
+      direction : input;
+      capacitance : 1.2328;
+    }
+    pin("Min_Wdata_ram[47]") {
+      direction : input;
+      capacitance : 1.2635;
+    }
+    pin("Min_Wdata_ram[46]") {
+      direction : input;
+      capacitance : 1.3199;
+    }
+    pin("Min_Wdata_ram[45]") {
+      direction : input;
+      capacitance : 1.2712;
+    }
+    pin("Min_Wdata_ram[44]") {
+      direction : input;
+      capacitance : 1.2334;
+    }
+    pin("Min_Wdata_ram[43]") {
+      direction : input;
+      capacitance : 1.3216;
+    }
+    pin("Min_Wdata_ram[42]") {
+      direction : input;
+      capacitance : 1.3117;
+    }
+    pin("Min_Wdata_ram[41]") {
+      direction : input;
+      capacitance : 1.2268;
+    }
+    pin("Min_Wdata_ram[40]") {
+      direction : input;
+      capacitance : 1.3513;
+    }
+    pin("Min_Wdata_ram[39]") {
+      direction : input;
+      capacitance : 1.2595;
+    }
+    pin("Min_Wdata_ram[38]") {
+      direction : input;
+      capacitance : 1.2252;
+    }
+    pin("Min_Wdata_ram[37]") {
+      direction : input;
+      capacitance : 1.2895;
+    }
+    pin("Min_Wdata_ram[36]") {
+      direction : input;
+      capacitance : 1.4651;
+    }
+    pin("Min_Wdata_ram[35]") {
+      direction : input;
+      capacitance : 1.2726;
+    }
+    pin("Min_Wdata_ram[34]") {
+      direction : input;
+      capacitance : 1.2406;
+    }
+    pin("Min_Wdata_ram[33]") {
+      direction : input;
+      capacitance : 1.2532;
+    }
+    pin("Min_Wdata_ram[32]") {
+      direction : input;
+      capacitance : 1.2706;
+    }
+    pin("Min_Wdata_ram[31]") {
+      direction : input;
+      capacitance : 0.7795;
+    }
+    pin("Min_Wdata_ram[30]") {
+      direction : input;
+      capacitance : 0.5778;
+    }
+    pin("Min_Wdata_ram[29]") {
+      direction : input;
+      capacitance : 0.5901;
+    }
+    pin("Min_Wdata_ram[28]") {
+      direction : input;
+      capacitance : 0.6546;
+    }
+    pin("Min_Wdata_ram[27]") {
+      direction : input;
+      capacitance : 0.6578;
+    }
+    pin("Min_Wdata_ram[26]") {
+      direction : input;
+      capacitance : 0.5644;
+    }
+    pin("Min_Wdata_ram[25]") {
+      direction : input;
+      capacitance : 0.5765;
+    }
+    pin("Min_Wdata_ram[24]") {
+      direction : input;
+      capacitance : 0.7190;
+    }
+    pin("Min_Wdata_ram[23]") {
+      direction : input;
+      capacitance : 0.6039;
+    }
+    pin("Min_Wdata_ram[22]") {
+      direction : input;
+      capacitance : 0.6062;
+    }
+    pin("Min_Wdata_ram[21]") {
+      direction : input;
+      capacitance : 0.6633;
+    }
+    pin("Min_Wdata_ram[20]") {
+      direction : input;
+      capacitance : 0.7715;
+    }
+    pin("Min_Wdata_ram[19]") {
+      direction : input;
+      capacitance : 0.5926;
+    }
+    pin("Min_Wdata_ram[18]") {
+      direction : input;
+      capacitance : 0.6250;
+    }
+    pin("Min_Wdata_ram[17]") {
+      direction : input;
+      capacitance : 0.6038;
+    }
+    pin("Min_Wdata_ram[16]") {
+      direction : input;
+      capacitance : 0.6084;
+    }
+    pin("Min_Wdata_ram[15]") {
+      direction : input;
+      capacitance : 0.6871;
+    }
+    pin("Min_Wdata_ram[14]") {
+      direction : input;
+      capacitance : 0.6343;
+    }
+    pin("Min_Wdata_ram[13]") {
+      direction : input;
+      capacitance : 0.6803;
+    }
+    pin("Min_Wdata_ram[12]") {
+      direction : input;
+      capacitance : 0.6333;
+    }
+    pin("Min_Wdata_ram[11]") {
+      direction : input;
+      capacitance : 0.7293;
+    }
+    pin("Min_Wdata_ram[10]") {
+      direction : input;
+      capacitance : 0.6070;
+    }
+    pin("Min_Wdata_ram[9]") {
+      direction : input;
+      capacitance : 0.6517;
+    }
+    pin("Min_Wdata_ram[8]") {
+      direction : input;
+      capacitance : 0.7979;
+    }
+    pin("Min_Wdata_ram[7]") {
+      direction : input;
+      capacitance : 0.5773;
+    }
+    pin("Min_Wdata_ram[6]") {
+      direction : input;
+      capacitance : 0.6592;
+    }
+    pin("Min_Wdata_ram[5]") {
+      direction : input;
+      capacitance : 0.6165;
+    }
+    pin("Min_Wdata_ram[4]") {
+      direction : input;
+      capacitance : 0.6215;
+    }
+    pin("Min_Wdata_ram[3]") {
+      direction : input;
+      capacitance : 0.6896;
+    }
+    pin("Min_Wdata_ram[2]") {
+      direction : input;
+      capacitance : 0.6125;
+    }
+    pin("Min_Wdata_ram[1]") {
+      direction : input;
+      capacitance : 0.5829;
+    }
+    pin("Min_Wdata_ram[0]") {
+      direction : input;
+      capacitance : 0.5922;
+    }
+    }
+    bus("Min_addr_ram") {
+      bus_type : Min_addr_ram;
+      direction : input;
+      capacitance : 0.0000;
+    pin("Min_addr_ram[45]") {
+      direction : input;
+      capacitance : 0.8791;
+    }
+    pin("Min_addr_ram[44]") {
+      direction : input;
+      capacitance : 0.7729;
+    }
+    pin("Min_addr_ram[43]") {
+      direction : input;
+      capacitance : 0.7538;
+    }
+    pin("Min_addr_ram[42]") {
+      direction : input;
+      capacitance : 2.8594;
+    }
+    pin("Min_addr_ram[41]") {
+      direction : input;
+      capacitance : 0.7245;
+    }
+    pin("Min_addr_ram[40]") {
+      direction : input;
+      capacitance : 0.7107;
+    }
+    pin("Min_addr_ram[39]") {
+      direction : input;
+      capacitance : 0.6467;
+    }
+    pin("Min_addr_ram[38]") {
+      direction : input;
+      capacitance : 0.6814;
+    }
+    pin("Min_addr_ram[37]") {
+      direction : input;
+      capacitance : 0.6073;
+    }
+    pin("Min_addr_ram[36]") {
+      direction : input;
+      capacitance : 0.9311;
+    }
+    pin("Min_addr_ram[35]") {
+      direction : input;
+      capacitance : 0.6021;
+    }
+    pin("Min_addr_ram[34]") {
+      direction : input;
+      capacitance : 0.6945;
+    }
+    pin("Min_addr_ram[33]") {
+      direction : input;
+      capacitance : 0.9272;
+    }
+    pin("Min_addr_ram[32]") {
+      direction : input;
+      capacitance : 0.6933;
+    }
+    pin("Min_addr_ram[31]") {
+      direction : input;
+      capacitance : 0.7479;
+    }
+    pin("Min_addr_ram[30]") {
+      direction : input;
+      capacitance : 0.6754;
+    }
+    pin("Min_addr_ram[29]") {
+      direction : input;
+      capacitance : 0.8004;
+    }
+    pin("Min_addr_ram[28]") {
+      direction : input;
+      capacitance : 0.6009;
+    }
+    pin("Min_addr_ram[27]") {
+      direction : input;
+      capacitance : 0.6351;
+    }
+    pin("Min_addr_ram[26]") {
+      direction : input;
+      capacitance : 0.7376;
+    }
+    pin("Min_addr_ram[25]") {
+      direction : input;
+      capacitance : 0.7032;
+    }
+    pin("Min_addr_ram[24]") {
+      direction : input;
+      capacitance : 0.6829;
+    }
+    pin("Min_addr_ram[23]") {
+      direction : input;
+      capacitance : 0.7047;
+    }
+    pin("Min_addr_ram[22]") {
+      direction : input;
+      capacitance : 1.7428;
+    }
+    pin("Min_addr_ram[21]") {
+      direction : input;
+      capacitance : 0.8030;
+    }
+    pin("Min_addr_ram[20]") {
+      direction : input;
+      capacitance : 2.3800;
+    }
+    pin("Min_addr_ram[19]") {
+      direction : input;
+      capacitance : 2.7097;
+    }
+    pin("Min_addr_ram[18]") {
+      direction : input;
+      capacitance : 2.2710;
+    }
+    pin("Min_addr_ram[17]") {
+      direction : input;
+      capacitance : 2.8289;
+    }
+    pin("Min_addr_ram[16]") {
+      direction : input;
+      capacitance : 1.3227;
+    }
+    pin("Min_addr_ram[15]") {
+      direction : input;
+      capacitance : 1.5735;
+    }
+    pin("Min_addr_ram[14]") {
+      direction : input;
+      capacitance : 0.7984;
+    }
+    pin("Min_addr_ram[13]") {
+      direction : input;
+      capacitance : 0.6698;
+    }
+    pin("Min_addr_ram[12]") {
+      direction : input;
+      capacitance : 1.0602;
+    }
+    pin("Min_addr_ram[11]") {
+      direction : input;
+      capacitance : 1.8241;
+    }
+    pin("Min_addr_ram[10]") {
+      direction : input;
+      capacitance : 0.7653;
+    }
+    pin("Min_addr_ram[9]") {
+      direction : input;
+      capacitance : 0.8671;
+    }
+    pin("Min_addr_ram[8]") {
+      direction : input;
+      capacitance : 0.9225;
+    }
+    pin("Min_addr_ram[7]") {
+      direction : input;
+      capacitance : 0.5654;
+    }
+    pin("Min_addr_ram[6]") {
+      direction : input;
+      capacitance : 0.8185;
+    }
+    pin("Min_addr_ram[5]") {
+      direction : input;
+      capacitance : 0.7184;
+    }
+    pin("Min_addr_ram[4]") {
+      direction : input;
+      capacitance : 0.9464;
+    }
+    pin("Min_addr_ram[3]") {
+      direction : input;
+      capacitance : 0.7566;
+    }
+    pin("Min_addr_ram[2]") {
+      direction : input;
+      capacitance : 0.8051;
+    }
+    pin("Min_addr_ram[1]") {
+      direction : input;
+      capacitance : 0.6318;
+    }
+    pin("Min_addr_ram[0]") {
+      direction : input;
+      capacitance : 0.9383;
+    }
+    }
+    bus("Min_data_ram_size") {
+      bus_type : Min_data_ram_size;
+      direction : input;
+      capacitance : 0.0000;
+    pin("Min_data_ram_size[11]") {
+      direction : input;
+      capacitance : 0.8025;
+    }
+    pin("Min_data_ram_size[10]") {
+      direction : input;
+      capacitance : 1.1038;
+    }
+    pin("Min_data_ram_size[9]") {
+      direction : input;
+      capacitance : 1.1360;
+    }
+    pin("Min_data_ram_size[8]") {
+      direction : input;
+      capacitance : 1.0944;
+    }
+    pin("Min_data_ram_size[7]") {
+      direction : input;
+      capacitance : 1.1044;
+    }
+    pin("Min_data_ram_size[6]") {
+      direction : input;
+      capacitance : 1.2204;
+    }
+    pin("Min_data_ram_size[5]") {
+      direction : input;
+      capacitance : 0.7730;
+    }
+    pin("Min_data_ram_size[4]") {
+      direction : input;
+      capacitance : 1.1835;
+    }
+    pin("Min_data_ram_size[3]") {
+      direction : input;
+      capacitance : 1.2187;
+    }
+    pin("Min_data_ram_size[2]") {
+      direction : input;
+      capacitance : 1.1387;
+    }
+    pin("Min_data_ram_size[1]") {
+      direction : input;
+      capacitance : 1.1238;
+    }
+    pin("Min_data_ram_size[0]") {
+      direction : input;
+      capacitance : 1.1135;
+    }
+    }
+    bus("Min_oe_ram") {
+      bus_type : Min_oe_ram;
+      direction : input;
+      capacitance : 0.0000;
+    pin("Min_oe_ram[1]") {
+      direction : input;
+      capacitance : 0.6877;
+    }
+    pin("Min_oe_ram[0]") {
+      direction : input;
+      capacitance : 0.6987;
+    }
+    }
+    bus("Min_we_ram") {
+      bus_type : Min_we_ram;
+      direction : input;
+      capacitance : 0.0000;
+    pin("Min_we_ram[1]") {
+      direction : input;
+      capacitance : 1.2252;
+    }
+    pin("Min_we_ram[0]") {
+      direction : input;
+      capacitance : 1.0744;
+    }
+    }
+    bus("Mout_Wdata_ram") {
+      bus_type : Mout_Wdata_ram;
+      direction : output;
+      capacitance : 0.0000;
+    pin("Mout_Wdata_ram[63]") {
+      direction : output;
+      capacitance : 0.1123;
+      timing() {
+        related_pin : "Min_Wdata_ram[63]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.00316,35.86613,44.29176,59.91958,90.38000,150.91298,271.73239");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95358,42.46973,76.18186,144.69772,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.02840,40.51071,47.80880,60.38292,83.72998,129.44627,220.38100");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24158,23.30462,35.07698,58.62132,106.54939,203.97247,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[62]") {
+      direction : output;
+      capacitance : 0.0850;
+      timing() {
+        related_pin : "Min_Wdata_ram[62]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.06094,35.92389,44.34953,59.97742,90.43784,150.97086,271.79025");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95360,42.46972,76.18185,144.69771,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.08073,40.56306,47.86113,60.43530,83.78247,129.49879,220.43349");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24159,23.30458,35.07692,58.62130,106.54922,203.97246,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[61]") {
+      direction : output;
+      capacitance : 0.0968;
+      timing() {
+        related_pin : "Min_Wdata_ram[61]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.00029,35.86326,44.28888,59.91670,90.37711,150.91010,271.72949");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95358,42.46973,76.18186,144.69772,282.82172,559.88464");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.02573,40.50804,47.80613,60.38026,83.72730,129.44359,220.37833");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24158,23.30462,35.07698,58.62132,106.54939,203.97247,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[60]") {
+      direction : output;
+      capacitance : 0.0957;
+      timing() {
+        related_pin : "Min_Wdata_ram[60]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.05779,35.92073,44.34639,59.97430,90.43473,150.96777,271.78720");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95361,42.46971,76.18185,144.69771,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.07200,40.55433,47.85241,60.42658,83.77381,129.49013,220.42485");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24160,23.30456,35.07689,58.62129,106.54916,203.97244,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[59]") {
+      direction : output;
+      capacitance : 0.1122;
+      timing() {
+        related_pin : "Min_Wdata_ram[59]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.09798,35.96093,44.38659,60.01451,90.47495,151.00798,271.82742");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95362,42.46970,76.18185,144.69771,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.11205,40.59439,47.89246,60.46664,83.81391,129.53024,220.46492");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24160,23.30454,35.07687,58.62128,106.54910,203.97243,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[58]") {
+      direction : output;
+      capacitance : 0.0923;
+      timing() {
+        related_pin : "Min_Wdata_ram[58]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.00270,35.86566,44.29130,59.91912,90.37954,150.91249,271.73193");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95358,42.46973,76.18186,144.69772,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.02788,40.51019,47.80828,60.38241,83.72947,129.44576,220.38049");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24158,23.30462,35.07698,58.62132,106.54939,203.97247,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[57]") {
+      direction : output;
+      capacitance : 0.1081;
+      timing() {
+        related_pin : "Min_Wdata_ram[57]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.00578,35.86874,44.29438,59.92221,90.38262,150.91560,271.73505");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95358,42.46973,76.18186,144.69772,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.03020,40.51251,47.81061,60.38472,83.73180,129.44809,220.38281");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24158,23.30462,35.07698,58.62131,106.54938,203.97247,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[56]") {
+      direction : output;
+      capacitance : 0.2157;
+      timing() {
+        related_pin : "Min_Wdata_ram[56]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.05539,35.91835,44.34399,59.97187,90.43230,150.96530,271.78473");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95360,42.46972,76.18185,144.69771,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.07426,40.55659,47.85468,60.42883,83.77599,129.49229,220.42702");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24159,23.30458,35.07692,58.62130,106.54924,203.97246,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[55]") {
+      direction : output;
+      capacitance : 0.0937;
+      timing() {
+        related_pin : "Min_Wdata_ram[55]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.00147,35.86444,44.29007,59.91790,90.37831,150.91129,271.73068");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95358,42.46973,76.18186,144.69772,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.02678,40.50909,47.80717,60.38130,83.72836,129.44464,220.37939");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24158,23.30462,35.07698,58.62132,106.54939,203.97247,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[54]") {
+      direction : output;
+      capacitance : 0.1162;
+      timing() {
+        related_pin : "Min_Wdata_ram[54]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.04291,35.90587,44.33151,59.95938,90.41981,150.95282,271.77225");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95360,42.46972,76.18186,144.69772,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.06313,40.54545,47.84353,60.41767,83.76483,129.48114,220.41583");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24159,23.30459,35.07693,58.62130,106.54926,203.97246,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[53]") {
+      direction : output;
+      capacitance : 0.1183;
+      timing() {
+        related_pin : "Min_Wdata_ram[53]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.00190,35.86486,44.29049,59.91832,90.37873,150.91171,271.73111");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95358,42.46973,76.18186,144.69772,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.02701,40.50932,47.80742,60.38153,83.72859,129.44487,220.37962");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24158,23.30462,35.07698,58.62132,106.54939,203.97247,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[52]") {
+      direction : output;
+      capacitance : 0.1659;
+      timing() {
+        related_pin : "Min_Wdata_ram[52]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.08195,35.94490,44.37055,59.99850,90.45895,150.99200,271.81137");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95363,42.46970,76.18185,144.69771,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.09196,40.57432,47.87239,60.44657,83.79386,129.51019,220.44489");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24160,23.30454,35.07686,58.62128,106.54908,203.97243,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[51]") {
+      direction : output;
+      capacitance : 0.1138;
+      timing() {
+        related_pin : "Min_Wdata_ram[51]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.00793,35.87090,44.29653,59.92436,90.38477,150.91776,271.73718");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95358,42.46973,76.18186,144.69772,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.03220,40.51452,47.81261,60.38674,83.73381,129.45010,220.38484");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24158,23.30462,35.07697,58.62131,106.54937,203.97247,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[50]") {
+      direction : output;
+      capacitance : 0.0920;
+      timing() {
+        related_pin : "Min_Wdata_ram[50]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.05191,35.91487,44.34052,59.96841,90.42883,150.96185,271.78125");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95360,42.46972,76.18185,144.69771,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.06973,40.55206,47.85013,60.42429,83.77148,129.48778,220.42249");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24159,23.30457,35.07691,58.62130,106.54922,203.97246,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[49]") {
+      direction : output;
+      capacitance : 0.0923;
+      timing() {
+        related_pin : "Min_Wdata_ram[49]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("30.99863,35.86160,44.28724,59.91505,90.37547,150.90842,271.72787");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95357,42.46973,76.18186,144.69772,282.82172,559.88464");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.02436,40.50667,47.80476,60.37888,83.72592,129.44221,220.37694");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24158,23.30462,35.07699,58.62132,106.54940,203.97247,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[48]") {
+      direction : output;
+      capacitance : 0.0923;
+      timing() {
+        related_pin : "Min_Wdata_ram[48]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.00778,35.87074,44.29637,59.92421,90.38463,150.91762,271.73703");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95358,42.46973,76.18186,144.69772,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.03170,40.51401,47.81210,60.38624,83.73331,129.44960,220.38432");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24158,23.30461,35.07697,58.62131,106.54936,203.97247,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[47]") {
+      direction : output;
+      capacitance : 0.2289;
+      timing() {
+        related_pin : "Min_Wdata_ram[47]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.05050,35.91345,44.33910,59.96700,90.42742,150.96043,271.77988");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95361,42.46971,76.18185,144.69771,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.06687,40.54921,47.84728,60.42143,83.76862,129.48494,220.41963");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24160,23.30457,35.07691,58.62130,106.54922,203.97246,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[46]") {
+      direction : output;
+      capacitance : 0.1146;
+      timing() {
+        related_pin : "Min_Wdata_ram[46]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.17384,36.03677,44.46245,60.09046,90.55091,151.08400,271.90341");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78258,25.95366,42.46968,76.18185,144.69769,282.82169,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.17949,40.66187,47.95992,60.53415,83.88160,129.59796,220.53261");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24162,23.30448,35.07678,58.62126,106.54888,203.97238,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[45]") {
+      direction : output;
+      capacitance : 0.1757;
+      timing() {
+        related_pin : "Min_Wdata_ram[45]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.05930,35.92225,44.34790,59.97581,90.43624,150.96928,271.78867");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95361,42.46971,76.18185,144.69771,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.07404,40.55638,47.85445,60.42862,83.77583,129.49216,220.42686");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24160,23.30456,35.07690,58.62129,106.54917,203.97244,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[44]") {
+      direction : output;
+      capacitance : 0.0927;
+      timing() {
+        related_pin : "Min_Wdata_ram[44]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.00924,35.87220,44.29783,59.92567,90.38609,150.91907,271.73849");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95358,42.46973,76.18186,144.69772,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.03302,40.51534,47.81343,60.38756,83.73464,129.45094,220.38567");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24158,23.30461,35.07697,58.62131,106.54936,203.97247,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[43]") {
+      direction : output;
+      capacitance : 0.1278;
+      timing() {
+        related_pin : "Min_Wdata_ram[43]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.18143,36.04435,44.47002,60.09805,90.55850,151.09160,271.91098");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78258,25.95366,42.46968,76.18185,144.69769,282.82169,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.18670,40.66907,47.96712,60.54135,83.88880,129.60516,220.53981");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24162,23.30448,35.07677,58.62126,106.54887,203.97238,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[42]") {
+      direction : output;
+      capacitance : 0.1138;
+      timing() {
+        related_pin : "Min_Wdata_ram[42]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.12875,35.99167,44.41735,60.04535,90.50580,151.03888,271.85828");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95365,42.46969,76.18185,144.69769,282.82169,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.13461,40.61698,47.91504,60.48925,83.83663,129.55299,220.48764");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24161,23.30450,35.07681,58.62127,106.54896,203.97240,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[41]") {
+      direction : output;
+      capacitance : 0.1095;
+      timing() {
+        related_pin : "Min_Wdata_ram[41]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.00294,35.86591,44.29153,59.91937,90.37978,150.91275,271.73218");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95358,42.46973,76.18186,144.69772,282.82172,559.88464");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.02832,40.51062,47.80871,60.38284,83.72990,129.44620,220.38091");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24158,23.30462,35.07698,58.62132,106.54939,203.97247,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[40]") {
+      direction : output;
+      capacitance : 0.2595;
+      timing() {
+        related_pin : "Min_Wdata_ram[40]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.21203,36.07494,44.50063,60.12870,90.58916,151.12233,271.94168");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78258,25.95368,42.46967,76.18185,144.69769,282.82169,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.20940,40.69180,47.98984,60.56409,83.91164,129.62804,220.56265");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24163,23.30445,35.07672,58.62125,106.54874,203.97235,400.62772");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[39]") {
+      direction : output;
+      capacitance : 0.1179;
+      timing() {
+        related_pin : "Min_Wdata_ram[39]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.05587,35.91882,44.34447,59.97235,90.43278,150.96579,271.78522");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95360,42.46972,76.18185,144.69771,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.07387,40.55620,47.85427,60.42844,83.77562,129.49194,220.42665");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24159,23.30457,35.07691,58.62130,106.54922,203.97246,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[38]") {
+      direction : output;
+      capacitance : 0.0923;
+      timing() {
+        related_pin : "Min_Wdata_ram[38]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("30.99863,35.86160,44.28724,59.91505,90.37547,150.90842,271.72787");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95357,42.46973,76.18186,144.69772,282.82172,559.88464");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.02436,40.50667,47.80476,60.37888,83.72592,129.44221,220.37694");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24158,23.30462,35.07699,58.62132,106.54940,203.97247,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[37]") {
+      direction : output;
+      capacitance : 0.1117;
+      timing() {
+        related_pin : "Min_Wdata_ram[37]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.09375,35.95670,44.38236,60.01030,90.47076,151.00381,271.82321");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95363,42.46970,76.18185,144.69771,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.10468,40.58703,47.88509,60.45928,83.80657,129.52290,220.45760");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24160,23.30453,35.07685,58.62128,106.54907,203.97243,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[36]") {
+      direction : output;
+      capacitance : 0.2627;
+      timing() {
+        related_pin : "Min_Wdata_ram[36]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.41700,36.27987,44.70562,60.33392,90.79444,151.32776,272.14706");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78259,25.95378,42.46962,76.18182,144.69766,282.82166,559.88452");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.38282,40.86529,48.16329,60.73764,84.08559,129.80206,220.73659");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24166,23.30431,35.07652,58.62120,106.54823,203.97224,400.62772");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[35]") {
+      direction : output;
+      capacitance : 0.1540;
+      timing() {
+        related_pin : "Min_Wdata_ram[35]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.05691,35.91986,44.34551,59.97343,90.43387,150.96689,271.78629");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95361,42.46971,76.18185,144.69771,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.07111,40.55345,47.85152,60.42569,83.77292,129.48924,220.42395");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24160,23.30456,35.07689,58.62129,106.54916,203.97244,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[34]") {
+      direction : output;
+      capacitance : 0.1458;
+      timing() {
+        related_pin : "Min_Wdata_ram[34]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.02314,35.88611,44.31174,59.93959,90.40002,150.93300,271.75244");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95359,42.46972,76.18186,144.69772,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.04523,40.52755,47.82564,60.39978,83.74689,129.46320,220.39790");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24159,23.30460,35.07695,58.62131,106.54932,203.97246,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[33]") {
+      direction : output;
+      capacitance : 0.1303;
+      timing() {
+        related_pin : "Min_Wdata_ram[33]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.03930,35.90226,44.32790,59.95578,90.41621,150.94920,271.76865");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95360,42.46972,76.18185,144.69771,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.05841,40.54074,47.83883,60.41298,83.76012,129.47643,220.41116");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24159,23.30459,35.07693,58.62130,106.54926,203.97246,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[32]") {
+      direction : output;
+      capacitance : 0.1246;
+      timing() {
+        related_pin : "Min_Wdata_ram[32]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("31.08345,35.94640,44.37205,59.99996,90.46040,150.99342,271.81287");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95361,42.46971,76.18185,144.69771,282.82172,559.88458");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.09946,40.58181,47.87987,60.45404,83.80127,129.51759,220.45232");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24160,23.30456,35.07689,58.62129,106.54915,203.97244,400.62775");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[31]") {
+      direction : output;
+      capacitance : 0.1133;
+      timing() {
+        related_pin : "Min_Wdata_ram[31]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("31.53666,37.28505,47.36411,66.26340,103.36346,177.22379,324.74878");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.69533,28.44586,48.07783,88.03292,169.03101,332.06149,658.75598");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("39.55271,44.79131,53.54567,68.68172,97.15546,153.14793,264.58389");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.93568,25.05745,38.66911,65.87160,121.24875,233.73239,460.40479");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[30]") {
+      direction : output;
+      capacitance : 0.1812;
+      timing() {
+        related_pin : "Min_Wdata_ram[30]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("56.09142,61.81589,71.87882,90.79812,127.90121,201.76836,349.29568");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.12237,28.80080,48.29979,88.12896,169.05711,332.06381,658.75513");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.84362,77.24749,85.84025,101.13371,129.51091,185.55995,297.01529");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.02730,25.09772,38.70388,65.87611,121.24184,233.73232,460.40491");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[29]") {
+      direction : output;
+      capacitance : 0.1787;
+      timing() {
+        related_pin : "Min_Wdata_ram[29]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("56.16101,61.90695,71.98549,90.92585,128.02774,201.89655,349.42288");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.33309,29.03290,48.44040,88.21283,169.09877,332.07980,658.75470");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.91729,77.35828,85.88747,101.24554,129.57477,185.66757,297.08765");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.06965,25.13236,38.72878,65.88268,121.24282,233.73354,460.40540");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[28]") {
+      direction : output;
+      capacitance : 0.2224;
+      timing() {
+        related_pin : "Min_Wdata_ram[28]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("56.41146,62.13892,72.20298,91.12723,128.23083,202.10068,349.62589");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.19292,28.86753,48.34165,88.15002,169.06566,332.06805,658.75494");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("72.12531,77.54376,86.11152,101.43039,129.78873,185.85497,297.29645");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.04395,25.11135,38.71368,65.87869,121.24223,233.73279,460.40509");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[27]") {
+      direction : output;
+      capacitance : 0.2129;
+      timing() {
+        related_pin : "Min_Wdata_ram[27]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("55.97721,61.70153,71.76335,90.68449,127.78827,201.65779,349.18320");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.16129,28.83294,48.32067,88.13759,169.05952,332.06564,658.75500");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.79520,77.20786,85.78555,101.09434,129.46014,185.51958,296.96652");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.03733,25.10593,38.70978,65.87767,121.24207,233.73259,460.40503");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[26]") {
+      direction : output;
+      capacitance : 0.1580;
+      timing() {
+        related_pin : "Min_Wdata_ram[26]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("55.93717,61.66336,71.72644,90.64959,127.75331,201.62321,349.14835");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.18334,28.85622,48.33490,88.14572,169.06339,332.06720,658.75500");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.73097,77.14855,85.71780,101.03516,129.39461,185.45984,296.90213");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.04296,25.11053,38.71309,65.87854,121.24221,233.73276,460.40509");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[25]") {
+      direction : output;
+      capacitance : 0.2206;
+      timing() {
+        related_pin : "Min_Wdata_ram[25]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("56.08318,61.82383,71.89822,90.83398,127.93636,201.80547,349.33145");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.29298,28.98557,48.41215,88.19485,169.08928,332.07645,658.75476");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.86403,77.29865,85.83871,101.18574,129.52318,185.60849,297.03461");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.06240,25.12643,38.72452,65.88155,121.24265,233.73331,460.40533");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[24]") {
+      direction : output;
+      capacitance : 0.2014;
+      timing() {
+        related_pin : "Min_Wdata_ram[24]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("56.03502,61.80934,71.91010,90.87524,127.97446,201.84171,349.36981");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.54840,29.28691,48.59209,88.30930,169.14961,332.09793,658.75439");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.87116,77.34764,85.81605,101.23588,129.51930,185.65388,297.04028");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.11013,25.16546,38.75258,65.88894,121.24377,233.73470,460.40588");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[23]") {
+      direction : output;
+      capacitance : 0.1824;
+      timing() {
+        related_pin : "Min_Wdata_ram[23]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("56.24549,61.97053,72.03797,90.94983,128.05026,201.90762,349.44266");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.96487,28.67076,48.21533,88.09408,169.04738,332.05643,658.75543");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.94113,77.31428,85.95964,101.19965,129.61650,185.62938,297.11386");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.99225,25.06906,38.68328,65.87069,121.24103,233.73129,460.40448");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[22]") {
+      direction : output;
+      capacitance : 0.1867;
+      timing() {
+        related_pin : "Min_Wdata_ram[22]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("55.92397,61.64898,71.71619,90.62844,127.72900,201.58684,349.12149");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.97272,28.67724,48.21954,88.09583,169.04787,332.05679,658.75543");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.70234,77.07730,85.71956,100.96272,129.37723,185.39223,296.87503");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.99433,25.07076,38.68451,65.87101,121.24107,233.73134,460.40451");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[21]") {
+      direction : output;
+      capacitance : 0.2509;
+      timing() {
+        related_pin : "Min_Wdata_ram[21]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("56.09225,61.81697,71.88189,90.79791,127.89983,201.76266,349.29337");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.05300,28.74352,48.26259,88.11360,169.05283,332.06058,658.75525");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.88068,77.27676,85.88286,101.16277,129.55000,185.58990,297.05264");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.01842,25.09046,38.69866,65.87474,121.24163,233.73204,460.40479");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[20]") {
+      direction : output;
+      capacitance : 0.3408;
+      timing() {
+        related_pin : "Min_Wdata_ram[20]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("56.12872,61.85363,71.92004,90.83360,127.93462,201.79420,349.32755");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.00068,28.70033,48.23454,88.10201,169.04959,332.05811,658.75531");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.95270,77.33574,85.96415,101.22138,129.62544,185.64999,297.12509");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.00356,25.07831,38.68993,65.87244,121.24128,233.73161,460.40463");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[19]") {
+      direction : output;
+      capacitance : 0.2061;
+      timing() {
+        related_pin : "Min_Wdata_ram[19]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("56.01692,61.74141,71.80442,90.72356,127.82662,201.69354,349.22101");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.11907,28.79808,48.29802,88.12823,169.05692,332.06369,658.75513");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.80560,77.21761,85.79640,101.10408,129.47072,185.52940,296.97696");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.03660,25.10533,38.70935,65.87756,121.24206,233.73256,460.40503");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[18]") {
+      direction : output;
+      capacitance : 0.1873;
+      timing() {
+        related_pin : "Min_Wdata_ram[18]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("55.85709,61.58164,71.64529,90.56342,127.66610,201.53168,349.06024");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.09743,28.78021,48.28642,88.12344,169.05557,332.06265,658.75519");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.68555,77.09216,85.68021,100.97845,129.35208,185.40439,296.85709");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.03043,25.10028,38.70573,65.87660,121.24192,233.73239,460.40494");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[17]") {
+      direction : output;
+      capacitance : 0.1704;
+      timing() {
+        related_pin : "Min_Wdata_ram[17]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("55.97715,61.72625,71.80726,90.75038,127.85197,201.72058,349.24713");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.35702,29.06112,48.45726,88.22355,169.10442,332.08185,658.75470");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.78168,77.22645,85.74917,101.11382,129.43817,185.53540,296.95187");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.07396,25.13588,38.73131,65.88334,121.24292,233.73367,460.40546");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[16]") {
+      direction : output;
+      capacitance : 0.1865;
+      timing() {
+        related_pin : "Min_Wdata_ram[16]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("55.95641,61.70138,71.77917,90.71870,127.82067,201.68954,349.21582");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.32580,29.02430,48.43527,88.20956,169.09705,332.07919,658.75470");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.77042,77.21114,85.74078,101.09840,129.42796,185.52045,296.94077");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.06935,25.13211,38.72860,65.88263,121.24282,233.73354,460.40540");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[15]") {
+      direction : output;
+      capacitance : 0.2085;
+      timing() {
+        related_pin : "Min_Wdata_ram[15]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("56.12548,61.86673,71.94159,90.87786,127.98018,201.84927,349.37531");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.29749,28.99089,48.41532,88.19688,169.09035,332.07681,658.75476");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.92069,77.35582,85.89504,101.24292,129.57973,185.66560,297.09125");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.06296,25.12689,38.72485,65.88164,121.24267,233.73334,460.40533");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[14]") {
+      direction : output;
+      capacitance : 0.2900;
+      timing() {
+        related_pin : "Min_Wdata_ram[14]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("56.24206,61.98064,72.05342,90.98737,128.08995,201.95917,349.48505");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.27729,28.96706,48.40109,88.18782,169.08559,332.07510,658.75482");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("72.01337,77.44543,85.98990,101.33244,129.67320,185.75548,297.18405");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.05947,25.12403,38.72280,65.88110,121.24258,233.73323,460.40530");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[13]") {
+      direction : output;
+      capacitance : 0.1543;
+      timing() {
+        related_pin : "Min_Wdata_ram[13]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("56.10191,61.83416,71.90200,90.83044,127.93359,201.80316,349.32867");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.22939,28.91055,48.36734,88.16636,169.07426,332.07111,658.75488");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.88472,77.30975,85.86629,101.19655,129.54643,185.62041,297.05563");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.05143,25.11746,38.71807,65.87985,121.24241,233.73300,460.40518");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[12]") {
+      direction : output;
+      capacitance : 0.2202;
+      timing() {
+        related_pin : "Min_Wdata_ram[12]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("56.13296,61.86528,71.93315,90.86164,127.96479,201.83437,349.35989");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.22980,28.91103,48.36763,88.16653,169.07437,332.07114,658.75488");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.91261,77.33719,85.89448,101.22399,129.57443,185.64789,297.08356");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.05093,25.11705,38.71778,65.87978,121.24239,233.73297,460.40518");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[11]") {
+      direction : output;
+      capacitance : 0.2642;
+      timing() {
+        related_pin : "Min_Wdata_ram[11]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("57.14127,62.86558,72.92728,91.84860,128.95245,202.82227,350.34741");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.16541,28.83634,48.32287,88.13850,169.05978,332.06586,658.75500");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("72.70621,78.12014,86.69567,102.00665,130.37082,186.43173,297.87753");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.03877,25.10711,38.71063,65.87789,121.24211,233.73265,460.40506");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[10]") {
+      direction : output;
+      capacitance : 0.1978;
+      timing() {
+        related_pin : "Min_Wdata_ram[10]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("55.98828,61.71264,71.77470,90.69543,127.79905,201.66808,349.19391");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.15288,28.82599,48.31615,88.13572,169.05901,332.06528,658.75507");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.78459,77.19598,85.77586,101.08242,129.44987,185.50781,296.95599");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.03588,25.10474,38.70893,65.87744,121.24204,233.73256,460.40503");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[9]") {
+      direction : output;
+      capacitance : 0.2257;
+      timing() {
+        related_pin : "Min_Wdata_ram[9]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("56.07207,61.79647,71.85881,90.77907,127.88252,201.75092,349.27722");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.14282,28.81769,48.31076,88.13349,169.05838,332.06479,658.75507");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.86391,77.27300,85.85680,101.15938,129.52980,185.58502,297.03540");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.03326,25.10260,38.70739,65.87704,121.24197,233.73248,460.40500");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[8]") {
+      direction : output;
+      capacitance : 0.3356;
+      timing() {
+        related_pin : "Min_Wdata_ram[8]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("56.06890,61.79364,71.85873,90.77448,127.87630,201.73874,349.26971");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.04678,28.73839,48.25926,88.11223,169.05244,332.06027,658.75525");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.91721,77.30328,85.92651,101.18900,129.58917,185.61728,297.08951");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.00700,25.08112,38.69195,65.87297,121.24136,233.73170,460.40469");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[7]") {
+      direction : output;
+      capacitance : 0.1952;
+      timing() {
+        related_pin : "Min_Wdata_ram[7]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("55.89891,61.62344,71.68673,90.60542,127.70831,201.57465,349.10257");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.10952,28.79019,48.29290,88.12612,169.05632,332.06320,658.75513");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.69995,77.10105,85.69855,100.98719,129.36795,185.41376,296.87173");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.02414,25.09514,38.70203,65.87563,121.24177,233.73221,460.40488");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[6]") {
+      direction : output;
+      capacitance : 0.2517;
+      timing() {
+        related_pin : "Min_Wdata_ram[6]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("55.94586,61.67033,71.73323,90.65258,127.75571,201.62291,349.15015");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.12362,28.80183,48.30046,88.12924,169.05721,332.06387,658.75513");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.77620,77.18137,85.77187,101.06764,129.44312,185.49371,296.94781");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.02879,25.09895,38.70477,65.87634,121.24187,233.73235,460.40494");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[5]") {
+      direction : output;
+      capacitance : 0.2897;
+      timing() {
+        related_pin : "Min_Wdata_ram[5]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("57.13992,62.86472,72.93027,91.84524,128.94678,202.80824,350.34006");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.03069,28.72511,48.25063,88.10866,169.05144,332.05951,658.75525");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("72.65942,78.04179,86.67136,101.92742,130.33235,186.35609,297.83188");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.00278,25.07767,38.68947,65.87231,121.24126,233.73160,460.40463");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[4]") {
+      direction : output;
+      capacitance : 0.2821;
+      timing() {
+        related_pin : "Min_Wdata_ram[4]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("56.15643,61.88116,71.94617,90.86205,127.96392,201.82652,349.35739");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.04988,28.74095,48.26092,88.11292,169.05263,332.06039,658.75525");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.91517,77.30170,85.92413,101.18745,129.58699,185.61565,297.08743");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.00754,25.08156,38.69226,65.87305,121.24138,233.73174,460.40469");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[3]") {
+      direction : output;
+      capacitance : 0.2980;
+      timing() {
+        related_pin : "Min_Wdata_ram[3]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("55.93405,61.65899,71.72550,90.63889,127.73983,201.59918,349.13266");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.99660,28.69696,48.23235,88.10111,169.04933,332.05792,658.75537");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.76373,77.13844,85.78112,101.02386,129.43867,185.45340,296.93643");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.99405,25.07053,38.68434,65.87097,121.24107,233.73134,460.40451");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[2]") {
+      direction : output;
+      capacitance : 0.2540;
+      timing() {
+        related_pin : "Min_Wdata_ram[2]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("56.20963,61.93432,71.99908,90.91536,128.01738,201.88052,349.41101");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.05836,28.74795,48.26547,88.11478,169.05316,332.06082,658.75525");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.94848,77.33746,85.95570,101.22327,129.61966,185.65120,297.12067");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.01032,25.08384,38.69390,65.87349,121.24145,233.73181,460.40472");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[1]") {
+      direction : output;
+      capacitance : 0.1682;
+      timing() {
+        related_pin : "Min_Wdata_ram[1]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("55.86353,61.58786,71.64960,90.57085,127.67466,201.54436,349.06964");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.16379,28.83500,48.32201,88.13815,169.05968,332.06577,658.75500");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.69648,77.12724,85.67394,101.01421,129.35666,185.43741,296.86719");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.05798,25.12281,38.72192,65.88087,121.24256,233.73320,460.40527");
+	}
+      }
+    }
+    pin("Mout_Wdata_ram[0]") {
+      direction : output;
+      capacitance : 0.2084;
+      timing() {
+        related_pin : "Min_Wdata_ram[0]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("55.96180,61.68666,71.75253,90.66698,127.76831,201.62903,349.16141");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.01913,28.71556,48.24443,88.10610,169.05074,332.05896,658.75531");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.73966,77.11948,85.75342,101.00504,129.41327,185.43402,296.91217");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.99987,25.07529,38.68776,65.87187,121.24120,233.73151,460.40460");
+	}
+      }
+    }
+    }
+    bus("Mout_addr_ram") {
+      bus_type : Mout_addr_ram;
+      direction : output;
+      capacitance : 0.0000;
+    pin("Mout_addr_ram[45]") {
+      direction : output;
+      capacitance : 0.2981;
+      timing() {
+        related_pin : "Min_addr_ram[45]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_3) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("55.86595,61.62881,71.69028,90.64692,127.79595,201.71396,349.27008");
+	}
+	rise_transition(template_3) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.56579,29.19938,48.69616,88.46500,169.37064,332.32629,658.96808");
+	}
+	cell_fall(template_3) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("61.56964,66.85236,75.53680,90.63748,119.10149,175.08429,286.69205");
+	}
+	fall_transition(template_3) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.03041,25.15314,38.85348,66.23503,121.87074,234.93298,462.86893");
+	}
+      }
+    }
+    pin("Mout_addr_ram[44]") {
+      direction : output;
+      capacitance : 0.1862;
+      timing() {
+        related_pin : "Min_addr_ram[44]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("52.93880,58.73849,68.85912,87.84638,124.94325,198.80908,346.33871");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.74083,29.51395,48.72766,88.39553,169.19507,332.11411,658.75403");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("70.02142,75.50511,84.02122,99.41492,127.72181,183.83206,295.23511");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.41137,25.41745,38.94782,66.03270,121.31879,233.76360,460.40988");
+	}
+      }
+    }
+    pin("Mout_addr_ram[43]") {
+      direction : output;
+      capacitance : 0.5508;
+      timing() {
+        related_pin : "Min_addr_ram[43]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("34.01730,39.84130,49.99930,68.98923,106.16163,180.09608,327.66644");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.18283,28.89825,48.46182,88.32169,169.26279,332.25400,658.93481");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("42.52821,47.90261,56.65993,71.87803,100.38718,156.41272,268.05173");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.02401,25.16690,38.85091,66.18710,121.78479,234.83398,462.67783");
+	}
+      }
+    }
+    pin("Mout_addr_ram[42]") {
+      direction : output;
+      capacitance : 2.3543;
+      timing() {
+        related_pin : "Min_addr_ram[42]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("38.30825,44.12715,54.28556,73.27431,110.44843,184.38478,331.95676");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.17192,28.88872,48.45681,88.32207,169.26181,332.25400,658.93384");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("46.26934,51.64565,60.40274,75.62226,104.13335,160.15927,271.79947");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.01501,25.15423,38.84370,66.18164,121.78455,234.83279,462.67755");
+	}
+      }
+    }
+    pin("Mout_addr_ram[41]") {
+      direction : output;
+      capacitance : 0.2594;
+      timing() {
+        related_pin : "Min_addr_ram[41]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("52.79248,58.58776,68.70491,87.68832,124.78560,198.65167,346.18106");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.70727,29.47435,48.70402,88.38050,169.18713,332.11130,658.75409");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("69.92564,75.40968,83.91253,99.31497,127.61449,183.73210,295.12985");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.34985,25.36594,38.90782,66.00266,121.30299,233.75754,460.40906");
+	}
+      }
+    }
+    pin("Mout_addr_ram[40]") {
+      direction : output;
+      capacitance : 0.3675;
+      timing() {
+        related_pin : "Min_addr_ram[40]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("52.81811,58.61372,68.73116,87.71487,124.81213,198.67819,346.20758");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.70995,29.47752,48.70591,88.38170,169.18777,332.11154,658.75409");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("69.96944,75.45345,83.95734,99.35911,127.65919,183.77623,295.17438");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.35463,25.36995,38.91093,66.00499,121.30421,233.75801,460.40912");
+	}
+      }
+    }
+    pin("Mout_addr_ram[39]") {
+      direction : output;
+      capacitance : 0.7678;
+      timing() {
+        related_pin : "Min_addr_ram[39]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("52.60169,58.40150,68.52222,87.50958,124.60645,198.47227,346.00195");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.74174,29.51502,48.72831,88.39594,169.19528,332.11420,658.75403");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("69.90125,75.38495,83.90143,99.29486,127.60194,183.71201,295.11520");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.41303,25.41883,38.94890,66.03352,121.31922,233.76376,460.40991");
+	}
+      }
+    }
+    pin("Mout_addr_ram[38]") {
+      direction : output;
+      capacitance : 0.5257;
+      timing() {
+        related_pin : "Min_addr_ram[38]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("52.98840,58.78846,68.90938,87.89698,124.99382,198.85963,346.38931");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.74372,29.51736,48.72971,88.39684,169.19574,332.11438,658.75403");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("70.11776,75.60143,84.11867,99.51160,127.81911,183.92877,295.33224");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.41655,25.42178,38.95119,66.03523,121.32012,233.76410,460.40994");
+	}
+      }
+    }
+    pin("Mout_addr_ram[37]") {
+      direction : output;
+      capacitance : 0.2061;
+      timing() {
+        related_pin : "Min_addr_ram[37]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("52.75151,58.55058,68.67072,87.65745,124.75437,198.62025,346.14987");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.73615,29.50843,48.72437,88.39344,169.19395,332.11374,658.75403");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("69.84766,75.33140,83.84570,99.24058,127.54645,183.65773,295.06006");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.40287,25.41033,38.94230,66.02855,121.31661,233.76276,460.40976");
+	}
+      }
+    }
+    pin("Mout_addr_ram[36]") {
+      direction : output;
+      capacitance : 0.2631;
+      timing() {
+        related_pin : "Min_addr_ram[36]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("53.30941,59.10589,69.22399,88.20846,125.30563,199.17163,346.70105");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.71646,29.48520,48.71050,88.38462,169.18930,332.11206,658.75409");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("70.40891,75.89286,84.39931,99.79936,128.10089,184.21651,295.61569");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.36656,25.37993,38.91869,66.01082,121.30728,233.75920,460.40927");
+	}
+      }
+    }
+    pin("Mout_addr_ram[35]") {
+      direction : output;
+      capacitance : 0.2492;
+      timing() {
+        related_pin : "Min_addr_ram[35]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("52.63678,58.43634,68.55685,87.54400,124.64088,198.50673,346.03635");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.73980,29.51273,48.72694,88.39507,169.19482,332.11404,658.75403");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("69.77911,75.26283,83.77854,99.17248,127.47914,183.58963,294.99249");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.40950,25.41588,38.94661,66.03179,121.31831,233.76343,460.40985");
+	}
+      }
+    }
+    pin("Mout_addr_ram[34]") {
+      direction : output;
+      capacitance : 0.4132;
+      timing() {
+        related_pin : "Min_addr_ram[34]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("52.79070,58.58679,68.70458,87.68871,124.78592,198.65198,346.18137");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.71348,29.48168,48.70840,88.38328,169.18861,332.11182,658.75409");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("69.95567,75.43965,83.94492,99.34576,127.64661,183.76289,295.16162");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.36107,25.37534,38.91512,66.00813,121.30587,233.75865,460.40921");
+	}
+      }
+    }
+    pin("Mout_addr_ram[33]") {
+      direction : output;
+      capacitance : 0.1940;
+      timing() {
+        related_pin : "Min_addr_ram[33]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("54.27108,60.07031,70.19057,89.17743,126.27435,200.14023,347.66980");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.73731,29.50980,48.72519,88.39396,169.19423,332.11380,658.75403");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.03586,76.51960,85.03434,100.42892,128.73505,184.84607,296.24857");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.40499,25.41210,38.94367,66.02959,121.31715,233.76299,460.40979");
+	}
+      }
+    }
+    pin("Mout_addr_ram[32]") {
+      direction : output;
+      capacitance : 0.1474;
+      timing() {
+        related_pin : "Min_addr_ram[32]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("54.29269,60.09208,70.21248,89.19948,126.29639,200.16223,347.69186");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.73858,29.51130,48.72608,88.39454,169.19453,332.11392,658.75403");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("70.98257,76.46629,84.98152,100.37579,128.68219,184.79294,296.19562");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.40730,25.41403,38.94518,66.03071,121.31775,233.76320,460.40982");
+	}
+      }
+    }
+    pin("Mout_addr_ram[31]") {
+      direction : output;
+      capacitance : 0.2218;
+      timing() {
+        related_pin : "Min_addr_ram[31]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("52.99975,58.79759,68.91676,87.90241,124.99946,198.86540,346.39493");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.72676,29.49735,48.71775,88.38924,169.19174,332.11292,658.75409");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("70.07073,75.55457,84.06512,99.46248,127.76627,183.87962,295.28043");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.38555,25.39583,38.93103,66.02010,121.31217,233.76106,460.40952");
+	}
+      }
+    }
+    pin("Mout_addr_ram[30]") {
+      direction : output;
+      capacitance : 0.2207;
+      timing() {
+        related_pin : "Min_addr_ram[30]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("52.76895,58.56811,68.68831,87.67511,124.77203,198.63791,346.16751");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.73679,29.50918,48.72482,88.39373,169.19411,332.11377,658.75403");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("69.88389,75.36763,83.88215,99.27688,127.58289,183.69403,295.09644");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.40402,25.41129,38.94305,66.02911,121.31690,233.76288,460.40976");
+	}
+      }
+    }
+    pin("Mout_addr_ram[29]") {
+      direction : output;
+      capacitance : 0.5013;
+      timing() {
+        related_pin : "Min_addr_ram[29]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("54.73959,60.53927,70.65988,89.64714,126.74400,200.60986,348.13950");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.74070,29.51380,48.72757,88.39548,169.19504,332.11411,658.75403");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("71.41524,76.89895,85.41501,100.80872,129.11559,185.22586,296.62888");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.41111,25.41722,38.94765,66.03258,121.31872,233.76357,460.40988");
+	}
+      }
+    }
+    pin("Mout_addr_ram[28]") {
+      direction : output;
+      capacitance : 0.1797;
+      timing() {
+        related_pin : "Min_addr_ram[28]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("53.23440,59.03548,69.15720,88.14567,125.24242,199.10818,346.63788");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.75138,29.52640,48.73510,88.40027,169.19756,332.11499,658.75403");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("70.18269,75.66628,84.18648,99.57746,127.88662,183.99463,295.39932");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.43027,25.43327,38.96011,66.04194,121.32365,233.76546,460.41013");
+	}
+      }
+    }
+    pin("Mout_addr_ram[27]") {
+      direction : output;
+      capacitance : 0.3296;
+      timing() {
+        related_pin : "Min_addr_ram[27]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("31.36162,37.11050,47.18965,66.08894,103.18909,177.04988,324.57434");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.69522,28.44571,48.07793,88.03287,169.03101,332.06189,658.75598");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("39.40022,44.63699,53.39216,68.52752,97.00140,152.99434,264.42868");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.93544,25.05791,38.66933,65.87175,121.24892,233.73242,460.40479");
+	}
+      }
+    }
+    pin("Mout_addr_ram[26]") {
+      direction : output;
+      capacitance : 0.6147;
+      timing() {
+        related_pin : "Min_addr_ram[26]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("31.53415,37.28268,47.36176,66.26106,103.36114,177.22162,324.74643");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.69530,28.44582,48.07786,88.03290,169.03101,332.06161,658.75598");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("39.55876,44.79682,53.55142,68.68728,97.16104,153.15366,264.58914");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.93561,25.05758,38.66917,65.87166,121.24879,233.73239,460.40479");
+	}
+      }
+    }
+    pin("Mout_addr_ram[25]") {
+      direction : output;
+      capacitance : 0.7858;
+      timing() {
+        related_pin : "Min_addr_ram[25]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("31.54800,37.29664,47.37574,66.27504,103.37514,177.23572,324.76041");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.69527,28.44578,48.07788,88.03289,169.03101,332.06168,658.75598");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("39.57958,44.81721,53.57200,68.70768,97.18149,153.17421,264.60931");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.93555,25.05769,38.66922,65.87168,121.24883,233.73242,460.40479");
+	}
+      }
+    }
+    pin("Mout_addr_ram[24]") {
+      direction : output;
+      capacitance : 0.1467;
+      timing() {
+        related_pin : "Min_addr_ram[24]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("31.40384,37.15256,47.23167,66.13097,103.23109,177.09172,324.61633");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.69526,28.44576,48.07790,88.03288,169.03101,332.06174,658.75598");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("39.43475,44.67211,53.42703,68.56261,97.03644,153.02924,264.46411");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.93552,25.05775,38.66925,65.87170,121.24886,233.73242,460.40479");
+	}
+      }
+    }
+    pin("Mout_addr_ram[23]") {
+      direction : output;
+      capacitance : 0.1472;
+      timing() {
+        related_pin : "Min_addr_ram[23]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("31.42885,37.17749,47.25659,66.15590,103.25599,177.11656,324.64130");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.69527,28.44578,48.07788,88.03289,169.03101,332.06168,658.75598");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("39.45645,44.69410,53.44888,68.58458,97.05839,153.05110,264.48621");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.93556,25.05769,38.66922,65.87168,121.24883,233.73242,460.40479");
+	}
+      }
+    }
+    pin("Mout_addr_ram[22]") {
+      direction : output;
+      capacitance : 1.4850;
+      timing() {
+        related_pin : "Min_addr_ram[22]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("62.66912,68.39487,78.46794,97.37051,134.46758,208.31274,355.85748");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.76787,28.50811,48.10969,88.05045,169.03519,332.04718,658.75586");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("81.77560,87.11319,95.81945,110.99756,139.46034,195.43135,306.94958");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.95168,25.03589,38.65944,65.86440,121.24009,233.73009,460.40402");
+	}
+      }
+    }
+    pin("Mout_addr_ram[21]") {
+      direction : output;
+      capacitance : 0.2575;
+      timing() {
+        related_pin : "Min_addr_ram[21]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("31.56703,37.31534,47.39438,66.29369,103.39371,177.25398,324.77905");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.69535,28.44588,48.07782,88.03293,169.03101,332.06143,658.75598");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("39.57987,44.81875,53.57299,68.70916,97.18287,153.17525,264.61151");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.93572,25.05737,38.66907,65.87159,121.24872,233.73239,460.40479");
+	}
+      }
+    }
+    pin("Mout_addr_ram[20]") {
+      direction : output;
+      capacitance : 1.5344;
+      timing() {
+        related_pin : "Min_addr_ram[20]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("79.96410,85.68969,95.76141,114.66621,151.76405,225.61215,373.15457");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.81477,28.54683,48.13483,88.06084,169.03809,332.04938,658.75580");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("95.75429,101.09875,109.79324,124.98330,153.43721,209.41629,320.92804");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.95952,25.04230,38.66404,65.86562,121.24026,233.73035,460.40414");
+	}
+      }
+    }
+    pin("Mout_addr_ram[19]") {
+      direction : output;
+      capacitance : 1.2078;
+      timing() {
+        related_pin : "Min_addr_ram[19]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("79.36185,85.16402,95.28656,114.27598,151.37260,225.23833,372.76813");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.75952,29.53600,48.74083,88.40391,169.19948,332.11569,658.75403");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("95.13355,100.61707,109.14039,124.52930,152.84019,208.94649,320.35236");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.44475,25.44538,38.96952,66.04900,121.32736,233.76686,460.41031");
+	}
+      }
+    }
+    pin("Mout_addr_ram[18]") {
+      direction : output;
+      capacitance : 1.5066;
+      timing() {
+        related_pin : "Min_addr_ram[18]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("86.26379,91.98940,102.06137,120.96577,158.06348,231.91103,379.45386");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.80622,28.53978,48.13025,88.05894,169.03757,332.04898,658.75580");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("100.90106,106.24884,114.93764,130.13350,158.58310,214.56613,326.07474");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.96332,25.04540,38.66627,65.86621,121.24035,233.73045,460.40417");
+	}
+      }
+    }
+    pin("Mout_addr_ram[17]") {
+      direction : output;
+      capacitance : 1.1165;
+      timing() {
+        related_pin : "Min_addr_ram[17]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("81.35023,87.15221,97.27464,116.26390,153.36057,227.22629,374.75607");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.75824,29.53449,48.73993,88.40334,169.19917,332.11560,658.75403");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("96.82520,102.30873,110.83157,126.22079,154.53143,210.63800,322.04370");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.44248,25.44348,38.96805,66.04790,121.32678,233.76665,460.41031");
+	}
+      }
+    }
+    pin("Mout_addr_ram[16]") {
+      direction : output;
+      capacitance : 1.2368;
+      timing() {
+        related_pin : "Min_addr_ram[16]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("62.62831,68.35370,78.42399,97.33115,134.42987,208.28105,355.82098");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.86500,28.58831,48.16177,88.07196,169.04120,332.05176,658.75568");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("81.64515,87.00203,95.67525,110.88696,139.32480,195.31853,306.81845");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.97371,25.05390,38.67238,65.86782,121.24059,233.73076,460.40430");
+	}
+      }
+    }
+    pin("Mout_addr_ram[15]") {
+      direction : output;
+      capacitance : 0.9347;
+      timing() {
+        related_pin : "Min_addr_ram[15]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("62.58052,68.31223,78.38827,97.28764,134.38460,208.23053,355.77267");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.69911,28.45073,48.07460,88.03484,169.03101,332.04846,658.75598");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("81.49796,86.81111,95.53198,110.69677,139.16490,195.13809,306.63998");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.94555,25.03864,38.66010,65.86562,121.24196,233.73053,460.40417");
+	}
+      }
+    }
+    pin("Mout_addr_ram[14]") {
+      direction : output;
+      capacitance : 0.3990;
+      timing() {
+        related_pin : "Min_addr_ram[14]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("31.59047,37.33880,47.41784,66.31715,103.41718,177.27745,324.80252");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.69535,28.44588,48.07782,88.03293,169.03101,332.06143,658.75598");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("39.60450,44.84333,53.59760,68.73374,97.20745,153.19989,264.63602");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.93571,25.05738,38.66908,65.87159,121.24872,233.73239,460.40479");
+	}
+      }
+    }
+    pin("Mout_addr_ram[13]") {
+      direction : output;
+      capacitance : 0.2094;
+      timing() {
+        related_pin : "Min_addr_ram[13]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("61.15783,66.95850,77.07986,96.06797,133.16475,207.03055,354.56024");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.74813,29.52257,48.73281,88.39881,169.19678,332.11472,658.75403");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("80.13174,85.61535,94.13430,109.52611,137.83456,193.94325,305.34744");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.42446,25.42840,38.95633,66.03910,121.32216,233.76486,460.41003");
+	}
+      }
+    }
+    pin("Mout_addr_ram[12]") {
+      direction : output;
+      capacitance : 0.6814;
+      timing() {
+        related_pin : "Min_addr_ram[12]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("63.79758,69.52839,79.60426,98.50365,135.60045,209.44557,356.98865");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.69931,28.45099,48.07443,88.03495,169.03101,332.04776,658.75598");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("82.36465,87.68192,96.40096,111.56732,140.03514,196.00725,307.51279");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.94609,25.03760,38.65961,65.86530,121.24158,233.73045,460.40414");
+	}
+      }
+    }
+    pin("Mout_addr_ram[11]") {
+      direction : output;
+      capacitance : 0.8616;
+      timing() {
+        related_pin : "Min_addr_ram[11]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_3) {
+          index_1("0.72000,  1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000");
+          values("40.85082,45.51395,54.80223,73.09357,109.58577,182.45650,328.00064");
+	}
+	rise_transition(template_3) {
+          index_1("0.72000,  1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000");
+          values("23.77571,33.18359,52.40282,91.69449,171.02422,329.57364,646.63123");
+	}
+	cell_fall(template_3) {
+          index_1("0.72000,  1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000");
+          values("51.28883,54.99957,61.71835,74.47525,99.66483,149.74858,250.00401");
+	}
+	fall_transition(template_3) {
+          index_1("0.72000,  1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000");
+          values("15.49384,21.56867,33.90143,59.28178,110.95852,215.17023,423.92065");
+	}
+      }
+    }
+    pin("Mout_addr_ram[10]") {
+      direction : output;
+      capacitance : 0.1479;
+      timing() {
+        related_pin : "Min_addr_ram[10]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("63.73031,69.53121,79.65279,98.64111,135.73787,209.60365,357.13339");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.75003,29.52481,48.73415,88.39967,169.19724,332.11490,658.75403");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("82.20506,87.68866,96.20834,111.59968,139.90852,196.01685,307.42130");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.42786,25.43125,38.95855,66.04076,121.32304,233.76520,460.41010");
+	}
+      }
+    }
+    pin("Mout_addr_ram[9]") {
+      direction : output;
+      capacitance : 0.5175;
+      timing() {
+        related_pin : "Min_addr_ram[9]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("61.83464,67.56015,77.63143,96.53697,133.63510,207.48418,355.02582");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.83073,28.56001,48.14339,88.06437,169.03908,332.05014,658.75574");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("80.72795,86.07662,94.76389,109.96132,138.40976,194.39381,305.90155");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.96434,25.04624,38.66687,65.86637,121.24038,233.73048,460.40417");
+	}
+      }
+    }
+    pin("Mout_addr_ram[8]") {
+      direction : output;
+      capacitance : 0.4611;
+      timing() {
+        related_pin : "Min_addr_ram[8]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("63.56854,69.29901,79.37482,98.27419,135.37094,209.21579,356.75925");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.69939,28.45109,48.07436,88.03499,169.03101,332.04752,658.75598");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("82.08995,87.40838,96.12689,111.29372,139.76143,195.73323,307.23984");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.94625,25.03730,38.65947,65.86520,121.24149,233.73042,460.40414");
+	}
+      }
+    }
+    pin("Mout_addr_ram[7]") {
+      direction : output;
+      capacitance : 0.1838;
+      timing() {
+        related_pin : "Min_addr_ram[7]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("61.75291,67.47852,77.55041,96.45495,133.55270,207.40045,354.94315");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.80943,28.54242,48.13197,88.05965,169.03775,332.04913,658.75580");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("80.54254,85.88846,94.58044,109.77307,138.22510,194.20590,305.71625");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.96119,25.04366,38.66502,65.86588,121.24030,233.73036,460.40414");
+	}
+      }
+    }
+    pin("Mout_addr_ram[6]") {
+      direction : output;
+      capacitance : 0.1401;
+      timing() {
+        related_pin : "Min_addr_ram[6]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("64.67892,70.47995,80.60160,99.59003,136.68677,210.55255,358.08224");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.75089,29.52582,48.73475,88.40005,169.19743,332.11499,658.75403");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("82.96788,88.45148,96.97149,112.36259,140.67165,196.77975,308.18433");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.42940,25.43253,38.95954,66.04150,121.32343,233.76537,460.41010");
+	}
+      }
+    }
+    pin("Mout_addr_ram[5]") {
+      direction : output;
+      capacitance : 0.3308;
+      timing() {
+        related_pin : "Min_addr_ram[5]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("62.66674,68.39858,78.47465,97.37402,134.47102,208.31706,355.85907");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.69908,28.45069,48.07463,88.03483,169.03101,332.04858,658.75598");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("81.30173,86.61473,95.33567,110.50041,138.96855,194.94176,306.44357");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.94553,25.03867,38.66012,65.86564,121.24197,233.73053,460.40417");
+	}
+      }
+    }
+    pin("Mout_addr_ram[4]") {
+      direction : output;
+      capacitance : 0.1272;
+      timing() {
+        related_pin : "Min_addr_ram[4]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("31.76072,37.50857,47.58752,66.48683,103.58678,177.44666,324.97217");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.69546,28.44602,48.07772,88.03298,169.03101,332.06107,658.75598");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("39.75404,44.99475,53.74816,68.88503,97.35860,153.35054,264.78833");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.93596,25.05691,38.66885,65.87144,121.24855,233.73235,460.40479");
+	}
+      }
+    }
+    pin("Mout_addr_ram[3]") {
+      direction : output;
+      capacitance : 0.2352;
+      timing() {
+        related_pin : "Min_addr_ram[3]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("31.50562,37.25409,47.33316,66.23247,103.33253,177.19293,324.71783");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.69531,28.44584,48.07785,88.03291,169.03101,332.06155,658.75598");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("39.52544,44.76374,53.51824,68.65418,97.12793,153.12048,264.55615");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.93564,25.05752,38.66914,65.87164,121.24877,233.73239,460.40479");
+	}
+      }
+    }
+    pin("Mout_addr_ram[2]") {
+      direction : output;
+      capacitance : 0.3204;
+      timing() {
+        related_pin : "Min_addr_ram[2]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("31.60452,37.35282,47.43185,66.33116,103.43120,177.29146,324.81653");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.69535,28.44588,48.07781,88.03293,169.03101,332.06143,658.75598");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("39.61711,44.85604,53.61025,68.74643,97.22014,153.21252,264.64877");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.93573,25.05736,38.66906,65.87158,121.24870,233.73239,460.40479");
+	}
+      }
+    }
+    pin("Mout_addr_ram[1]") {
+      direction : output;
+      capacitance : 0.1946;
+      timing() {
+        related_pin : "Min_addr_ram[1]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("42.50595,49.22810,60.48789,80.30061,117.88162,191.98888,339.63687");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("23.98817,33.86676,53.13168,92.15406,171.92241,333.80237,659.50500");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("54.50638,60.90932,71.03623,87.74098,117.33891,173.79456,285.56366");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("22.97342,30.67317,44.76424,72.00790,126.70898,238.28786,464.72455");
+	}
+      }
+    }
+    pin("Mout_addr_ram[0]") {
+      direction : output;
+      capacitance : 0.2037;
+      timing() {
+        related_pin : "Min_addr_ram[0]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("54.77760,60.50296,70.57289,89.48066,126.57958,200.43155,347.97089");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.87772,28.59881,48.16859,88.07478,169.04198,332.05234,658.75562");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("73.89382,79.21916,87.93456,103.10405,131.57126,187.54126,299.05402");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("17.94716,25.03556,38.65863,65.86465,121.24085,233.73022,460.40408");
+	}
+      }
+    }
+    }
+    bus("Mout_data_ram_size") {
+      bus_type : Mout_data_ram_size;
+      direction : output;
+      capacitance : 0.0000;
+    pin("Mout_data_ram_size[11]") {
+      direction : output;
+      capacitance : 0.1937;
+      timing() {
+        related_pin : "Min_data_ram_size[11]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("25.61313,31.34361,41.41006,60.33694,97.44027,171.30994,318.83536");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.21589,28.89462,48.35783,88.16031,169.07108,332.06995,658.75494");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("41.02277,46.45580,54.99861,70.34283,98.68235,154.76578,266.19339");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.06057,25.12493,38.72344,65.88126,121.24261,233.73328,460.40530");
+	}
+      }
+    }
+    pin("Mout_data_ram_size[10]") {
+      direction : output;
+      capacitance : 0.1731;
+      timing() {
+        related_pin : "Min_data_ram_size[10]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_4) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("37.73959,45.30434,58.64038,83.79214,133.35245,232.12009,429.38223");
+	}
+	rise_transition(template_4) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("24.03819,37.18035,63.61923,117.38161,226.28966,445.48901,884.53314");
+	}
+	cell_fall(template_4) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("40.02774,46.32767,56.96970,76.38323,114.02370,188.77841,337.97311");
+	}
+	fall_transition(template_4) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("20.35648,29.61184,47.98368,85.29637,161.28876,315.00500,623.49878");
+	}
+      }
+    }
+    pin("Mout_data_ram_size[9]") {
+      direction : output;
+      capacitance : 0.1855;
+      timing() {
+        related_pin : "Min_data_ram_size[9]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_4) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("37.76680,45.33147,58.66746,83.81936,133.37970,232.14732,429.40945");
+	}
+	rise_transition(template_4) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("24.03805,37.18027,63.61920,117.38163,226.28961,445.48901,884.53314");
+	}
+	cell_fall(template_4) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("40.05236,46.35224,56.99431,76.40787,114.04839,188.80310,337.99783");
+	}
+	fall_transition(template_4) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("20.35642,29.61182,47.98367,85.29636,161.28876,315.00500,623.49878");
+	}
+      }
+    }
+    pin("Mout_data_ram_size[8]") {
+      direction : output;
+      capacitance : 0.1787;
+      timing() {
+        related_pin : "Min_data_ram_size[8]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_4) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("37.72133,45.28610,58.62216,83.77388,133.33417,232.10181,429.36392");
+	}
+	rise_transition(template_4) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("24.03823,37.18037,63.61924,117.38161,226.28967,445.48901,884.53314");
+	}
+	cell_fall(template_4) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("40.01013,46.31007,56.95209,76.36561,114.00606,188.76076,337.95551");
+	}
+	fall_transition(template_4) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("20.35650,29.61185,47.98369,85.29638,161.28876,315.00500,623.49884");
+	}
+      }
+    }
+    pin("Mout_data_ram_size[7]") {
+      direction : output;
+      capacitance : 0.2243;
+      timing() {
+        related_pin : "Min_data_ram_size[7]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_4) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("37.73840,45.30314,58.63919,83.79095,133.35124,232.11891,429.38104");
+	}
+	rise_transition(template_4) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("24.03819,37.18034,63.61923,117.38161,226.28966,445.48901,884.53314");
+	}
+	cell_fall(template_4) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("40.02655,46.32647,56.96850,76.38203,114.02250,188.77722,337.97192");
+	}
+	fall_transition(template_4) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("20.35648,29.61184,47.98368,85.29637,161.28876,315.00500,623.49878");
+	}
+      }
+    }
+    pin("Mout_data_ram_size[6]") {
+      direction : output;
+      capacitance : 0.1446;
+      timing() {
+        related_pin : "Min_data_ram_size[6]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_4) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("37.89252,45.45699,58.79282,83.94511,133.50555,232.27316,429.53534");
+	}
+	rise_transition(template_4) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("24.03767,37.18008,63.61913,117.38169,226.28949,445.48901,884.53314");
+	}
+	cell_fall(template_4) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("40.17281,46.47254,57.11475,76.52838,114.16904,188.92378,338.11853");
+	}
+	fall_transition(template_4) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("20.35623,29.61178,47.98362,85.29630,161.28874,315.00500,623.49878");
+	}
+      }
+    }
+    pin("Mout_data_ram_size[5]") {
+      direction : output;
+      capacitance : 0.1534;
+      timing() {
+        related_pin : "Min_data_ram_size[5]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("30.85469,36.45621,46.41210,65.29210,102.49604,176.62285,324.68610");
+	}
+	rise_transition(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("18.54517,28.28140,48.08408,88.50797,170.39784,335.13400,665.01294");
+	}
+	cell_fall(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("74.79230,82.41348,94.28279,113.11642,144.94615,202.98734,315.65594");
+	}
+	fall_transition(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("33.08237,41.26943,56.23619,84.51257,139.65485,251.43413,479.33264");
+	}
+      }
+    }
+    pin("Mout_data_ram_size[4]") {
+      direction : output;
+      capacitance : 0.1100;
+      timing() {
+        related_pin : "Min_data_ram_size[4]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("39.30947,45.88561,56.93990,76.50438,114.01913,188.25800,336.50418");
+	}
+	rise_transition(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("22.31072,32.45744,52.21845,92.01511,172.90913,336.69760,666.08301");
+	}
+	cell_fall(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("38.82958,44.04516,52.59943,67.61006,96.05536,152.18945,264.10574");
+	}
+	fall_transition(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("17.60372,24.70897,38.51624,66.25960,122.77102,237.52898,468.60498");
+	}
+      }
+    }
+    pin("Mout_data_ram_size[3]") {
+      direction : output;
+      capacitance : 0.1348;
+      timing() {
+        related_pin : "Min_data_ram_size[3]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("39.36544,45.94152,56.99545,76.56034,114.07511,188.31403,336.55945");
+	}
+	rise_transition(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("22.31068,32.45742,52.21841,92.01510,172.90913,336.69760,666.08301");
+	}
+	cell_fall(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("38.88189,44.09746,52.65174,67.66241,96.10775,152.24188,264.15811");
+	}
+	fall_transition(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("17.60373,24.70898,38.51622,66.25956,122.77100,237.52899,468.60498");
+	}
+      }
+    }
+    pin("Mout_data_ram_size[2]") {
+      direction : output;
+      capacitance : 0.1421;
+      timing() {
+        related_pin : "Min_data_ram_size[2]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("39.24678,45.82298,56.87777,76.44170,113.95645,188.19524,336.44241");
+	}
+	rise_transition(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("22.31077,32.45746,52.21850,92.01512,172.90912,336.69760,666.08301");
+	}
+	cell_fall(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("38.77160,43.98722,52.54146,67.55206,95.99731,152.13135,264.04764");
+	}
+	fall_transition(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("17.60372,24.70895,38.51625,66.25964,122.77103,237.52895,468.60498");
+	}
+      }
+    }
+    pin("Mout_data_ram_size[1]") {
+      direction : output;
+      capacitance : 0.1585;
+      timing() {
+        related_pin : "Min_data_ram_size[1]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("39.22888,45.80510,56.86005,76.42381,113.93855,188.17731,336.42484");
+	}
+	rise_transition(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("22.31079,32.45746,52.21851,92.01512,172.90912,336.69763,666.08301");
+	}
+	cell_fall(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("38.75542,43.97104,52.52528,67.53587,95.98109,152.11513,264.03143");
+	}
+	fall_transition(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("17.60372,24.70894,38.51625,66.25965,122.77103,237.52895,468.60498");
+	}
+      }
+    }
+    pin("Mout_data_ram_size[0]") {
+      direction : output;
+      capacitance : 0.1169;
+      timing() {
+        related_pin : "Min_data_ram_size[0]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("39.21561,45.79185,56.84690,76.41055,113.92529,188.16403,336.41174");
+	}
+	rise_transition(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("22.31080,32.45747,52.21852,92.01513,172.90912,336.69763,666.08301");
+	}
+	cell_fall(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("38.74348,43.95911,52.51334,67.52393,95.96914,152.10318,264.01947");
+	}
+	fall_transition(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("17.60372,24.70894,38.51626,66.25967,122.77104,237.52892,468.60498");
+	}
+      }
+    }
+    }
+    bus("Mout_oe_ram") {
+      bus_type : Mout_oe_ram;
+      direction : output;
+      capacitance : 0.0000;
+    pin("Mout_oe_ram[1]") {
+      direction : output;
+      capacitance : 0.1517;
+      timing() {
+        related_pin : "Min_oe_ram[1]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("25.45766,31.18818,41.25462,60.18154,97.28487,171.15454,318.67993");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.21609,28.89486,48.35798,88.16039,169.07112,332.06998,658.75494");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("40.89135,46.32443,54.86715,70.21148,98.55092,154.63440,266.06198");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.06063,25.12499,38.72348,65.88128,121.24261,233.73328,460.40530");
+	}
+      }
+    }
+    pin("Mout_oe_ram[0]") {
+      direction : output;
+      capacitance : 0.1772;
+      timing() {
+        related_pin : "Min_oe_ram[0]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("25.47120,31.20170,41.26815,60.19506,97.29838,171.16805,318.69342");
+	}
+	rise_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("19.21601,28.89476,48.35792,88.16036,169.07111,332.06995,658.75494");
+	}
+	cell_fall(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("40.90974,46.34280,54.88556,70.22984,98.56931,154.65277,266.08035");
+	}
+	fall_transition(template_2) {
+          index_1("1.44000,  2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000");
+          values("18.06061,25.12496,38.72346,65.88127,121.24261,233.73328,460.40530");
+	}
+      }
+    }
+    }
+    bus("Mout_we_ram") {
+      bus_type : Mout_we_ram;
+      direction : output;
+      capacitance : 0.0000;
+    pin("Mout_we_ram[1]") {
+      direction : output;
+      capacitance : 0.0923;
+      timing() {
+        related_pin : "Min_we_ram[1]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("30.99863,35.86160,44.28723,59.91505,90.37547,150.90843,271.72787");
+	}
+	rise_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.78257,25.95357,42.46973,76.18186,144.69772,282.82172,559.88464");
+	}
+	cell_fall(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("36.02436,40.50667,47.80476,60.37888,83.72592,129.44221,220.37697");
+	}
+	fall_transition(template_1) {
+          index_1("5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001,  368.64001");
+          values("17.24158,23.30462,35.07699,58.62132,106.54940,203.97247,400.62775");
+	}
+      }
+    }
+    pin("Mout_we_ram[0]") {
+      direction : output;
+      capacitance : 0.1104;
+      timing() {
+        related_pin : "Min_we_ram[0]";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+	cell_rise(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("30.00537,34.17710,41.29634,54.29925,79.37958,129.13029,228.37279");
+	}
+	rise_transition(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("15.73956,22.31943,35.51417,62.44300,117.31290,228.14171,450.63910");
+	}
+	cell_fall(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("41.39945,45.71608,52.62166,64.02291,84.20023,122.26424,197.41318");
+	}
+	fall_transition(template_4) {
+          index_1("2.88000,  5.76000,  11.52000,  23.04000,  46.08000,  92.16000,  184.32001");
+          values("18.07631,23.24471,32.95842,51.79467,89.51277,166.23489,321.95206");
+	}
+      }
+    }
+    }
+    bus("vargs") {
+      bus_type : vargs;
+      direction : input;
+      capacitance : 0.0000;
+    pin("vargs[31]") {
+      direction : input;
+      capacitance : 3.0304;
+    }
+    pin("vargs[30]") {
+      direction : input;
+      capacitance : 4.3167;
+    }
+    pin("vargs[29]") {
+      direction : input;
+      capacitance : 3.7437;
+    }
+    pin("vargs[28]") {
+      direction : input;
+      capacitance : 4.9419;
+    }
+    pin("vargs[27]") {
+      direction : input;
+      capacitance : 6.1621;
+    }
+    pin("vargs[26]") {
+      direction : input;
+      capacitance : 5.0912;
+    }
+    pin("vargs[25]") {
+      direction : input;
+      capacitance : 4.7934;
+    }
+    pin("vargs[24]") {
+      direction : input;
+      capacitance : 6.3031;
+    }
+    pin("vargs[23]") {
+      direction : input;
+      capacitance : 7.6447;
+    }
+    pin("vargs[22]") {
+      direction : input;
+      capacitance : 8.7722;
+    }
+    pin("vargs[21]") {
+      direction : input;
+      capacitance : 7.1177;
+    }
+    pin("vargs[20]") {
+      direction : input;
+      capacitance : 8.1527;
+    }
+    pin("vargs[19]") {
+      direction : input;
+      capacitance : 6.7710;
+    }
+    pin("vargs[18]") {
+      direction : input;
+      capacitance : 5.0506;
+    }
+    pin("vargs[17]") {
+      direction : input;
+      capacitance : 8.4236;
+    }
+    pin("vargs[16]") {
+      direction : input;
+      capacitance : 5.3802;
+    }
+    pin("vargs[15]") {
+      direction : input;
+      capacitance : 10.4904;
+    }
+    pin("vargs[14]") {
+      direction : input;
+      capacitance : 3.5034;
+    }
+    pin("vargs[13]") {
+      direction : input;
+      capacitance : 5.6120;
+    }
+    pin("vargs[12]") {
+      direction : input;
+      capacitance : 4.3323;
+    }
+    pin("vargs[11]") {
+      direction : input;
+      capacitance : 4.8898;
+    }
+    pin("vargs[10]") {
+      direction : input;
+      capacitance : 3.8057;
+    }
+    pin("vargs[9]") {
+      direction : input;
+      capacitance : 4.6687;
+    }
+    pin("vargs[8]") {
+      direction : input;
+      capacitance : 4.1966;
+    }
+    pin("vargs[7]") {
+      direction : input;
+      capacitance : 5.2282;
+    }
+    pin("vargs[6]") {
+      direction : input;
+      capacitance : 4.2624;
+    }
+    pin("vargs[5]") {
+      direction : input;
+      capacitance : 3.5438;
+    }
+    pin("vargs[4]") {
+      direction : input;
+      capacitance : 3.3521;
+    }
+    pin("vargs[3]") {
+      direction : input;
+      capacitance : 2.6515;
+    }
+    pin("vargs[2]") {
+      direction : input;
+      capacitance : 2.7383;
+    }
+    pin("vargs[1]") {
+      direction : input;
+      capacitance : 0.6652;
+    }
+    pin("vargs[0]") {
+      direction : input;
+      capacitance : 0.6851;
+    }
+    }
+  }
+
+}

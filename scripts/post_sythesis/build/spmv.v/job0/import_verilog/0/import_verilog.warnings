@@ -1,0 +1,13 @@
+1198: [WRN:EL0534] Cmd line top level is not a top level "run_benchmark".
+1205: [WRN:UH0732] /home/ubuntu/spmv.v:12190:10: Critical: Signed vs Unsigned port connection "in1".
+1206: [WRN:UH0732] /home/ubuntu/spmv.v:12299:10: Critical: Signed vs Unsigned port connection "in2".
+1207: [WRN:UH0732] /home/ubuntu/spmv.v:12590:10: Critical: Signed vs Unsigned port connection "in1".
+1208: [WRN:UH0732] /home/ubuntu/spmv.v:12623:10: Critical: Signed vs Unsigned port connection "in1".
+1209: [WRN:UH0732] /home/ubuntu/spmv.v:12627:10: Critical: Signed vs Unsigned port connection "in1".
+1210: [WRN:UH0732] /home/ubuntu/spmv.v:12628:10: Critical: Signed vs Unsigned port connection "in2".
+1211: [WRN:UH0732] /home/ubuntu/spmv.v:12751:10: Critical: Signed vs Unsigned port connection "in2".
+1212: [WRN:UH0732] /home/ubuntu/spmv.v:13138:10: Critical: Signed vs Unsigned port connection "in2".
+1213: [WRN:UH0732] /home/ubuntu/spmv.v:13181:10: Critical: Signed vs Unsigned port connection "in2".
+1214: [WRN:UH0732] /home/ubuntu/spmv.v:14766:10: Critical: Signed vs Unsigned port connection "in2".
+1215: [WRN:UH0732] /home/ubuntu/spmv.v:14791:10: Critical: Signed vs Unsigned port connection "in2".
+1216: [WRN:UH0732] /home/ubuntu/spmv.v:14797:10: Critical: Signed vs Unsigned port connection "in2".

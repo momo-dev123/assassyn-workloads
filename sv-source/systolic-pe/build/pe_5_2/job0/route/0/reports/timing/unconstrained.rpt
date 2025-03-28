@@ -1,0 +1,38 @@
+Startpoint: fifo_north_pop_data[2] (input port)
+Endpoint: array_array_6632d_d[28] (output port)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+    Cap   Delay    Time   Description
+----------------------------------------------------------------
+           0.00    0.00 v input external delay
+   9.01    7.74    7.74 v fifo_north_pop_data[2] (in)
+   2.62   33.29   41.02 ^ _534_/Y (NAND2x1_ASAP7_75t_R)
+   1.78   27.73   68.75 v _535_/Y (INVx1_ASAP7_75t_R)
+   6.54  237.11  305.86 v _814_/SN (FAx1_ASAP7_75t_R)
+   0.77   97.39  403.25 v _816_/SN (FAx1_ASAP7_75t_R)
+   2.17   43.80  447.05 ^ _622_/Y (INVx1_ASAP7_75t_R)
+   0.74   71.58  518.63 v _818_/SN (FAx1_ASAP7_75t_R)
+   1.58   30.57  549.20 ^ _681_/Y (INVx1_ASAP7_75t_R)
+   1.17   78.50  627.70 v _819_/SN (FAx1_ASAP7_75t_R)
+   2.68  112.93  740.63 v _873_/SN (HAxp5_ASAP7_75t_R)
+   2.15   59.60  800.23 v _590_/Y (OA21x2_ASAP7_75t_R)
+   1.31   41.84  842.07 v _591_/Y (XOR2x1_ASAP7_75t_R)
+   2.22   89.99  932.06 v _874_/SN (HAxp5_ASAP7_75t_R)
+   1.83   55.78  987.84 v _722_/Y (OA21x2_ASAP7_75t_R)
+   0.77   38.55 1026.40 v _727_/Y (OA21x2_ASAP7_75t_R)
+   1.71   40.35 1066.74 v _728_/Y (OA21x2_ASAP7_75t_R)
+   0.70   38.01 1104.75 v _733_/Y (OA21x2_ASAP7_75t_R)
+   2.11   41.65 1146.40 v _734_/Y (OA21x2_ASAP7_75t_R)
+   2.18   27.24 1173.64 ^ _740_/Y (NOR2x1_ASAP7_75t_R)
+   1.77   71.90 1245.54 ^ _754_/Y (AND5x1_ASAP7_75t_R)
+   2.41   40.92 1286.46 ^ _761_/Y (AND2x2_ASAP7_75t_R)
+   1.10   41.70 1328.16 ^ _765_/Y (AND3x1_ASAP7_75t_R)
+  13.62   80.02 1408.18 ^ _766_/Y (XOR2x2_ASAP7_75t_R)
+           1.30 1409.48 ^ array_array_6632d_d[28] (out)
+                1409.48   data arrival time
+----------------------------------------------------------------
+(Path is unconstrained)
+
+

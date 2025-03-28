@@ -6,7 +6,7 @@
 # Synthesis script for COMPONENT: main
 
 # STEP: vivado_flow
-cd /home/gaod/derui_work/MachSuite
-ulimit -s 131072; vivado -mode batch -nojournal -nolog -source /home/gaod/derui_work/MachSuite/HLS_output//Synthesis/vivado_flow/vivado.tcl
+cd /home/gaod/derui_work/assassyn-workloads/MachSuite
+ulimit -s 131072; vivado -mode batch -nojournal -nolog -source /home/gaod/derui_work/assassyn-workloads/MachSuite/HLS_output//Synthesis/vivado_flow/vivado.tcl
 
 

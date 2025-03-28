@@ -1,0 +1,11 @@
+ 2: [WRN:PA0205] /home/ubuntu/priority_queue.sv:2:1: No timescale set for "testbench".
+ 3: [WRN:PA0205] /home/ubuntu/priority_queue.sv:44:1: No timescale set for "level_0".
+ 4: [WRN:PA0205] /home/ubuntu/priority_queue.sv:468:1: No timescale set for "heappop_e8579".
+ 5: [WRN:PA0205] /home/ubuntu/priority_queue.sv:516:1: No timescale set for "level_1".
+ 6: [WRN:PA0205] /home/ubuntu/priority_queue.sv:940:1: No timescale set for "level_2".
+ 7: [WRN:PA0205] /home/ubuntu/priority_queue.sv:1255:1: No timescale set for "heappush_e4194".
+ 8: [WRN:PA0205] /home/ubuntu/priority_queue.sv:1315:1: No timescale set for "top".
+ 9: [WRN:PA0205] /home/ubuntu/priority_queue.sv:1949:1: No timescale set for "fifo".
+10: [WRN:PA0205] /home/ubuntu/priority_queue.sv:2071:1: No timescale set for "trigger_counter".
+11: [WRN:PA0205] /home/ubuntu/priority_queue.sv:2109:1: No timescale set for "tb".
+37: [WRN:EL0534] Cmd line top level is not a top level "top".

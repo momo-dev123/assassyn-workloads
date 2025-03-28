@@ -20,7 +20,7 @@ sodor_sim_kcs = []
 
 # Iterate workloads
 for wl in workloads:
-
+    #at /sodor_cpu
     subprocess.run(["./sodor_run.sh", wl])
 
 
@@ -83,6 +83,6 @@ data = {
 print(data)
 
 df = pd.DataFrame(data)
-df.to_csv("sodor.csv", index=False)
+df.to_csv("./sodor_logs/sodor.csv", index=False)
 
 print("CSV file 'sodor.csv' has been created.")

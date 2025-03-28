@@ -1,0 +1,11 @@
+ 2: [WRN:PA0205] /home/ubuntu/radix_sort.sv:2:1: No timescale set for "numbers_mem".
+ 3: [WRN:PA0205] /home/ubuntu/radix_sort.sv:68:1: No timescale set for "memory_blackbox_array_4e654".
+ 4: [WRN:PA0205] /home/ubuntu/radix_sort.sv:100:1: No timescale set for "memuser_4e4c2".
+ 5: [WRN:PA0205] /home/ubuntu/radix_sort.sv:202:1: No timescale set for "radixreducer_b33b6".
+ 6: [WRN:PA0205] /home/ubuntu/radix_sort.sv:296:1: No timescale set for "driver".
+ 7: [WRN:PA0205] /home/ubuntu/radix_sort.sv:616:1: No timescale set for "MemImpl".
+ 8: [WRN:PA0205] /home/ubuntu/radix_sort.sv:967:1: No timescale set for "top".
+ 9: [WRN:PA0205] /home/ubuntu/radix_sort.sv:1626:1: No timescale set for "fifo".
+10: [WRN:PA0205] /home/ubuntu/radix_sort.sv:1748:1: No timescale set for "trigger_counter".
+11: [WRN:PA0205] /home/ubuntu/radix_sort.sv:1786:1: No timescale set for "tb".
+28: [WRN:EL0534] Cmd line top level is not a top level "top".

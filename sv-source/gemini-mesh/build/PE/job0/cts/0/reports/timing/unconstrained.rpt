@@ -1,0 +1,18 @@
+Startpoint: io_outL[3]$_DFFE_PP_ (rising edge-triggered flip-flop)
+Endpoint: io_outU[3] (output port)
+Path Group: unconstrained
+Path Type: max
+Corner: slow
+
+    Cap   Delay    Time   Description
+----------------------------------------------------------------
+           0.00    0.00 ^ io_outL[3]$_DFFE_PP_/CLK (DFFHQNx1_ASAP7_75t_R)
+   5.31  110.90  110.90 ^ io_outL[3]$_DFFE_PP_/QN (DFFHQNx1_ASAP7_75t_R)
+  14.72   36.84  147.74 v _47_/Y (INVx8_ASAP7_75t_R)
+  13.54   51.66  199.40 v _89_/Y (BUFx10_ASAP7_75t_R)
+           0.46  199.86 v io_outU[3] (out)
+                 199.86   data arrival time
+----------------------------------------------------------------
+(Path is unconstrained)
+
+

@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-beRUmI/usr/bin/bambu -I./common --top-fname=main --simulator=VERILATOR --file-input-data=./ellpack/input.data,./ellpack/check.data --simulate -s --top-rtldesign-name=run_benchmark --no-iob --hls-div --benchmark-name=spmv -DBAMBU_PROFILING -DNO_FINAL_MEMCMP_CHECK ./ellpack/ellpack.c ./common/harness.c 
+ ==  Bambu executed with: /tmp/.mount_bambu-hDxYH5/usr/bin/bambu -I./common --top-fname=main --simulator=VERILATOR --file-input-data=./ellpack/input.data,./ellpack/check.data --simulate -s --top-rtldesign-name=run_benchmark --no-iob --hls-div --benchmark-name=spmv -DBAMBU_PROFILING -DNO_FINAL_MEMCMP_CHECK ./ellpack/ellpack.c ./common/harness.c 
 
 
 ********************************************************************************
@@ -139,13 +139,13 @@ Function call to __float_mule11m52b_1023nih inlined in run_benchmark
     Code has LOADs or STOREs with unaligned accesses
     Internally allocated memory (no private memories): 7340032
     Internally allocated memory: 7340040
-  Time to perform memory allocation: 0.00 seconds
+  Time to perform memory allocation: 0.01 seconds
 
 
   Module allocation information for function __assert_fail:
     Number of complex operations: 2
     Number of complex operations: 2
-  Time to perform module allocation: 0.20 seconds
+  Time to perform module allocation: 0.15 seconds
 
 
   Module allocation information for function __internal_free:
@@ -157,13 +157,13 @@ Function call to __float_mule11m52b_1023nih inlined in run_benchmark
   Module allocation information for function read:
     Number of complex operations: 5
     Number of complex operations: 5
-  Time to perform module allocation: 0.01 seconds
+  Time to perform module allocation: 0.00 seconds
 
 
   Module allocation information for function run_benchmark:
     Number of complex operations: 9
     Number of complex operations: 9
-  Time to perform module allocation: 0.06 seconds
+  Time to perform module allocation: 0.07 seconds
 
 
   Scheduling Information of function __assert_fail:
@@ -439,8 +439,8 @@ Function call to __float_mule11m52b_1023nih inlined in run_benchmark
     Slack computed in 0.00 seconds
     False-loop computation completed in 0.00 seconds
     Weight computation completed in 0.00 seconds
-    Clique covering computation completed in 0.00 seconds
-  Time to perform module binding: 0.00 seconds
+    Clique covering computation completed in 0.01 seconds
+  Time to perform module binding: 0.01 seconds
 
 
   Register binding information for function run_benchmark:
@@ -459,7 +459,7 @@ Function call to __float_mule11m52b_1023nih inlined in run_benchmark
     False-loop computation completed in 0.00 seconds
     Weight computation completed in 0.00 seconds
     Clique covering computation completed in 0.01 seconds
-  Time to perform module binding: 0.02 seconds
+  Time to perform module binding: 0.01 seconds
 
 
   Module allocation information for function __internal_malloc:
@@ -493,7 +493,7 @@ Function call to __float_mule11m52b_1023nih inlined in run_benchmark
 
   Register binding information for function __internal_malloc:
     Register allocation algorithm obtains a sub-optimal result: 29 registers(LB:11)
-  Time to perform register binding: 0.01 seconds
+  Time to perform register binding: 0.00 seconds
 
 
   Module binding information for function __internal_malloc:
@@ -506,7 +506,7 @@ Function call to __float_mule11m52b_1023nih inlined in run_benchmark
     Slack computed in 0.00 seconds
     False-loop computation completed in 0.00 seconds
     Weight computation completed in 0.00 seconds
-    Clique covering computation completed in 0.01 seconds
+    Clique covering computation completed in 0.00 seconds
   Time to perform module binding: 0.01 seconds
 
 
@@ -546,7 +546,7 @@ Function call to __float_mule11m52b_1023nih inlined in run_benchmark
   Module allocation information for function main:
     Number of complex operations: 11
     Number of complex operations: 11
-  Time to perform module allocation: 0.18 seconds
+  Time to perform module allocation: 0.17 seconds
 
 
   Memory allocation information:
@@ -560,7 +560,7 @@ Function call to __float_mule11m52b_1023nih inlined in run_benchmark
     Code has LOADs or STOREs with unaligned accesses
     Internally allocated memory (no private memories): 7340032
     Internally allocated memory: 7340040
-  Time to perform memory allocation: 0.00 seconds
+  Time to perform memory allocation: 0.01 seconds
 
 
   Module allocation information for function main:
@@ -619,7 +619,7 @@ Function call to __float_mule11m52b_1023nih inlined in run_benchmark
   Time to perform interconnection binding: 0.00 seconds
 
   Total number of flip-flops in function main: 624
-[0mWarning: XML file "/home/gaod/derui_work/MachSuite/test.xml" cannot be opened, creating a stub with random values
+[0mWarning: XML file "/home/gaod/derui_work/assassyn-workloads/MachSuite/test.xml" cannot be opened, creating a stub with random values
   Total cycles             : 11166 cycles
   Number of executions     : 1
   Average execution        : 11166 cycles

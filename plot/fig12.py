@@ -48,7 +48,7 @@ def appendgmean(a):
 cpu_speedup = appendgmean(cpu_speedup)[-1]
 
 base_area = ['./reports/pq.json', 'reports/gemmini-pe.json', './reports/sodor.json', './reports/hls-kmp.v.json', './reports/hls-merge.v.json', './reports/hls-radix.v.json', './reports/hls-spmv.v.json', './reports/hls-stencil.v.json', './reports/hls-fft.v.json']
-assy_area = ['./reports/priority_queue.sv.json', 'reports/asm.pe.json', './reports/nocsr.sv.json', './reports/kmp.sv.json', './reports/merge_sort.sv.json', './reports/radix_sort.sv.json', './reports/spmv.sv.json', './reports/conv_sum.sv.json', './reports/fft.sv.json']
+assy_area = ['./reports/priority_queue.sv.json', 'reports/out.pe.json', './reports/nocsr.sv.json', './reports/kmp.sv.json', './reports/merge_sort.sv.json', './reports/radix_sort.sv.json', './reports/spmv.sv.json', './reports/conv_sum.sv.json', './reports/fft.sv.json']
 xlabels = ['pq', 'sys-pe', 'cpu', 'kmp', 'merge', 'radix', 'spmv', 'st-2d', 'fft']
 
 base_area = np.array([json.load(open(i, 'r'))['design']['area'] for i in base_area])

@@ -1,0 +1,55 @@
+{
+   "creator": "Yosys 0.43 (git sha1 ead4718e5, g++ 11.4.0-1ubuntu1~22.04 -fPIC -Os)",
+   "invocation": "stat -json -top PE -liberty /home/gaod/derui_work/assassyn-workloads/sv-source/gemini-mesh/build/PE/job0/syn/0/inputs/sc_dff_library.lib -liberty /home/gaod/derui_work/assassyn-workloads/sv-source/gemini-mesh/build/PE/job0/syn/0/inputs/sc_logic_asap7sc7p5t_rvt_asap7sc7p5t_AO_RVT_SS_nldm.lib -liberty /home/gaod/derui_work/assassyn-workloads/sv-source/gemini-mesh/build/PE/job0/syn/0/inputs/sc_logic_asap7sc7p5t_rvt_asap7sc7p5t_INVBUF_RVT_SS_nldm.lib -liberty /home/gaod/derui_work/assassyn-workloads/sv-source/gemini-mesh/build/PE/job0/syn/0/inputs/sc_logic_asap7sc7p5t_rvt_asap7sc7p5t_OA_RVT_SS_nldm.lib -liberty /home/gaod/derui_work/assassyn-workloads/sv-source/gemini-mesh/build/PE/job0/syn/0/inputs/sc_logic_asap7sc7p5t_rvt_asap7sc7p5t_SEQ_RVT_SS_nldm.lib -liberty /home/gaod/derui_work/assassyn-workloads/sv-source/gemini-mesh/build/PE/job0/syn/0/inputs/sc_logic_asap7sc7p5t_rvt_asap7sc7p5t_SIMPLE_RVT_SS_nldm.lib ",
+   "modules": {
+      "\\PE": {
+         "num_wires":         50,
+         "num_wire_bits":     78,
+         "num_pub_wires":     7,
+         "num_pub_wire_bits": 35,
+         "num_ports":         7,
+         "num_port_bits":     35,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         59,
+         "area":              6.531840,
+         "num_cells_by_type": {
+            "AND2x2_ASAP7_75t_R": 8,
+            "AO21x1_ASAP7_75t_R": 16,
+            "BUFx12f_ASAP7_75t_R": 1,
+            "BUFx2_ASAP7_75t_R": 8,
+            "BUFx6f_ASAP7_75t_R": 1,
+            "DFFHQNx1_ASAP7_75t_R": 8,
+            "INVx1_ASAP7_75t_R": 8,
+            "INVx2_ASAP7_75t_R": 1,
+            "NOR2x1_ASAP7_75t_R": 8
+         }
+      }
+   },
+      "design": {
+         "num_wires":         50,
+         "num_wire_bits":     78,
+         "num_pub_wires":     7,
+         "num_pub_wire_bits": 35,
+         "num_ports":         7,
+         "num_port_bits":     35,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         59,
+         "area":              6.531840,
+         "num_cells_by_type": {
+            "AND2x2_ASAP7_75t_R": 8,
+            "AO21x1_ASAP7_75t_R": 16,
+            "BUFx12f_ASAP7_75t_R": 1,
+            "BUFx2_ASAP7_75t_R": 8,
+            "BUFx6f_ASAP7_75t_R": 1,
+            "DFFHQNx1_ASAP7_75t_R": 8,
+            "INVx1_ASAP7_75t_R": 8,
+            "INVx2_ASAP7_75t_R": 1,
+            "NOR2x1_ASAP7_75t_R": 8
+         }
+      }
+}
+

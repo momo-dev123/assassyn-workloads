@@ -1,0 +1,12 @@
+ 3: [WRN:PA0205] /home/ubuntu/fft.sv:2:1: No timescale set for "calculate_loop_92b65".
+ 4: [WRN:PA0205] /home/ubuntu/fft.sv:98:1: No timescale set for "SRAM_683b0".
+ 5: [WRN:PA0205] /home/ubuntu/fft.sv:164:1: No timescale set for "memory_blackbox_array_683e6".
+ 6: [WRN:PA0205] /home/ubuntu/fft.sv:196:1: No timescale set for "memuser_92bfe".
+ 7: [WRN:PA0205] /home/ubuntu/fft.sv:312:1: No timescale set for "loop_user_68877".
+ 8: [WRN:PA0205] /home/ubuntu/fft.sv:330:1: No timescale set for "driver".
+ 9: [WRN:PA0205] /home/ubuntu/fft.sv:360:1: No timescale set for "external_loop_66c6b".
+10: [WRN:PA0205] /home/ubuntu/fft.sv:1176:1: No timescale set for "top".
+11: [WRN:PA0205] /home/ubuntu/fft.sv:1849:1: No timescale set for "fifo".
+12: [WRN:PA0205] /home/ubuntu/fft.sv:1971:1: No timescale set for "trigger_counter".
+13: [WRN:PA0205] /home/ubuntu/fft.sv:2009:1: No timescale set for "tb".
+32: [WRN:EL0534] Cmd line top level is not a top level "top".

@@ -1,0 +1,41 @@
+ 11: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_SS_nldm.lib.gz line 13156, timing group from output port.
+ 12: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_SS_nldm.lib.gz line 13189, timing group from output port.
+ 13: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_SS_nldm.lib.gz line 13222, timing group from output port.
+ 14: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_SS_nldm.lib.gz line 13255, timing group from output port.
+ 15: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_SS_nldm.lib.gz line 13288, timing group from output port.
+ 16: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_SS_nldm.lib.gz line 13321, timing group from output port.
+ 17: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_SS_nldm.lib.gz line 13354, timing group from output port.
+ 18: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_SS_nldm.lib.gz line 14748, timing group from output port.
+ 19: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_SS_nldm.lib.gz line 14781, timing group from output port.
+ 20: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_SS_nldm.lib.gz line 14814, timing group from output port.
+ 26: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_FF_nldm.lib.gz line 13178, timing group from output port.
+ 27: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_FF_nldm.lib.gz line 13211, timing group from output port.
+ 28: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_FF_nldm.lib.gz line 13244, timing group from output port.
+ 29: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_FF_nldm.lib.gz line 13277, timing group from output port.
+ 30: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_FF_nldm.lib.gz line 13310, timing group from output port.
+ 31: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_FF_nldm.lib.gz line 13343, timing group from output port.
+ 32: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_FF_nldm.lib.gz line 13376, timing group from output port.
+ 33: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_FF_nldm.lib.gz line 14772, timing group from output port.
+ 34: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_FF_nldm.lib.gz line 14805, timing group from output port.
+ 35: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_FF_nldm.lib.gz line 14838, timing group from output port.
+ 41: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_TT_nldm.lib.gz line 13178, timing group from output port.
+ 42: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_TT_nldm.lib.gz line 13211, timing group from output port.
+ 43: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_TT_nldm.lib.gz line 13244, timing group from output port.
+ 44: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_TT_nldm.lib.gz line 13277, timing group from output port.
+ 45: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_TT_nldm.lib.gz line 13310, timing group from output port.
+ 46: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_TT_nldm.lib.gz line 13343, timing group from output port.
+ 47: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_TT_nldm.lib.gz line 13376, timing group from output port.
+ 48: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_TT_nldm.lib.gz line 14772, timing group from output port.
+ 49: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_TT_nldm.lib.gz line 14805, timing group from output port.
+ 50: [WARNING STA-1212] /home/gaod/.sc/cache/lambdapdk-v0.1.38/lambdapdk/asap7/libs/asap7sc7p5t_rvt/nldm/asap7sc7p5t_SIMPLE_RVT_TT_nldm.lib.gz line 14838, timing group from output port.
+ 57: [WARNING FLW-0001] Defaulting back to default SDC
+ 61: Warning: There are 227 input ports missing set_input_delay.
+ 62: Warning: There are 127 output ports missing set_output_delay.
+ 63: Warning: There are 1543 unclocked register/latch pins.
+ 64: Warning: There are 1670 unconstrained endpoints.
+ 65: [WARNING FLW-0001] No clocks defined.
+111: [WARNING IFP-0028] Core area lower left (1.000, 1.000) snapped to (1.026, 1.080).
+578: [WARNING GUI-0076] QStandardPaths: wrong permissions on runtime directory /tmp/runtime_gaod, 0775 instead of 0700
+579: [WARNING GUI-0076] This plugin does not support propagateSizeHints()
+580: [WARNING GUI-0076] This plugin does not support propagateSizeHints()
+581: [WARNING GUI-0076] This plugin does not support propagateSizeHints()
