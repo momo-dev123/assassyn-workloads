@@ -1,4 +1,4 @@
-workloads,o3_cycles,fbp_cycles,tbp_cycles,tbp_rate
+benchmarks,ooo-1.cycle,fbp.cycle,tbp.cycle,tbp.rate
 median,4784,7715,6524,0.5936
 multiply,21582,36819,28286,0.9045
 qsort,147219,197581,183237,0.6495

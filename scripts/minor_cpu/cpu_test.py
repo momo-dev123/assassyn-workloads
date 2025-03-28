@@ -79,11 +79,11 @@ for wl in workloads:
 
 
 data = {
-    "workloads": workloads,
-    "o3_cycles": o3_cycles,
-    "fbp_cycles": fbp_cycles,
-    "tbp_cycles": tbp_cycles,
-    "tbp_rate": tbp_rate,
+    "benchmarks": workloads,
+    "ooo-1.cycle": o3_cycles,
+    "fbp.cycle": fbp_cycles,
+    "tbp.cycle": tbp_cycles,
+    "tbp.rate": tbp_rate,
 }
 
 

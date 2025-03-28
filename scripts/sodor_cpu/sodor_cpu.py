@@ -74,9 +74,9 @@ for wl in workloads:
 # Create the final data dictionary
 data = {
     "benchmarks": benchmarks,
-    "sodor_cycles": sodor_cycles,
-    "sodor_insts": sodor_insts,
-    "sodor_sim_kcs": sodor_sim_kcs,
+    "sodor.cycle": sodor_cycles,
+    "sodor.insts": sodor_insts,
+    "sodor.kcycle/s": sodor_sim_kcs,
 }
 
 

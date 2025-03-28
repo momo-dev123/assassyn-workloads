@@ -16,8 +16,8 @@ raw = pandas.read_csv('cpu-bmarks.csv')
 gscale = plt.get_cmap('binary')
 
 mcycle = raw['minor.cycle']
-fcycle = raw['fbp.cycles']
-tcycle = raw['tbp.cycles']
+fcycle = raw['fbp.cycle']
+tcycle = raw['tbp.cycle']
 o3cycle= raw['ooo-1.cycle']
 
 gs = mpl.gridspec.GridSpec(1, 10, wspace=0.1, hspace=0.04)

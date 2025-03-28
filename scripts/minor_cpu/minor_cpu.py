@@ -95,10 +95,10 @@ for wl in workloads:
 # Create the final data dictionary
 data = {
     "benchmarks": benchmarks,
-    "minor_cycles": minor_cycles,
-    "minor_insts": minor_insts,
-    "minor_sim_kcs": minor_sim_kcs,
-    "minor_vtb_kcs": minor_vtb_kcs,
+    "minor.cycle": minor_cycles,
+    "minor.insts": minor_insts,
+    "minor.kcycle/s": minor_sim_kcs,
+    "minor.v.kcycle/s": minor_vtb_kcs,
 }
 
 # For example, print the data structure:

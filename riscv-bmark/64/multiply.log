@@ -8,14 +8,14 @@ gem5 is copyrighted software; use the --copyright option for details.
 
 gem5 version 23.0.0.1
 gem5 compiled Mar 24 2025 21:33:58
-gem5 started Mar 28 2025 06:55:28
-gem5 executing on 550f1481a895, pid 77
+gem5 started Mar 28 2025 08:16:04
+gem5 executing on 9a605ddac3ea, pid 77
 command line: ../gem5/build/RISCV/gem5.opt --outdir=../gem5/m5out/ ./gem5-simple.py ./64/multiply.riscv
 
 Beginning simulation!
 src/sim/simulate.cc:194: info: Entering event queue @ 0.  Starting simulation...
 Exiting @ tick 34567000 because exiting with last active thread context
 
-real	0m0.508s
-user	0m0.431s
-sys	0m0.042s
+real	0m0.477s
+user	0m0.412s
+sys	0m0.037s

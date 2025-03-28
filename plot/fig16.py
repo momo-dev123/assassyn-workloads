@@ -25,10 +25,10 @@ def appendavg(a):
     a.append(avg)
     return a
 
-sodor = raw['sodor.cycle/s']
-asyn  = raw['minor.cycle/s']
-asynv = raw['minor.v.cycle/s']
-gem5 = raw['gem5.cycle/s']
+sodor = raw['sodor.kcycle/s']
+asyn  = raw['minor.kcycle/s']
+asynv = raw['minor.v.kcycle/s']
+gem5 = raw['gem5.kcycle/s']
 
 sodor = appendavg(sodor)
 asyn  = appendavg(asyn)

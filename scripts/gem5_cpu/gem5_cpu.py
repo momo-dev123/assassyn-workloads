@@ -54,8 +54,9 @@ for wl in workloads:
 
 
 data = {
-    "all_ipc": all_ipc,
-    "cycle_s": cycle_s,
+    "benchmarks": workloads,
+    "gem5.ipc": all_ipc,
+    "gem5.kcycle/s": cycle_s,
 
 }
 

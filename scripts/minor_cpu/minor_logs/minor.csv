@@ -1,4 +1,4 @@
-benchmarks,minor_cycles,minor_insts,minor_sim_kcs,minor_vtb_kcs
+benchmarks,minor.cycle,minor.insts,minor.kcycle/s,minor.v.kcycle/s
 median,7631,4150,89.4095238095238,39.11666666666667
 multiply,34304,20897,88.32658227848101,38.130054644808745
 qsort,205680,123504,92.34575,39.0468287526427

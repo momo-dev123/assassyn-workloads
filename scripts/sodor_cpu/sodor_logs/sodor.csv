@@ -1,4 +1,4 @@
-benchmarks,sodor_cycles,sodor_insts,sodor_sim_kcs
+benchmarks,sodor.cycle,sodor.insts,sodor.kcycle/s
 median,6369,4155,12.765911817091345
 multiply,33136,20902,12.514632897084018
 qsort,172780,123509,12.65764482726453

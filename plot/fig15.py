@@ -14,7 +14,7 @@ mpl.rcParams['lines.linewidth'] = 2.5
 raw = pandas.read_csv('cpu-bmarks.csv')
 gscale = plt.get_cmap('binary')
 
-mcycle = raw['tbp.cycles']
+mcycle = raw['tbp.cycle']
 minsts = raw['minor.insts']
 
 mcpi = (mcycle / minsts)
