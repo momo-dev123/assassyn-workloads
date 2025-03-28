@@ -174,10 +174,10 @@ plt.show()
 #
 fname = __file__[:-3]
 fig.savefig(f'{fname}.pdf')
-subprocess.run(f'pdf-crop-margins -p4 1 1 1 1 {fname}.pdf', shell=True)
-def mv(src, dst):
-    if os.path.exists(dst):
-        os.remove(dst)
-    shutil.move(src, dst)
-mv(f'{fname}_cropped.pdf', f'{fname}.pdf')
-#
+#subprocess.run(f'pdf-crop-margins -p4 1 1 1 1 {fname}.pdf', shell=True)
+#def mv(src, dst):
+#    if os.path.exists(dst):
+#        os.remove(dst)
+#    shutil.move(src, dst)
+#mv(f'{fname}_cropped.pdf', f'{fname}.pdf')
+##
