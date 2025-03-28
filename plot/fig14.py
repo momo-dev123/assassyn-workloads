@@ -118,19 +118,19 @@ hls = ['reports/hls-kmp.v.json',
        'reports/hls-merge.v.json',
        'reports/hls-radix.v.json',
        'reports/hls-spmv.v.json',
-       'reports/hls-stencil.v.json',
-       'reports/hls-fft.v.json']
+       'reports/hls-stencil.v.json'
+        ]
 assassyn = ['reports/kmp.sv.json',
             'reports/merge_sort.sv.json',
             'reports/radix_sort.sv.json',
             'reports/spmv.sv.json',
-            'reports/conv_sum.sv.json',
-            'reports/fft.sv.json']
+            'reports/conv_sum.sv.json'
+        ]
 
 hls = [breakdown(json.load(open(i, 'r'))) if i is not None else {'combinational': 0, 'sequential': 0} for i in hls]
 assassyn = [breakdown(json.load(open(i, 'r'))) if i is not None else {'combinational': 0, 'sequential': 0} for i in assassyn]
 
-xs = np.arange(6)
+xs = np.arange(5)
 
 h_comb = np.array([i['combinational'] for i in hls])
 h_seq = np.array([i['sequential'] for i in hls])
@@ -157,7 +157,7 @@ ax.set_yticks(np.arange(0, ylim, 0.2))
 ax.set_ylim(0, ylim)
 ax.set_yticklabels(['' for i in np.arange(0, ylim, 0.2)], fontsize=12)
 ax.set_xticks(xs + 0.225)
-ax.set_xticklabels(['kmp', 'merge', 'radix', 'spmv', 'st-2d', 'fft'], fontsize=12, rotation=90)
+ax.set_xticklabels(['kmp', 'merge', 'radix', 'spmv', 'st-2d'], fontsize=12, rotation=90)
 ax.set_xlim(-0.225, len(hls) - 0.3)
 
 to_legend = to_legend[::-1] + aimpl[::-1]

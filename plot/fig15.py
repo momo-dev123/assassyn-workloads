@@ -64,7 +64,7 @@ for i in range(3):
 
 #ax.text(5.5, 1.6, 'Lower CPI is better', fontsize=8)
 
-wl = list(map(lambda x: x[:-4], raw['wl']))
+wl = list(map(lambda x: x[:-4], raw['benchmarks']))
 ax.set_xticks(xs * 3.5 + 1.75)
 ax.set_xticklabels(wl + ['g-mean'], rotation=90, ha='right', fontsize=12)
 
@@ -106,7 +106,7 @@ ax.bar(xs, perf, width=0.75, color=gscale(0.5), edgecolor='white')
 for i in range(len(perf)):
     ax.text(i, min(perf[i], 3) - 0.42, f'{perf[i]:.2f}', ha='center', rotation=90, fontsize=10, color='white', fontweight='bold')
 
-wl = list(raw['workload'])
+wl = list(raw['workloads'])
 ax.set_xticks(xs + 0.35)
 wl[-2] = 'stcl-2d'
 ax.set_xticklabels(wl + ['g-mean'], rotation=90, ha='right', fontsize=12)

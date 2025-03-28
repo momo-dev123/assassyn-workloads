@@ -49,7 +49,7 @@ for i in range(len(asyn)):
     if gem5[i] > 320:
         ax.text(i * 4.5 + 3, 300, f'{gem5[i]:.0f}', ha='center', va='bottom', fontsize=10, weight='bold')
 
-wl = list(map(lambda x: x[:-4], raw['wl']))
+wl = list(map(lambda x: x[:-4], raw['benchmarks']))
 ax.set_xticks(xs * 4.5 + 1.75)
 ax.set_xticklabels(wl + ['avg'], rotation=90, ha='right', fontsize=12)
 
@@ -97,7 +97,7 @@ for i in range(len(asn)):
 
 ax.bar(xs * 4.5 + 2, asv, width=0.85, color=gscale(0.4), edgecolor='white', label='Asyn.V', hatch='//')
 
-wl = list(raw['workload'])
+wl = list(raw['workloads'])
 wl[-2] = 'stcl-2d'
 ax.set_xticks(xs * 4.5 + 1.75)
 ax.set_xticklabels(wl + ['avg'], rotation=90, ha='right', fontsize=12)

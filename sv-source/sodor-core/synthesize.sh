@@ -20,7 +20,7 @@ for f in "${files[@]}"; do
   echo "$f"
 done > filelist.f
 
-apptainer exec "${bind[@]}" "$ASSASSYN_HOME/open_eda.sif" \
+apptainer exec "${bind[@]}" "$WORKLOAD_HOME/open_eda.sif" \
     sc "${files[@]}" -target asap7_demo -define SYNTHESIS=1 -design Core
 
 cp ./build/Core/job0/syn/0/reports/stat.json ../../plot/reports/sodor.json

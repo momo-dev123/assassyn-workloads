@@ -1,28 +1,22 @@
 
 module top (
-    input  logic               clk,
-    input  logic               rst_n,
-
-    input  logic               push_valid,
-    input  logic [18:0] push_data,
-    output logic               push_ready,
-
-    output logic               pop_valid,
-    output logic [18:0] pop_data,
-    input  logic               pop_ready
+  input logic clk,
+  input logic rst_n,
+  input logic [7:0] delta,
+  output logic delta_ready,
+  input logic pop_ready,
+  output logic pop_valid
 );
 
-fifo #(19, 0) fi (
-    .clk(clk),
-    .rst_n(rst_n),
-
-    .push_valid(push_valid),
-    .push_data(push_data),
-    .push_ready(push_ready),
-
-    .pop_valid(pop_valid),
-    .pop_data(pop_data),
-    .pop_ready(pop_ready)
+trigger_counter #(
+  .WIDTH(8)
+) tci (
+  .clk(clk),
+  .rst_n(rst_n),
+  .delta(delta),
+  .delta_ready(delta_ready),
+  .pop_ready(pop_ready),
+  .pop_valid(pop_valid)
 );
 
 endmodule

@@ -158,7 +158,7 @@ for k, v in raw_breakdown.items():
     for fifo in v['fifo']:
         width = fifo['width']
         depth = fifo['depth']
-        loaded = json.load(open('./reports/fifo.%s.%s.json' % (width, depth), 'r'))
+        loaded = json.load(open('../component/fifo.%s.%s.json' % (width, depth), 'r'))
         loaded = differentiate(loaded)
         loaded['combinational'] *= fifo['cnt']
         loaded['sequential'] *= fifo['cnt']
@@ -167,7 +167,7 @@ for k, v in raw_breakdown.items():
 
     counter = v['counter']
     width = counter['width']
-    loaded = json.load(open('./reports/counter.%s.json' % width, 'r'))
+    loaded = json.load(open('../component/counter.%s.json' % width, 'r'))
     loaded = differentiate(loaded)
     loaded['combinational'] *= counter['cnt']
     loaded['sequential'] *= counter['cnt']

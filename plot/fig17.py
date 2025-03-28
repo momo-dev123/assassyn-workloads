@@ -53,7 +53,7 @@ for i in range(4):
 
 #ax.text(5.5, 1.6, 'Lower CPI is better', fontsize=8)
 
-wl = list(map(lambda x: x[:-4], raw['wl']))
+wl = list(map(lambda x: x[:-4], raw['benchmarks']))
 ax.set_xticks(xs * 5 + 3)
 ax.set_xticklabels(wl + ['g-mean'], rotation=90, ha='right', fontsize=12)
 
@@ -94,7 +94,7 @@ delta = {
 }
 
 
-base = breakdown(json.load(open('reports/report-minor_cpu.sv.json')))
+base = breakdown(json.load(open('reports/minor_cpu.sv.json')))
 bp = breakdown(json.load(open('reports/report-minor_cpu_br.sv.json')))
 o3 = breakdown(json.load(open('reports/report-o3_cpu.sv.json')))
 
