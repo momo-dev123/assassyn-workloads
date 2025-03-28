@@ -66,11 +66,11 @@ xlabels = ['pq', 'sys-pe', 'cpu', 'kmp', 'merge', 'radix', 'spmv', 'st-2d', 'fft
 base_area = np.array([json.load(open(i, 'r'))['design']['area'] for i in base_area])
 assy_area = np.array([json.load(open(i, 'r'))['design']['area'] for i in assy_area])
 
-print(base_area.size)
-print(assy_area.size)
+print(base_area)
+print(assy_area)
 
 norm_area = assy_area / base_area
-speedup = np.array([1.0, 1.0, 1.0 , cpu_speedup] + list(hls_speedup))
+speedup = np.array([1.0, 1.0 , cpu_speedup] + list(hls_speedup))
 
 
 
