@@ -1,8 +1,0 @@
- 2: [WRN:PA0205] /home/ubuntu/CSRFile.sv:64:1: No timescale set for "CSRFile".
- 3: [WRN:PA0205] /home/ubuntu/Core.sv:2:1: No timescale set for "Core".
- 4: [WRN:PA0205] /home/ubuntu/CtlPath.sv:46:1: No timescale set for "CtlPath".
- 5: [WRN:PA0205] /home/ubuntu/DatPath.sv:73:1: No timescale set for "DatPath".
- 6: [WRN:PA0205] /home/ubuntu/Queue1_MemResp.sv:46:1: No timescale set for "Queue1_MemResp".
- 7: [WRN:PA0205] /home/ubuntu/Queue1_UInt32.sv:46:1: No timescale set for "Queue1_UInt32".
- 8: [WRN:PA0205] /home/ubuntu/RegisterFile.sv:46:1: No timescale set for "RegisterFile".
- 9: [WRN:PA0205] /home/ubuntu/regfile_32x32.sv:3:1: No timescale set for "regfile_32x32".

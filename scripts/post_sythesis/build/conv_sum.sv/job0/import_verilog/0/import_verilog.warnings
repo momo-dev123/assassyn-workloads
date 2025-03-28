@@ -1,9 +1,0 @@
- 2: [WRN:PA0205] /home/ubuntu/conv_sum.sv:2:1: No timescale set for "memuser_6e251".
- 3: [WRN:PA0205] /home/ubuntu/conv_sum.sv:134:1: No timescale set for "driver".
- 4: [WRN:PA0205] /home/ubuntu/conv_sum.sv:365:1: No timescale set for "SRAM_6e3f2".
- 5: [WRN:PA0205] /home/ubuntu/conv_sum.sv:422:1: No timescale set for "memory_blackbox_array_77af3".
- 6: [WRN:PA0205] /home/ubuntu/conv_sum.sv:453:15: No timescale set for "top".
- 7: [WRN:PA0205] /home/ubuntu/conv_sum.sv:857:1: No timescale set for "fifo".
- 8: [WRN:PA0205] /home/ubuntu/conv_sum.sv:979:1: No timescale set for "trigger_counter".
- 9: [WRN:PA0205] /home/ubuntu/conv_sum.sv:1017:1: No timescale set for "tb".
-26: [WRN:EL0534] Cmd line top level is not a top level "top".

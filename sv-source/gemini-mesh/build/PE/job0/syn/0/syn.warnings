@@ -1,2 +1,0 @@
-1199: ABC: Warning: Detected 1 multi-output gates (for example, "FAx1_ASAP7_75t_R").
-1208: ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").

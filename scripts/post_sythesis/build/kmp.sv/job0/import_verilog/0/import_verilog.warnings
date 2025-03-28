@@ -1,9 +1,0 @@
- 2: [WRN:PA0205] /home/ubuntu/kmp.sv:2:1: No timescale set for "SRAM_d6221".
- 3: [WRN:PA0205] /home/ubuntu/kmp.sv:62:1: No timescale set for "memory_blackbox_array_d6227".
- 4: [WRN:PA0205] /home/ubuntu/kmp.sv:94:1: No timescale set for "kmp".
- 5: [WRN:PA0205] /home/ubuntu/kmp.sv:224:1: No timescale set for "driver".
- 6: [WRN:PA0205] /home/ubuntu/kmp.sv:294:1: No timescale set for "top".
- 7: [WRN:PA0205] /home/ubuntu/kmp.sv:528:1: No timescale set for "fifo".
- 8: [WRN:PA0205] /home/ubuntu/kmp.sv:650:1: No timescale set for "trigger_counter".
- 9: [WRN:PA0205] /home/ubuntu/kmp.sv:688:1: No timescale set for "tb".
-24: [WRN:EL0534] Cmd line top level is not a top level "top".

@@ -1,5 +1,0 @@
-   23: Warning: Replacing memory \multi_element_fifo.q with list of registers. See inputs/top.v:1474
-   90: Warning: Replacing memory \multi_element_fifo.q with list of registers. See inputs/top.v:1474
-   98: Warning: Replacing memory \multi_element_fifo.q with list of registers. See inputs/top.v:1474
-40652: ABC: Warning: Detected 1 multi-output gates (for example, "FAx1_ASAP7_75t_R").
-40661: ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
