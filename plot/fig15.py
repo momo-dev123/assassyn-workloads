@@ -64,7 +64,7 @@ for i in range(3):
 
 #ax.text(5.5, 1.6, 'Lower CPI is better', fontsize=8)
 
-wl = list(map(lambda x: x[:-4], raw['benchmarks']))
+wl = list(map(lambda x: x, raw['benchmarks']))
 ax.set_xticks(xs * 3.5 + 1.75)
 ax.set_xticklabels(wl + ['g-mean'], rotation=90, ha='right', fontsize=12)
 
