@@ -7,6 +7,7 @@ fi
 
 NAME=$1
 
+
 if [ "$NAME" = "merge_sort" ]; then
     {
         unset VERILATOR_ROOT
@@ -23,9 +24,9 @@ cd /tmp/$NAME
 cd ./${NAME}_verilog
 
 
+TIME_OUTPUT=$( { ../${NAME}_simulator/my_time ./obj_dir/Vtb; } 2>&1 | tee v.log )
 
-TIME_OUTPUT=$( { time -p ./obj_dir/Vtb; } 2>&1 | tee v.log )
+USER_TIME=$(grep 'Time taken:' v.log | tail -n 1 | sed 's/[^0-9]*//g')
 
-USER_TIME=$(echo "$TIME_OUTPUT" | awk '/^user/ {print $2}')
 
 echo "$USER_TIME"

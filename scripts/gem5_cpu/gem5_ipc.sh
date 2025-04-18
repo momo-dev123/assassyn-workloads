@@ -8,6 +8,6 @@ NAME=$1
 
 FILE_PATH="../../riscv-bmark/64/${NAME}.stats"
 
-ipc=$(awk '$1 == "system.cpu.ipc" { print $2; exit }' $FILE_PATH)
+ipc=$(gawk '$1 == "system.cpu.ipc" { print $2; exit }' $FILE_PATH)
 echo "$ipc"
 

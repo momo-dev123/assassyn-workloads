@@ -16,7 +16,6 @@ cycle_s = []
 
 
 #at ./gem5_cpu
-subprocess.run(["./gem5_run.sh"])
 
 # Iterate workloads
 for wl in workloads:
@@ -41,7 +40,7 @@ for wl in workloads:
     output = result.stdout.strip()
     try:
         sim_time = float(output)
-        print(wl,"  cycles:", sim_time)
+        print(wl,"  sim_time:", sim_time)
     except ValueError:
         print("Error: Output is not a valid integer:", output)
     
@@ -63,7 +62,7 @@ data = {
 
 print(data)
 
-df = pd.DataFrame(data)
+df = pd.DataFrame(data) 
 df.to_csv("./gem5_logs/gem5.csv", index=False)
 
 print("CSV file 'gem5.csv' has been created.")

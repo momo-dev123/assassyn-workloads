@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-aX1943/usr/bin/bambu -I./common --top-fname=main --simulator=VERILATOR --file-input-data=./fft/input.data,./fft/check.data --simulate -s --top-rtldesign-name=run_benchmark --no-iob --hls-div --benchmark-name=fft -DBAMBU_PROFILING -DNO_FINAL_MEMCMP_CHECK ./fft/fft.c ./common/harness.c 
+ ==  Bambu executed with: /tmp/.mount_bambu-VgfhC2/usr/bin/bambu -I./common -m64 --top-fname=main --simulator=VERILATOR --file-input-data=./fft/input.data,./fft/check.data --simulate -s --top-rtldesign-name=run_benchmark --no-iob --hls-div --benchmark-name=fft -DBAMBU_PROFILING -DNO_FINAL_MEMCMP_CHECK ./fft/fft.c ./common/harness.c 
 
 
 ********************************************************************************
@@ -158,7 +158,7 @@ Target technology = FPGA
   Module allocation information for function __assert_fail:
     Number of complex operations: 2
     Number of complex operations: 2
-  Time to perform module allocation: 0.17 seconds
+  Time to perform module allocation: 0.18 seconds
 
 
   Module allocation information for function __internal_free:
@@ -249,7 +249,7 @@ Target technology = FPGA
   State Transition Graph Information of function __internal_free:
     Number of states: 17
     Done port is registered
-  Time to perform creation of STG: 0.00 seconds
+  Time to perform creation of STG: 0.01 seconds
 
 
   Memory allocation information:
@@ -289,7 +289,7 @@ Target technology = FPGA
     Number of control steps: 20
     Minimum slack: 0.41999999999999571
     Estimated max frequency (MHz): 104.38413361169098
-  Time to perform scheduling: 0.00 seconds
+  Time to perform scheduling: 0.01 seconds
 
 
   State Transition Graph Information of function fft:
@@ -323,19 +323,19 @@ Target technology = FPGA
     Code has LOADs or STOREs with unaligned accesses
     Internally allocated memory (no private memories): 7340032
     Internally allocated memory: 7340040
-  Time to perform memory allocation: 0.00 seconds
+  Time to perform memory allocation: 0.01 seconds
 
 
   Module allocation information for function read:
     Number of complex operations: 5
-  Time to perform module allocation: 0.00 seconds
+  Time to perform module allocation: 0.01 seconds
 
 
   Scheduling Information of function read:
     Number of control steps: 19
     Minimum slack: 5.1483999949999992
     Estimated max frequency (MHz): 206.11756924919862
-  Time to perform scheduling: 0.01 seconds
+  Time to perform scheduling: 0.00 seconds
 
 
   State Transition Graph Information of function read:
@@ -355,7 +355,7 @@ Target technology = FPGA
 
 
   Easy binding information for function fft:
-    Bound operations:44/80
+    Bound operations:48/84
   Time to perform easy binding: 0.00 seconds
 
 
@@ -439,7 +439,7 @@ Target technology = FPGA
   Module allocation information for function __internal_malloc:
     Number of complex operations: 9
     Number of complex operations: 9
-  Time to perform module allocation: 0.00 seconds
+  Time to perform module allocation: 0.01 seconds
 
 
   Memory allocation information:
@@ -471,16 +471,16 @@ Target technology = FPGA
 
 
   Register binding information for function fft:
-    Register allocation algorithm obtains a sub-optimal result: 30 registers(LB:17)
+    Register allocation algorithm obtains a sub-optimal result: 32 registers(LB:17)
   Time to perform register binding: 0.00 seconds
 
 
   Module binding information for function fft:
-    Number of modules instantiated: 68
+    Number of modules instantiated: 72
     Number of possible conflicts for possible false paths introduced by resource sharing: 0
-    Estimated resources area (no Muxes and address logic): 911
+    Estimated resources area (no Muxes and address logic): 915
     Estimated area of MUX21: 175
-    Total estimated area: 1086
+    Total estimated area: 1090
     Estimated number of DSPs: 16
     Slack computed in 0.00 seconds
     False-loop computation completed in 0.00 seconds
@@ -558,7 +558,7 @@ Target technology = FPGA
 
   Register binding information for function __internal_malloc:
     Register allocation algorithm obtains a sub-optimal result: 29 registers(LB:11)
-  Time to perform register binding: 0.00 seconds
+  Time to perform register binding: 0.01 seconds
 
 
   Connection Binding Information for function __internal_malloc:
@@ -568,20 +568,20 @@ Target technology = FPGA
   Total number of flip-flops in function __internal_malloc: 746
 
   Register binding information for function fft:
-    Register allocation algorithm obtains a sub-optimal result: 30 registers(LB:17)
+    Register allocation algorithm obtains a sub-optimal result: 32 registers(LB:17)
   Time to perform register binding: 0.00 seconds
 
 
   Connection Binding Information for function fft:
     Number of allocated multiplexers (2-to-1 equivalent): 15
-  Time to perform interconnection binding: 0.01 seconds
+  Time to perform interconnection binding: 0.00 seconds
 
-  Total number of flip-flops in function fft: 775
+  Total number of flip-flops in function fft: 839
 
   Module allocation information for function run_benchmark:
     Number of complex operations: 1
     Number of complex operations: 1
-  Time to perform module allocation: 0.00 seconds
+  Time to perform module allocation: 0.01 seconds
 
 
   Scheduling Information of function run_benchmark:
@@ -638,7 +638,7 @@ Target technology = FPGA
   Module allocation information for function main:
     Number of complex operations: 11
     Number of complex operations: 11
-  Time to perform module allocation: 0.16 seconds
+  Time to perform module allocation: 0.17 seconds
 
 
   Memory allocation information:
@@ -673,26 +673,26 @@ Target technology = FPGA
 
 
   Easy binding information for function main:
-    Bound operations:42/66
+    Bound operations:64/88
   Time to perform easy binding: 0.00 seconds
 
 
   Storage Value Information of function main:
-    Number of storage values inserted: 26
+    Number of storage values inserted: 28
   Time to compute storage value information: 0.00 seconds
 
 
   Register binding information for function main:
-    Register allocation algorithm obtains a sub-optimal result: 24 registers(LB:16)
+    Register allocation algorithm obtains a sub-optimal result: 26 registers(LB:16)
   Time to perform register binding: 0.00 seconds
 
 
   Module binding information for function main:
-    Number of modules instantiated: 60
+    Number of modules instantiated: 82
     Number of possible conflicts for possible false paths introduced by resource sharing: 0
-    Estimated resources area (no Muxes and address logic): 8330
+    Estimated resources area (no Muxes and address logic): 8352
     Estimated area of MUX21: 284
-    Total estimated area: 8614
+    Total estimated area: 8636
     Estimated number of DSPs: 0
     Slack computed in 0.00 seconds
     False-loop computation completed in 0.00 seconds
@@ -702,16 +702,16 @@ Target technology = FPGA
 
 
   Register binding information for function main:
-    Register allocation algorithm obtains a sub-optimal result: 24 registers(LB:16)
+    Register allocation algorithm obtains a sub-optimal result: 26 registers(LB:16)
   Time to perform register binding: 0.00 seconds
 
 
   Connection Binding Information for function main:
     Number of allocated multiplexers (2-to-1 equivalent): 22
-  Time to perform interconnection binding: 0.00 seconds
+  Time to perform interconnection binding: 0.01 seconds
 
-  Total number of flip-flops in function main: 624
-[0mWarning: XML file "/home/gaod/derui_work/assassyn-workloads/MachSuite/test.xml" cannot be opened, creating a stub with random values
+  Total number of flip-flops in function main: 688
+[0mWarning: XML file "/home/gaod/isca25_ae/assassyn-workloads/MachSuite/test.xml" cannot be opened, creating a stub with random values
   Total cycles             : 14136 cycles
   Number of executions     : 1
   Average execution        : 14136 cycles

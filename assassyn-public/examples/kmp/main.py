@@ -69,9 +69,8 @@ def test_kmp():
     raw = utils.run_simulator(simulator_path)
     # check(raw)
 
-    if utils.has_verilator():
-        raw = utils.run_verilator(verilator_path)
-        # check(raw)
+    raw = utils.run_verilator(verilator_path)
+    # check(raw)
 
 if __name__ == "__main__":
     test_kmp()

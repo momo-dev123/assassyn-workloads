@@ -22,7 +22,7 @@ MY_DATA_PATH="./${NAME}.log"
 VAL1="$(
   grep -i "jal" "$FILE_PATH" \
   | grep -i "setStats" \
-  | awk '{print $1}' \
+  | gawk '{print $1}' \
   | sed -n 1p
 )"
 
@@ -30,7 +30,7 @@ VAL1="$(
 VAL2="$(
   grep -i "jal" "$FILE_PATH" \
   | grep -i "setStats" \
-  | awk '{print $1}' \
+  | gawk '{print $1}' \
   | sed -n 2p
 )"
 

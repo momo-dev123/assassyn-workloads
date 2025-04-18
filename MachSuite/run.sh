@@ -16,6 +16,7 @@ do
 
     ../bambu-0.9.7.AppImage "$wl" ./common/harness.c \
         -I./common \
+        -m64 \
         --top-fname=main \
         --simulator=VERILATOR \
         --file-input-data="${dir}/input.data,${dir}/check.data" \

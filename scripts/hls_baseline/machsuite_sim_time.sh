@@ -8,6 +8,6 @@ NAME=$1
 
 FILE_PATH="./machsuite_logs/${NAME}.time"
 
-user_time=$(awk '/^user/ { match($0, /([0-9]+\.[0-9]+)s/, a); print a[1] }' "$FILE_PATH")
+user_time=$(gawk '/^user/ { match($0, /([0-9]+\.[0-9]+)s/, a); print a[1] }' "$FILE_PATH")
 
 echo "$user_time"

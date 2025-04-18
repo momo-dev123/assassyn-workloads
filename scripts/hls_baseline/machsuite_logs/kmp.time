@@ -1,5 +1,5 @@
-ln: failed to create symbolic link '/home/gaod/derui_work/assassyn-workloads/MachSuite/HLS_output//verilator_beh/verilator_obj/HLS_output': File exists
+ln: failed to create symbolic link '/home/gaod/isca25_ae/assassyn-workloads/MachSuite/HLS_output//verilator_beh/verilator_obj/HLS_output': File exists
 
-real	0m0.738s
-user	0m0.696s
-sys	0m0.016s
+real	0m0.714s
+user	0m0.681s
+sys	0m0.011s

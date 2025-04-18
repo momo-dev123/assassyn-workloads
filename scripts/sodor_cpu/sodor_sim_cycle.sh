@@ -9,6 +9,6 @@ NAME=$1
 FILE_PATH="./sodor_logs/${NAME}.out"
 
 
-cycles=$(cat $FILE_PATH|tail -n1 | awk '{print $6}')
+cycles=$(cat $FILE_PATH|tail -n1 | gawk '{print $6}')
 echo $cycles
 

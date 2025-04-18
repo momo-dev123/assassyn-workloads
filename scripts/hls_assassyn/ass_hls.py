@@ -1,5 +1,7 @@
 import subprocess
 import pandas as pd
+import shutil
+
 
 
 workloads=[
@@ -62,7 +64,7 @@ for i in range(0, 5):
     result = subprocess.run(["./ass_hls_veri_time.sh", wl], capture_output=True, text=True)
     output = result.stdout.strip()
     try:
-        v_time = float(output)
+        v_time = float(output)/1000000
         print(wl,"  v_time:", v_time)
     except ValueError:
         print("Error: Output is not a valid float:", output)    
@@ -83,6 +85,12 @@ for i in range(0, 5):
     ass_sim_kcs.append(sim_cycles/(1000*sim_time))
     print("ass_veri_kcs:",  sim_cycles/(1000*v_time))
     ass_veri_kcs.append(sim_cycles/(1000*v_time))
+
+    source_file = "/tmp/" + wl + "/" + wl + "_verilog/" + wl + ".sv"
+    dest = "./ass_hls_logs/" + wl + ".sv"
+    shutil.copy(source_file, dest)
+
+
 
 
 

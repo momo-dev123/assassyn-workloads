@@ -10,7 +10,7 @@ NAME=$1
 cd /tmp/$NAME 
 
 cd ./${NAME}_simulator
-cycle=$(awk '/finish/ { match($0, /Cycle @([0-9.]+):/, a); print a[1] }' sim.log)
+cycle=$(gawk '/finish/ { match($0, /Cycle @([0-9.]+):/, a); print a[1] }' sim.log)
 
 echo "$cycle"
 

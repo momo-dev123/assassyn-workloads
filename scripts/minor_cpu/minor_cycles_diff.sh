@@ -28,7 +28,7 @@ sed 's/. | addr/ | addr/' temp2.txt > pc_hook_d.txt
 VAL1="$(
   grep -i "jal" "$FILE_PATH" \
   | grep -i "setStats" \
-  | awk '{print $1}' \
+  | gawk '{print $1}' \
   | sed -n 1p
 )"
 
@@ -36,20 +36,20 @@ VAL1="$(
 VAL2="$(
   grep -i "jal" "$FILE_PATH" \
   | grep -i "setStats" \
-  | awk '{print $1}' \
+  | gawk '{print $1}' \
   | sed -n 2p
 )"
 
 NUMBER_BEHIND_AT_1="$(
   grep "raw: 0x${VAL1}" pc_hook_d.txt \
-  | awk -F'[@:]' '{ print $2 }' \
+  | gawk -F'[@:]' '{ print $2 }' \
   | sed 's/\..*//'
 )"
 
 
 NUMBER_BEHIND_AT_2="$(
   grep "raw: 0x${VAL2}" pc_hook_d.txt \
-  | awk -F'[@:]' '{ print $2 }' \
+  | gawk -F'[@:]' '{ print $2 }' \
   | sed 's/\..*//'
 )"
 

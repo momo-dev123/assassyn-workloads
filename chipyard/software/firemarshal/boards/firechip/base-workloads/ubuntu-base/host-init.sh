@@ -1,1 +1,3 @@
-../br-base/host-init.sh
+#!/bin/sh
+
+exec make -C trigger

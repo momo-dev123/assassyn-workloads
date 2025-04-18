@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-HwXRBx/usr/bin/bambu -I./common --top-fname=main --simulator=VERILATOR --file-input-data=./radix/input.data,./radix/check.data --simulate -s --top-rtldesign-name=run_benchmark --no-iob --hls-div --benchmark-name=radix -DBAMBU_PROFILING -DNO_FINAL_MEMCMP_CHECK ./radix/radix.c ./common/harness.c 
+ ==  Bambu executed with: /tmp/.mount_bambu-QJsarl/usr/bin/bambu -I./common -m64 --top-fname=main --simulator=VERILATOR --file-input-data=./radix/input.data,./radix/check.data --simulate -s --top-rtldesign-name=run_benchmark --no-iob --hls-div --benchmark-name=radix -DBAMBU_PROFILING -DNO_FINAL_MEMCMP_CHECK ./radix/radix.c ./common/harness.c 
 
 
 ********************************************************************************
@@ -110,7 +110,7 @@ Target technology = FPGA
     Code has LOADs or STOREs with unaligned accesses
     Internally allocated memory (no private memories): 7340032
     Internally allocated memory: 7340040
-  Time to perform memory allocation: 0.01 seconds
+  Time to perform memory allocation: 0.00 seconds
 
 
   Memory allocation information:
@@ -124,7 +124,21 @@ Target technology = FPGA
     Code has LOADs or STOREs with unaligned accesses
     Internally allocated memory (no private memories): 7340032
     Internally allocated memory: 7340040
-  Time to perform memory allocation: 0.01 seconds
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Memory allocation information:
+    BRAM bitsize: 32
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 32
+    ADDRESS bus bitsize: 23
+    SIZE bus bitsize: 6
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 7340032
+    Internally allocated memory: 7340040
+  Time to perform memory allocation: 0.00 seconds
 
 
   Memory allocation information:
@@ -144,7 +158,7 @@ Target technology = FPGA
   Module allocation information for function __assert_fail:
     Number of complex operations: 2
     Number of complex operations: 2
-  Time to perform module allocation: 0.17 seconds
+  Time to perform module allocation: 0.18 seconds
 
 
   Module allocation information for function __internal_free:
@@ -156,7 +170,7 @@ Target technology = FPGA
   Module allocation information for function read:
     Number of complex operations: 5
     Number of complex operations: 5
-  Time to perform module allocation: 0.02 seconds
+  Time to perform module allocation: 0.01 seconds
 
 
   Module allocation information for function ss_sort:
@@ -235,7 +249,7 @@ Target technology = FPGA
   State Transition Graph Information of function __internal_free:
     Number of states: 17
     Done port is registered
-  Time to perform creation of STG: 0.01 seconds
+  Time to perform creation of STG: 0.00 seconds
 
 
   Memory allocation information:
@@ -268,7 +282,7 @@ Target technology = FPGA
 
   Module allocation information for function read:
     Number of complex operations: 5
-  Time to perform module allocation: 0.01 seconds
+  Time to perform module allocation: 0.00 seconds
 
 
   Scheduling Information of function read:
@@ -285,14 +299,14 @@ Target technology = FPGA
 
 
   Scheduling Information of function ss_sort:
-    Number of control steps: 51
+    Number of control steps: 49
     Minimum slack: 1.1863999929999747
     Estimated max frequency (MHz): 113.4610147052022
   Time to perform scheduling: 0.02 seconds
 
 
   State Transition Graph Information of function ss_sort:
-    Number of states: 49
+    Number of states: 47
     Done port is registered
   Time to perform creation of STG: 0.00 seconds
 
@@ -313,7 +327,7 @@ Target technology = FPGA
 
 
   Easy binding information for function ss_sort:
-    Bound operations:260/441
+    Bound operations:275/436
   Time to perform easy binding: 0.00 seconds
 
 
@@ -333,7 +347,7 @@ Target technology = FPGA
 
 
   Storage Value Information of function ss_sort:
-    Number of storage values inserted: 106
+    Number of storage values inserted: 105
   Time to compute storage value information: 0.00 seconds
 
 
@@ -443,25 +457,25 @@ Target technology = FPGA
 
 
   Register binding information for function ss_sort:
-    Register allocation algorithm obtains a sub-optimal result: 85 registers(LB:24)
+    Register allocation algorithm obtains a sub-optimal result: 86 registers(LB:20)
   Time to perform register binding: 0.00 seconds
 
 
   Register binding information for function ss_sort:
-    Register allocation algorithm obtains a sub-optimal result: 85 registers(LB:24)
+    Register allocation algorithm obtains a sub-optimal result: 86 registers(LB:20)
   Time to perform register binding: 0.01 seconds
 
 
   Module binding information for function ss_sort:
-    Number of modules instantiated: 413
-    Number of possible conflicts for possible false paths introduced by resource sharing: 24
-    Estimated resources area (no Muxes and address logic): 1533
+    Number of modules instantiated: 408
+    Number of possible conflicts for possible false paths introduced by resource sharing: 66
+    Estimated resources area (no Muxes and address logic): 1717
     Estimated area of MUX21: 477
-    Total estimated area: 2010
+    Total estimated area: 2194
     Estimated number of DSPs: 0
     Slack computed in 0.00 seconds
     False-loop computation completed in 0.00 seconds
-    Weight computation completed in 0.00 seconds
+    Weight computation completed in 0.01 seconds
     Clique covering computation completed in 0.01 seconds
   Time to perform module binding: 0.02 seconds
 
@@ -507,11 +521,11 @@ Target technology = FPGA
     Estimated area of MUX21: 241
     Total estimated area: 2578
     Estimated number of DSPs: 0
-    Slack computed in 0.00 seconds
+    Slack computed in 0.01 seconds
     False-loop computation completed in 0.00 seconds
     Weight computation completed in 0.00 seconds
     Clique covering computation completed in 0.00 seconds
-  Time to perform module binding: 0.00 seconds
+  Time to perform module binding: 0.01 seconds
 
 
   Register binding information for function __internal_malloc:
@@ -537,15 +551,15 @@ Target technology = FPGA
   Total number of flip-flops in function read: 623
 
   Register binding information for function ss_sort:
-    Register allocation algorithm obtains a sub-optimal result: 85 registers(LB:24)
+    Register allocation algorithm obtains a sub-optimal result: 86 registers(LB:20)
   Time to perform register binding: 0.00 seconds
 
 
   Connection Binding Information for function ss_sort:
     Number of allocated multiplexers (2-to-1 equivalent): 54
-  Time to perform interconnection binding: 0.01 seconds
+  Time to perform interconnection binding: 0.00 seconds
 
-  Total number of flip-flops in function ss_sort: 1846
+  Total number of flip-flops in function ss_sort: 1892
 
   Module allocation information for function run_benchmark:
     Number of complex operations: 1
@@ -591,12 +605,12 @@ Target technology = FPGA
     Register allocation algorithm obtains an optimal result: 4 registers
   Time to perform register binding: 0.00 seconds
 
-  Total number of flip-flops in function run_benchmark: 128
+  Total number of flip-flops in function run_benchmark: 112
 
   Module allocation information for function main:
     Number of complex operations: 11
     Number of complex operations: 11
-  Time to perform module allocation: 0.18 seconds
+  Time to perform module allocation: 0.17 seconds
 
 
   Memory allocation information:
@@ -615,14 +629,14 @@ Target technology = FPGA
 
   Module allocation information for function main:
     Number of complex operations: 11
-  Time to perform module allocation: 0.01 seconds
+  Time to perform module allocation: 0.00 seconds
 
 
   Scheduling Information of function main:
     Number of control steps: 20
     Minimum slack: 1.1102230246251565e-15
     Estimated max frequency (MHz): 100.00000000000001
-  Time to perform scheduling: 0.00 seconds
+  Time to perform scheduling: 0.01 seconds
 
 
   State Transition Graph Information of function main:
@@ -631,26 +645,26 @@ Target technology = FPGA
 
 
   Easy binding information for function main:
-    Bound operations:42/66
+    Bound operations:64/88
   Time to perform easy binding: 0.00 seconds
 
 
   Storage Value Information of function main:
-    Number of storage values inserted: 26
+    Number of storage values inserted: 28
   Time to compute storage value information: 0.00 seconds
 
 
   Register binding information for function main:
-    Register allocation algorithm obtains a sub-optimal result: 24 registers(LB:16)
+    Register allocation algorithm obtains a sub-optimal result: 26 registers(LB:16)
   Time to perform register binding: 0.00 seconds
 
 
   Module binding information for function main:
-    Number of modules instantiated: 60
+    Number of modules instantiated: 82
     Number of possible conflicts for possible false paths introduced by resource sharing: 0
-    Estimated resources area (no Muxes and address logic): 8330
+    Estimated resources area (no Muxes and address logic): 8352
     Estimated area of MUX21: 284
-    Total estimated area: 8614
+    Total estimated area: 8636
     Estimated number of DSPs: 0
     Slack computed in 0.00 seconds
     False-loop computation completed in 0.00 seconds
@@ -660,7 +674,7 @@ Target technology = FPGA
 
 
   Register binding information for function main:
-    Register allocation algorithm obtains a sub-optimal result: 24 registers(LB:16)
+    Register allocation algorithm obtains a sub-optimal result: 26 registers(LB:16)
   Time to perform register binding: 0.00 seconds
 
 
@@ -668,8 +682,8 @@ Target technology = FPGA
     Number of allocated multiplexers (2-to-1 equivalent): 22
   Time to perform interconnection binding: 0.00 seconds
 
-  Total number of flip-flops in function main: 624
-[0mWarning: XML file "/home/gaod/derui_work/assassyn-workloads/MachSuite/test.xml" cannot be opened, creating a stub with random values
-  Total cycles             : 135989 cycles
+  Total number of flip-flops in function main: 688
+[0mWarning: XML file "/home/gaod/isca25_ae/assassyn-workloads/MachSuite/test.xml" cannot be opened, creating a stub with random values
+  Total cycles             : 135170 cycles
   Number of executions     : 1
-  Average execution        : 135989 cycles
+  Average execution        : 135170 cycles

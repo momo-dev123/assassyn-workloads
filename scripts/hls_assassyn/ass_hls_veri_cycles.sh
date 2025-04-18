@@ -11,7 +11,7 @@ cd /tmp/$NAME
 
 cd ./${NAME}_verilog
 
-cycle=$(awk '/finish/ { if (match($0, /^[[:space:]]*([0-9]+)/, a)) print a[1] }' v.log | head -n 1)
+cycle=$(gawk '/finish/ { if (match($0, /^[[:space:]]*([0-9]+)/, a)) print a[1] }' v.log | head -n 1)
 
 
 echo "$cycle"

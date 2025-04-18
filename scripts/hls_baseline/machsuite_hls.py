@@ -6,9 +6,9 @@ workloads=["kmp","spmv","merge","radix","stencil"]
 all_cycles = []
 hls_kcycle_s = []
 #at ./hls_baseline
-subprocess.run(["./machsuite_run.sh"],
-        stdout=subprocess.DEVNULL,
-        stderr=subprocess.DEVNULL)
+#subprocess.run(["./machsuite_run.sh"],
+#        stdout=subprocess.DEVNULL,
+#        stderr=subprocess.DEVNULL)
 
 # Iterate workloads
 for wl in workloads:

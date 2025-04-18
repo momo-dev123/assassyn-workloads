@@ -93,3 +93,38 @@ df = pd.DataFrame(data)
 df.to_csv("cpu_all_version.csv", index=False)
 
 print("CSV file 'cpu_all_version.csv' has been created.")
+
+
+wl = "minor_cpu"
+subprocess.run(
+    ['python', f"../../../assassyn-public/examples/minor-cpu/src/main.py"],
+    stdout=subprocess.DEVNULL,
+    stderr=subprocess.DEVNULL
+)
+source_file = "/tmp/" + wl + "/" + wl + "_verilog/" + wl + ".sv"
+dest = "./" + wl + ".sv"
+print("copying file from ", source_file, " to ", dest)
+shutil.copy(source_file, dest)
+
+wl = "minor_cpu_br"
+subprocess.run(
+    ['python', f"../../../assassyn-public/examples/minor-cpu/src/br_pre_main.py"],
+    stdout=subprocess.DEVNULL,
+    stderr=subprocess.DEVNULL
+)
+source_file = "/tmp/" + wl + "/" + wl + "_verilog/" + wl + ".sv"
+dest = "./" + wl + ".sv"
+print("copying file from ", source_file, " to ", dest)
+shutil.copy(source_file, dest)
+
+
+wl = "o3_cpu"
+subprocess.run(
+    ['python', f"../../../assassyn-public/examples/o3-cpu/src/main.py"],
+    stdout=subprocess.DEVNULL,
+    stderr=subprocess.DEVNULL
+)
+source_file = "/tmp/" + wl + "/" + wl + "_verilog/" + wl + ".sv"
+dest = "./" + wl + ".sv"
+print("copying file from ", source_file, " to ", dest)
+shutil.copy(source_file, dest)

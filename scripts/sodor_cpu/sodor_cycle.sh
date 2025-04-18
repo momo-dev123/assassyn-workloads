@@ -7,6 +7,6 @@ fi
 NAME=$1
 
 FILE_PATH="./sodor_logs/${NAME}_sodor.log"
-mcycle=$(grep '^mcycle =' "$FILE_PATH" | awk -F'= ' '{print $2}')
+mcycle=$(grep '^mcycle =' "$FILE_PATH" | gawk -F'= ' '{print $2}')
 
 echo "$mcycle"
