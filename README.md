@@ -119,6 +119,7 @@ c. Generate the Minor CPU datas
 
                     cd ./scripts/post_sythesis
                     python ./base_report.py
+                    cd ../..
                     
                     
 
